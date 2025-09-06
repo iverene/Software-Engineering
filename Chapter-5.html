@@ -97,7 +97,7 @@
             <article>
                 <img src="assets\figure5.1.png">
                 <figcaption><strong>Figure 5.1: </strong>The context of the MHC-PMS</figcaption>
-                
+
                 <p>Defining a system boundary is not purely a technical decision—it can be influenced by social and organizational factors. For example, boundaries might be set to keep analysis within a single site, avoid dealing with difficult stakeholders, or even inflate project scope to justify expanding a development team. Once boundary decisions are made, the next step is to analyze the system's context—identifying how it interacts with its environment. This usually begins with creating a simple architectural model to illustrate key components and external dependencies.</p>
 
                 <p>Figure 5.1 presents a context model for the mental health patient information system (MHC-PMS), illustrating its interactions with other systems in its environment. It shows that the MHC-PMS is connected to:</p>
@@ -350,6 +350,33 @@
         <section>
             <article>
                 <h2>5.5 Model-driven engineering</h2>
+                <p>Model-driven engineering (MDE) is a software development approach where the primary outputs are models rather than traditional code. The models serve as high-level representations of the system, and the actual program code is automatically generated from these models.</p>
+                <p>The key idea behind MDE is that it raises the level of abstraction in the development process. Engineers focus on creating models that describe the system's behavior, structure, and functionality, without having to worry about low-level details such as programming languages or platform-specific execution concerns. This can potentially lead to faster development cycles, improved consistency, and easier maintenance by automating code generation directly from the models.</p>
+                <p>Model-Driven Engineering (MDE) has its origins in Model-Driven Architecture (MDA), which was introduced by the Object Management Group (OMG) in 2001 as a new approach to software development. While MDE and MDA are often used interchangeably, MDE is broader in scope.</p>
+                <p>MDA mainly focuses on the design and implementation phases of software development, providing models that can be automatically transformed into executable code. However, MDE goes beyond just design and implementation, addressing all aspects of the software engineering process, from requirements engineering to testing.</p>
+                <p>In summary, while MDA is centered on design and implementation, MDE includes areas like model-based requirements engineering, model-driven software processes, and model-based testing, making it a more comprehensive approach to software development.</p>
+                <p>Model-Driven Engineering (MDE) offers both advantages and challenges, and its adoption in software engineering is still evolving. Here are the main arguments for and against MDE:</p>
+                <p>For MDE:</p>
+                <ul>
+                    <li>High-Level Abstraction: MDE enables engineers to focus on designing systems at a high level, abstracting away the complexities of implementation. This reduces the likelihood of errors, speeds up the development process, and facilitates the creation of reusable, platform-independent models.</li>
+                    <li>Platform Independence: MDE allows system implementations to be generated for different platforms using the same model. By creating a translator for a new platform, all existing platform-independent models can be quickly adapted, making it easier to rehost systems on new technologies.</li>
+                </ul>
+                <p>Against MDE:</p>
+                <ul>
+                    <li>Wrong Abstractions for Implementation: While models are useful for facilitating design discussions, the abstractions in these models may not always match the realities of the implementation. For example, an informal design model may not be easily translated into a working system, especially if off-the-shelf configurable packages are used for implementation.</li>
+                    <li>Limited Relevance to Shorter Lifespan Systems: The advantages of platform independence are most relevant for large, long-lifetime systems where platforms may become obsolete. For these systems, issues like requirements engineering, security, dependability, integration with legacy systems, and testing are often more critical than platform reusability.</li>
+                </ul>
+                <p>In summary, while MDE holds promise for simplifying software development through abstraction and platform independence, its practical impact may be limited for certain types of systems, especially where other engineering challenges outweigh platform adaptation concerns.</p>
+                <p>Model-Driven Engineering (MDE) has seen some significant successes, particularly in large organizations like IBM and Siemens, and in complex, long-lifetime systems like air traffic management. The Object Management Group (OMG) has reported these successes on their website, showcasing MDE’s potential for large-scale, mission-critical applications.</p>
+                <p>However, despite these successes, MDE has not yet achieved widespread adoption in the software engineering industry. Similar to formal methods, which are discussed in Chapter 12, MDE is considered a promising approach but is not universally accepted or implemented. The challenge remains in balancing the costs and risks of using MDE with its potential benefits. While MDE can offer significant advantages, particularly in terms of high-level abstraction and platform independence, its practical application on a broad scale still faces hurdles that need to be overcome.</p>
+            </article>
+            
+            <article>
+                <h3>5.5.1 Model-driven architecture</h3>
+                <p>Model-Driven Architecture (MDA) is a software design and implementation approach that focuses on using models to describe a system at various levels of abstraction. MDA leverages a subset of UML models to represent the system’s design. The core idea is to start with a platform-independent model (PIM), which describes the system's functionality without being tied to any specific technology or platform.</p>
+                <p>From this high-level model, it is theoretically possible to automatically generate a working program with minimal or no manual intervention. The aim is to abstract away platform-specific details during the design phase, allowing for more flexible and adaptable systems. By creating models at different abstraction levels, MDA facilitates easier adaptation and reconfiguration for different platforms and technologies.</p>
+                <img src="assets\figure5.19.png">
+                <figcaption><strong>Figure 5.19: </strong>MDA transformations</figcaption>
             </article>
         </section>
 
