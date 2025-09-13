@@ -11,18 +11,18 @@
     
         <section>
             <img src="https://static.vecteezy.com/system/resources/thumbnails/040/867/093/small_2x/technology-logo-computer-and-data-related-business-hi-tech-and-innovative-vector.jpg" alt="logo">
-            <p><b>Systematic.dev</b></p>
+            <p style="text-align:right;"><b>Systematic.dev</b></p>
             <hr>
         </section>
         
 </header>
 
 
-<main>
+<main style=background-color:aqua>
     
     <section>
 
-    <h1>SOFTWARE PROCESSES</h1>
+    <h1 style="text-align:center;">SOFTWARE PROCESSES</h1>
     <p>Objectives</p>
     <p>The objective of this chapter is to introduce you to the idea of a software
     process—a coherent set of activities for software production. When you
@@ -37,7 +37,7 @@
     </ul>
     
     
-    <h1>Contents</h1>
+    <h1 style="text-align:center;">Contents</h1>
    
         <p><b>2.1</b> Software process models</p>
         <p><b>2.2</b> Process activities</p>
@@ -71,14 +71,14 @@
 
 <section>
     <br>
-    <h1>2.1 Software process models</h1>
+    <h1 style="text-align:center;">2.1 Software process models</h1>
     <hr>
     <p>1. <i>The waterfall model</i> This takes the fundamental process activities of specification, development, validation, and evolution and represents them as separate process phases such as requirements specification, software design, implementation, testing, and so on.</p>
 
 </section>
 
 <section>
-   <img src="assets/image1.png" alt="">
+   <img src="assets/image1.png" style="display:block; margin:auto;" width="700">
 </section>
 
 
@@ -87,7 +87,7 @@
     </section>
 
 <section>
-   <img src="assets/image2.png" alt="">
+   <img src="assets/image2.png" style="display:block; margin:auto;" width="700">
 </section>
 
 <section>
@@ -95,12 +95,12 @@
 </section>
 
 <section> 
-    <img src="assets/image3.png" alt="">
+    <img src="assets/image3.png" style="display:block; margin:auto;" width="700">
 </section>
 
 <section>
     <br>
-    <h1>2.2 Process activities</h1>
+    <h1 style="text-align:center;">2.2 Process activities</h1>
     <hr>
     <p>Real software processes are interleaved sequences of technical, collaborative, and managerial activities with the overall goal of specifying, designing, implementing, and testing a software system. Software developers use a variety of different software tools in their work. Tools are particularly useful for supporting the editing of different types of document and for managing the immense volume of detailed information that is generated in a large software project.</p>
     <p>The four basic process activities of specification, development, validation, and evolution are organized differently in different development processes. In the waterfall model, they are organized in sequence, whereas in incremental development they are interleaved. How these activities are carried out depends on the type of software, people, and organizational structures involved. In extreme programming, for example, specifications are written on cards. Tests are executable and developed before the program itself. Evolution may involve substantial system restructuring or refactoring.</p>
@@ -112,7 +112,8 @@
     <p>3. <i>Requirements specification</i> Requirements specification is the activity of translating the information gathered during the analysis activity into a document that defines a set of requirements. Two types of requirements may be included in this document. User requirements are abstract statements of the system requirements for the customer and end-user of the system; system requirements are a more detailed description of the functionality to be provided.</p>
     <p>4. <i>Requirements validation</i> This activity checks the requirements for realism, consistency, and completeness. During this process, errors in the requirements document are inevitably discovered. It must then be modified to correct these problems.</p>
 
-    <img src="assets/image4.png" alt="">
+
+    <img src="assets/image4.png" style="display:block; margin:auto;" width="700">
 </section>
 
 <section>
@@ -122,14 +123,14 @@
     <p>The implementation stage of software development is the process of converting a system specification into an executable system. It always involves processes of software design and programming but, if an incremental approach to development is used, may also involve refinement of the software specification.</p>
     <p>Figure 2.5 is an abstract model of this process showing the inputs to the design process, process activities, and the documents produced as outputs from this process.</p>
 
-    <img src="assets/image5.png" alt="">
+    <img src="assets/image5.png" style="display:block; margin:auto;" width="700">
 
     <p>1. Architectural design, where you identify the overall structure of the system, the principal components (sometimes called sub-systems or modules), their relationships, and how they are distributed.</p>
     <p>2. Interface design, where you define the interfaces between system components. This interface specification must be unambiguous. With a precise interface, a component can be used without other components having to know how it is implemented. Once interface specifications are agreed, the components can be designed and developed concurrently.</p>
     <p>3. Component design, where you take each system component and design how it will operate. This may be a simple statement of the expected functionality to be implemented, with the specific design left to the programmer. Alternatively, it may be a list of changes to be made to a reusable component or a detailed design model. The design model may be used to automatically generate an implementation.</p>
     <p>4. Database design, where you design the system data structures and how these are to be represented in a database. Again, the work here depends on whether an existing database is to be reused or a new database is to be created.</p>
 
-    <img src="assets/image6.png" alt="">
+    <img src="assets/image6.png" style="display:block; margin:auto;" width="700">
 
 </section>
 
@@ -142,7 +143,8 @@
     <p>2. System testing System components are integrated to create a complete system. This process is concerned with finding errors that result from unanticipated interactions between components and component interface problems. It is also concerned with showing that the system meets its functional and non-functional requirements, and testing the emergent system properties. For large systems, this may be a multi-stage process where components are integrated to form subsystems that are individually tested before these sub-systems are themselves integrated to form the final system.</p>
     <p>3. Acceptance testing This is the final stage in the testing process before the system is accepted for operational use. The system is tested with data supplied by the system customer rather than with simulated test data. Acceptance testing may reveal errors and omissions in the system requirements definition, because the real data exercise the system in different ways from the test data. Acceptance testing may also reveal requirements problems where the system’s facilities do not really meet the user’s needs or the system performance is unacceptable.</p>
 
-    <img src="assets/image7.png" alt="">
+
+    <img src="assets/image7.png" style="display:block; margin:auto;" width="700">
 
 </section>
 
@@ -161,7 +163,7 @@
     <h1>2.3 Coping with change</h1>
     <p>Change is inevitable in all large software projects. The system requirements change as the business procuring the system responds to external pressures and management priorities change. As new technologies become available, new design and implementation possibilities emerge. Therefore whatever software process model is used, it is essential that it can accommodate changes to the software being developed.</p>
 
-    <img src="assets/image8.png" alt="">
+    <img src="assets/image8.png" style="display:block; margin:auto;" width="700">
 
 
     <br>
@@ -176,7 +178,7 @@
     <p>1. System prototyping, where a version of the system or part of the system is developed quickly to check the customer’s requirements and the feasibility of some design decisions. This supports change avoidance as it allows users to experiment with the system before delivery and so refine their requirements. The number of requirements change proposals made after delivery is therefore likely to be reduced.</p>
     <p>2. Incremental delivery, where system increments are delivered to the customer for comment and experimentation. This supports both change avoidance and change tolerance. It avoids the premature commitment to requirements for the whole system and allows changes to be incorporated into later increments at relatively low cost.</p>
 
-    <img src="assets/image9.png" alt="">
+    <img src="assets/image9.png" style="display:block; margin:auto;" width="700">
 </section>
 
 <section>
@@ -185,7 +187,7 @@
     <p>A prototype is an initial version of a software system that is used to demonstrate concepts, try out design options, and find out more about the problem and its possible solutions. Rapid, iterative development of the prototype is essential so that costs are controlled and system stakeholders can experiment with the prototype early in the software process.</p>
     <p>Prototypes do not have to be executable to be useful. Paper-based mock-ups of the system user interface (Rettig, 1994) can be effective in helping users refine an interface design and work through usage scenarios. These are very cheap to develop and can be constructed in a few days. An extension of this technique is a Wizard of Oz prototype where only the user interface is developed. Users interact with this interface but their requests are passed to a person who interprets them and outputs the appropriate response.</p>
 
-    <img src="assets/image10.png" alt="">
+    <img src="assets/image10.png" style="display:block; margin:auto;" width="700">
 
 </section>
 
@@ -214,7 +216,8 @@
     <figcaption><strong>2.3.3 </strong>Boehm’s spiral model</figcaption>
     <p>A risk-driven software process framework (the spiral model) was proposed by Boehm (1988). This is shown in Figure 2.11. Here, the software process is represented as a spiral, rather than a sequence of activities with some backtracking from one activity to another. Each loop in the spiral represents a phase of the software process. Thus, the innermost loop might be concerned with system feasibility, the next loop with requirements definition, the next loop with system design, and so on. The spiral model combines change avoidance with change tolerance. It assumes that changes are a result of project risks and includes explicit risk management activities to reduce these risks.</p>
 
-    <img src="assets/image11.png" alt="">
+
+    <img src="assets/image11.png" style="display:block; margin:auto;" width="700">
 
     <p>Each loop in the spiral is split into four sectors:</p>
     <p>1. <i>Objective setting</i> Specific objectives for that phase of the project are defined. Constraints on the process and the product are identified and a detailed management plan is drawn up. Project risks are identified. Alternative strategies, depending on these risks, may be planned.</p>
@@ -247,7 +250,7 @@
     <p>4. <i>Transition</i> The final phase of the RUP is concerned with moving the system from the development community to the user community and making it work in a real environment. This is something that is ignored in most software process models but is, in fact, an expensive and sometimes problematic activity. On completion of this phase, you should have a documented software system that is working correctly in its operational environment.</p>
 
 
-    <img src="assets/image12.png" alt="">
+    <img src="assets/image12.png" style="display:block; margin:auto;" width="700">
 
     <p>The practice perspective on the RUP describes good software engineering prac tices that are recommended for use in systems development. Six fundamental best practices are recommended:</p>
     <p>1. <i>Develop software iteratively</i> Plan increments of the system based on customer priorities and develop the highest-priority system features early in the development process.</p>
@@ -286,6 +289,9 @@
 
         <section>
             <p>© Systematic.dev. All rights reserved</p>
+
+        <br>
+            <p style="text-align:right;">DEVELOP BY: PAGKALIWAGAN NOILEE ANN S.</p>
         </section>
     </footer>
 
