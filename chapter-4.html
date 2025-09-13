@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>Chapter 4 - Requirements Engineering</title>
 </head>
 <body>
-    <main>
-        <section>
-            <h1>Requirements Engineering</h1>
-            <hr>
-            <h2>Objectives</h2>
-            <p> The objective of this chapter is to introduce software requirements and to discuss the processes involved in discovering and documenting these requirements. When you have read the chapter you will:</p>
-            <ul>
-                <li> understand the concepts of user and system requirements and why these requirements should be written in different ways;</li>
-                <li> understand the differences between functional and nonfunctional software requirements;</li>
-                <li> understand how requirements may be organized in a software requirements document;</li>
-                <li> understand the principal requirements engineering activities of elicitation, analysis and validation, and the relationships between these activities;</li>
-                <li> understand why requirements management is necessary and how it supports other requirements engineering activities.</li>
-            </ul>
-        </section>
+    <header>
+         <section>
+            <img src="assets\logo.png" class="logo">
+            
+         </section>
+            
 
-        <section>
+            <nav>
+                <a href="">Home</a>
+                <a href="">Chapters</a>
+                <a href="">About</a>
+            </nav>
+    </header>
+
+    <aside class="sidebar">
             <h2>Contents</h2>
             <ul>
                 <li>4.1 Functional and non-functional requirements</li>
@@ -31,19 +33,40 @@
                 <li>4.5 Requirements elicitation and analysis</li>
                 <li>4.6 Requirements validation</li>
                 <li>4.7 Requirements management</li>
-                <hr>
+            
             </ul>
+        </aside>
+
+    <main>
+        
+        <section>
+            <h1>Requirements Engineering</h1>
+            <hr>
+            <article>
+                <h2>Objectives</h2>
+            <p> The objective of this chapter is to introduce software requirements and to discuss the processes involved in discovering and documenting these requirements. When you have read the chapter you will:</p>
+            <ul>
+                <li> understand the concepts of user and system requirements and why these requirements should be written in different ways;</li>
+                <li> understand the differences between functional and nonfunctional software requirements;</li>
+                <li> understand how requirements may be organized in a software requirements document;</li>
+                <li> understand the principal requirements engineering activities of elicitation, analysis and validation, and the relationships between these activities;</li>
+                <li> understand why requirements management is necessary and how it supports other requirements engineering activities.</li>
+            </ul>
+            </article>
+            
         </section>
 
+
         <!---introduction-->
-        <section>
+        <section class="introduction">
             <p>System requirements describe what a system should do, the services it provides, and its operational constraints, based on customer needs. The process of discovering, analyzing, documenting, and validating these requirements is called requirements engineering (RE). In practice, the term "requirement" can range from broad, high-level statements to detailed, formal system definitions.</p>
-            <p>Problems in requirements engineering often occur when high-level and detailed requirements are not clearly separated.<b>User requirements</b> are natural language statements with diagrams that describe the services the system should provide and its constraints.<b> System requirements</b> are detailed specifications of functions, services, and constraints, documented in a functional specification that precisely defines what will be implemented and may form part of the contract between buyer and developer.</p>
+            <p>Problems in requirements engineering often occur when high-level and detailed requirements are not clearly separated.<b> User requirements</b> are natural language statements with diagrams that describe the services the system should provide and its constraints.<b> System requirements</b> are detailed specifications of functions, services, and constraints, documented in a functional specification that precisely defines what will be implemented and may form part of the contract between buyer and developer.</p>
         </section>
 
         <!--4.1-->
         <section>
             <article>
+                
                 <h2>4.1 Functional and non-functional requirements</h2>
                 <p>Software system requirements are often classified as functional requirements or non-functional requirements:</p>
                 <ol>
@@ -261,5 +284,28 @@
             </article>
         </section>
     </main>
+
+    <footer>
+        <section>
+            <p><b>Systematic.dev</b></p>
+
+            <p><i class="fa-solid fa-location-dot"></i> 123 Innovation Street, Tech City, 45678</p>
+
+        </section>
+
+        <section>
+            <p><b>CONTACT US</b></p>
+            <i class="fa-solid fa-location-dot"></i>  
+            <i class="fa-brands fa-facebook"></i>  
+            <i class="fa-brands fa-twitter"></i>  
+            <i class="fa-brands fa-instagram"></i>  
+            <i class="fa-brands fa-linkedin"></i> 
+        </section>
+
+        <section>
+            <p>© Systematic.dev. All rights reserved</p>
+            <p>Iverene Grace M. Causapin</p>
+        </section>
+    </footer>
 </body>
 </html>
