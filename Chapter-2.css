@@ -1,0 +1,35 @@
+header{
+    background-color: #FFD6BA;
+    margin:15px 40px 82px 25px;
+    padding: 40px 60px;
+    border-radius: 10px ;
+    border: #e00b16 solid 5px;
+
+}
+
+
+
+    .picture {
+      width: 150px; 
+      height: 100px; 
+    }
+
+
+
+main{
+    margin: 10px;
+    background-color:darksalmon;
+    text-align: justify;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    border-width:20px;
+    border-radius:20px;
+    border: #e00b16 solid 5px;
+}
+
+
+
+
+
+
+
