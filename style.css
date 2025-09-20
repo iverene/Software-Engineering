@@ -4,6 +4,8 @@
     --secondary-color: #1d1fb6;
 
     font-family: Poppins;
+
+    scroll-behavior: smooth;
 }
 
 body {
