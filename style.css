@@ -1,16 +1,26 @@
+:root {
+    --primary-color: #669bbc;
+    --secondary-color: #003049;
+    --header-background: #eee;
+    --white-color: #FFFAFA;
+    --dark-color: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #FFFAFA;
-    color: #333;
+    background-color: var(--white-color);
+    color: var(--dark-color);
     display: grid;
     grid-template-areas: 
     "header header header"
+    "bottom-nav bottom-nav bottom-nav"
     "sidebar main main"
     "footer footer footer";
 }
@@ -19,15 +29,20 @@ h2{
     margin: 10px;
     font-weight: 600;
     padding: 10px;
-    border-style: solid;
-    border-radius: 8px;
-    background-color: #eee;
+    color: var(--primary-color);
 }
 
-h1, h3, p {
-    margin: 15px 0;
+h1, p {
+    margin: 10px 0;
     line-height: 1.6;
     text-align: justify;
+}
+
+h3 {
+    padding: 5px 0;
+    margin: 15px 0;
+    line-height: 1.6;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 ul, ol{
@@ -38,8 +53,8 @@ li {
     margin-left: 10px;  
 }
 
-a:hover, header .brand:hover {
-  color: #0077cc;
+a:hover, header .brand:hover, .bottom-nav a:hover {
+  color: var(--primary-color);
 }
 
 header {
@@ -47,16 +62,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 15px;              
-    background-color: #FFFAFA;
+    padding: 5px 10px;              
+    background-color: var(--white-color);
     height: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 header section {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 18px;
     gap: 10px;
 }
 
@@ -67,7 +82,7 @@ header .logo {
 header .brand {
     font-weight: bold;
     font-size: 1rem;
-    color: #333;
+    color: var(--dark-color);
     text-decoration: none;
     margin-right: 10px;
 }
@@ -75,56 +90,77 @@ header .brand {
 nav{
     flex: 1;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 25px;
     margin: 0 10px;
 }
 
 nav a {
     text-decoration: none;
     font-weight: 500;
-    color: #333;
+    color: var(--dark-color);
     padding: 4px 6px;
 }
 
 .auth {
     display: flex;
-
     align-items: center;
 }
 
 .auth .btn {
-    background-color: #0077cc;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 4px 10px;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
     transition: 0.2s ease;
     margin-left: 10px;
 }
 
 .auth .btn:hover {
-    background-color: #005fa3;
+    background-color: var(--secondary-color);
+}
+
+.bottom-nav {
+    grid-area: bottom-nav;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;              
+    background-color: var(--white-color);
+    height: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.bottom-nav nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--dark-color);
+    padding: 0 6px;
+    font-size: 0.9rem;
 }
 
 .sidebar {
     grid-area: sidebar;
-    width: 250px;
-    background-color: #FFFAFA;
-    margin-top: 10px;;
-    padding: 20px 10px;
+    width: 300px;
+    background-color: var(--white-color);
+    padding: -25px 15px;
+    margin-left: 5px;
 }
 
 .sidebar-content {
     position: sticky;
     top: 0;
-}
-
-.sidebar h2 {
-    padding-top: 10px; 
-
 }
 
 .sidebar ul {
@@ -149,45 +185,49 @@ nav a {
 }
 
 .sidebar a:hover {
-    background-color: #0077cc;
-    color: #f9f9f9;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 main {
     grid-area: main;
-    margin-right: 150px;
-    padding: 30px 40px;
+    margin-right: 200px;
+    padding: 0 20px;
 }
 
 section {
+    padding-top: 15px;
     margin-bottom: 30px;
 }
 
 .introduction {
-    background-color: #eee;
+    background-color: var(--white-color);
     padding: 20px;
     border-style: solid;
+    border-color: var(--primary-color);
     border-radius: 8px;
 }
 
 img {
     max-width: 100%;
     height: auto;
-    display: block; margin: 0 auto;
+    display: block; 
+    margin: 0 auto;
 }
 
 footer {
     grid-area: footer;
     text-align: center;
     padding: 15px;
-    border-top: 1px solid #6d6e71;
-    background-color: #333;
-    color: #f1e4e4;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
+
+
 
 
 
