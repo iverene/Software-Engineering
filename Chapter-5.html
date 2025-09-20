@@ -5,6 +5,7 @@
     <title>Chapter 5</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
@@ -15,7 +16,16 @@
             
 
         <nav>
-            <a href="">Chapters ▼</a>
+            <div class="chapter-dropdown">
+                <button class="chapter-button">Chapters ▼</button>
+                <div class="chapter-content">
+                    <a href="Chapter1.html">Chapter 1</a>
+                    <a href="Chapter-2.html">Chapter 2</a>
+                    <a href="Chapter-3.html">Chapter 3</a>
+                    <a href="Chapter-4.html">Chapter 4</a>
+                    <a href="Chapter-5.html">Chapter 5</a>
+                </div>
+            </div> 
             <a href="">Projects</a>
             <a href="">Blog</a>
             <a href="">About</a>
@@ -400,7 +410,24 @@
     </main>
 
     <footer>
-        <h1>Bagunas, John Rey V.</h1>
+        <section class="footer-section">
+            <p><b>Systematic.dev</b></p>
+            <p><i class="fa-solid fa-location-dot"></i> 123 Innovation Street, Tech City, 45678</p>
+        </section>
+
+        <section class="footer-section">
+            <p><b>CONTACT US</b></p> 
+            <i class="fa-brands fa-facebook"></i>  
+            <i class="fa-brands fa-twitter"></i>  
+            <i class="fa-brands fa-instagram"></i>  
+            <i class="fa-brands fa-linkedin"></i> 
+        </section>
+
+        <section class="footer-section">
+            <p>© Systematic.dev. All rights reserved</p>
+            <p><b>Bagunas, Johnrey V.</b></p>
+        </section>
+
     </footer>
     
 </body>

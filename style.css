@@ -100,6 +100,49 @@ nav a {
     background-color: var(--secondary-color);
 }
 
+.chapter-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.chapter-dropdown .chapter-button {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;  
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: var(--secondary-color);
+  padding: 14px 16px;
+  background-color: var(--main-white);
+  margin: 0;
+}
+
+.chapter-content {
+  display: none;
+  position: absolute;
+  background-color: var(--main-white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.chapter-content a {
+  float: none;
+  color: var(--secondary-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.chapter-content a:hover {
+  background-color: var(--secondary-color);
+}
+
+.chapter-dropdown:hover .chapter-content {
+  display: block;
+}
+
 main{
     background-color: var(--main-white);
     padding: 20px;
@@ -124,17 +167,6 @@ article{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-footer{
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    color: var(--main-white);
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    font-size: 0.8em;
-}
-
 .introduction{
     background-color: var(--secondary-color);
     padding: 20px;
@@ -151,7 +183,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    border: #1d1fb6 5px solid;
+    border: var(--secondary-color) 5px solid;
     border-radius: 10px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -212,3 +244,29 @@ hr {
 #figure5-10{
     width: 20%;
 }
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.footer-section {
+    background-color: var(--secondary-color);
+    color: var(--main-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10px;
+    column-gap: 25px;
+}
+
+.fa-solid, .fa-brands {
+  color: var(--main-white);  
+}
+
+
