@@ -30,6 +30,16 @@
             <a href="">Blog</a>
             <a href="">About</a>
             <a href="">Contact</a>
+            <div class="content-dropdown">
+                <button class="content-button">Contents ▼</button>
+                <div class="content-container">
+                    <a href="#Chapter5-1">Chapter 5.1</a>
+                    <a href="#Chapter5-2">Chapter 5.2</a>
+                    <a href="#Chapter5-3">Chapter 5.3</a>
+                    <a href="#Chapter5-4">Chapter 5.4</a>
+                    <a href="#Chapter5-5">Chapter 5.5</a>
+                </div>
+            </div> 
         </nav>
 
         <div class="auth">
@@ -52,17 +62,6 @@
                     <li>have been introduced to some of the diagram types in the Unified Modeling Language (UML) and how these diagrams may be used in system modeling;</li>
                     <li>be aware of the ideas underlying model-driven engineering, where a system is automatically generated from structural and behavioral models.</li>
                 </ul>
-            </article>
-
-            <article>
-                <h2>Contents</h2> 
-                <ol>
-                    <li><a href="#Chapter5-1">Context models</a></li>
-                    <li><a href="#Chapter5-2">Interaction models</a></li>
-                    <li><a href="#Chapter5-3">Structural models</a></li>
-                    <li><a href="#Chapter5-4">Behavioral models</a></li>
-                    <li><a href="#Chapter5-5">Model-driven engineering</a></li>
-                </ol>
             </article>
 
             <article>
@@ -109,9 +108,9 @@
 
         </section>
 
-        <section>
+        <section id="Chapter5-1">
             <article>
-                <h2 id="Chapter5-1">5.1 Context Models</h2>
+                <h2 >5.1 Context Models</h2>
             
                 <p>Early in system specification, it’s important to define the system boundaries—determining what functionality will be handled by the system itself and what will remain in the environment or be managed by other systems. This requires collaboration with stakeholders to decide which business processes will be automated and which will remain manual or external. Identifying overlaps with existing systems is also crucial to avoid redundancy. Making these decisions early helps reduce system costs and simplifies requirements and design. In some cases, the boundary is obvious—such as replacing an old system—while in others, it must be clarified during requirements engineering.</p>
 
@@ -144,9 +143,9 @@
             </article> 
         </section>
 
-        <section>
+        <section id="Chapter5-2">
             <article>
-                <h2 id="Chapter5-2">5.2 Interaction models</h2>
+                <h2>5.2 Interaction models</h2>
                 <p>All systems involve some form of interaction—between users and the system, between the system and other systems, or among components within the system. Modeling these interactions is crucial: user interaction models help identify user requirements; system-to-system interaction models reveal potential communication issues; and component interaction models help assess whether the system’s structure can meet performance and reliability goals.</p>
                 <p>Two key approaches to interaction modeling are:</p>
                 <ol>
@@ -223,8 +222,8 @@
                 <p>Thus, sequence diagrams at this stage should prioritize key interactions and general workflows, while more detailed interactions can be added later when the design and implementation choices are clearer.</p>
             </article>
 
-            <article>
-                <h2 id="Chapter5-3">5.3 Structural models</h2>
+            <article id="Chapter5-3">
+                <h2>5.3 Structural models</h2>
                 <p>Structural models represent a system's components and their relationships. These can be static models (showing the system's design) or dynamic models (showing how the system behaves during execution). While static models focus on system architecture, dynamic models illustrate its runtime behavior.</p>
                 <p>In architectural design, UML component, package, and deployment diagrams are commonly used. This section specifically focuses on class diagrams to model the static structure of an object-oriented system.</p>
 
@@ -278,9 +277,9 @@
             </article>
         </section>
 
-        <section>
+        <section id="Chapter5-4">
             <article>
-                <h2 id="Chapter5-4">5.4 Behavioral models</h2>
+                <h2>5.4 Behavioral models</h2>
                 <p>Behavioral models represent the dynamic aspects of a system during its execution, showing how the system responds to stimuli from its environment. These stimuli can be of two types:</p>
                 <ol>
                     <li>Data: This refers to incoming data that the system needs to process.</li>
@@ -353,9 +352,9 @@
             </article>
         </section>
 
-        <section>
+        <section id="Chapter5-5">
             <article>
-                <h2 id="Chapter5-5">5.5 Model-driven engineering</h2>
+                <h2>5.5 Model-driven engineering</h2>
                 <p>Model-driven engineering (MDE) is a software development approach where the primary outputs are models rather than traditional code. The models serve as high-level representations of the system, and the actual program code is automatically generated from these models.</p>
                 <p>The key idea behind MDE is that it raises the level of abstraction in the development process. Engineers focus on creating models that describe the system's behavior, structure, and functionality, without having to worry about low-level details such as programming languages or platform-specific execution concerns. This can potentially lead to faster development cycles, improved consistency, and easier maintenance by automating code generation directly from the models.</p>
                 <p>Model-Driven Engineering (MDE) has its origins in Model-Driven Architecture (MDA), which was introduced by the Object Management Group (OMG) in 2001 as a new approach to software development. While MDE and MDA are often used interchangeably, MDE is broader in scope.</p>

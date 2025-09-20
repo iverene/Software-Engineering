@@ -100,12 +100,12 @@ nav a {
     background-color: var(--secondary-color);
 }
 
-.chapter-dropdown {
+.chapter-dropdown, .content-dropdown {
   float: left;
   overflow: hidden;
 }
 
-.chapter-dropdown .chapter-button {
+.chapter-dropdown .chapter-button, .content-dropdown .content-button {
   font-family: Poppins, sans-serif;
   font-size: 16px;  
   font-weight: bold;
@@ -117,7 +117,7 @@ nav a {
   margin: 0;
 }
 
-.chapter-content {
+.chapter-content, .content-container {
   display: none;
   position: absolute;
   background-color: var(--main-white);
@@ -135,11 +135,20 @@ nav a {
   text-align: left;
 }
 
-.chapter-content a:hover {
+.content-container a {
+  float: none;
+  color: var(--secondary-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.chapter-content a:hover, .content-container a:hover {
   background-color: var(--secondary-color);
 }
 
-.chapter-dropdown:hover .chapter-content {
+.chapter-dropdown:hover .chapter-content, .content-dropdown:hover .content-container {
   display: block;
 }
 
