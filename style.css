@@ -64,6 +64,15 @@ nav a {
     transition: 0.2s ease;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
+.chapter-content a:hover, .content-container a:hover {
+    color: var(--main-white);
+    text-decoration: none;
+}
+
 .auth {
     display: flex;
     align-items: center;
@@ -124,6 +133,7 @@ nav a {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-radius: 10px;
 }
 
 .chapter-content a {
@@ -150,6 +160,12 @@ nav a {
 
 .chapter-dropdown:hover .chapter-content, .content-dropdown:hover .content-container {
   display: block;
+}
+
+.auth .btn:hover {
+    background-color: var(--secondary-color);
+    padding: 6px 10px;
+    color: var(--main-white);
 }
 
 main{
@@ -232,15 +248,6 @@ h2:hover{
 a{
     text-decoration:double;
     color: var(--secondary-color);
-}
-
-a:hover{
-    color: var(--main-white);
-    background-color: var(--secondary-color);
-    transition: 0.3s;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 hr {
