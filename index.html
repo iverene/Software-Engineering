@@ -3,81 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
     <title>Software Engineering</title>
 </head>
 <body>
     <header>
-        <section>
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/040/867/093/small_2x/technology-logo-computer-and-data-related-business-hi-tech-and-innovative-vector.jpg" alt="logo">
-            <p><b>Systematic.dev</b></p>
-        </section>
-        
+        <div class="logo-section">
+            <a href="index.html" class="brand">Systematic.dev</a>
+        </div>
+            
+        <nav>
+            <a href="">Projects</a>
+            <a href="">Blog</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <div class="auth">
+            <a href="" class="btn">Login / Sign Up</a>
+        </div>
     </header>
+
     <main>
-
-        <section>
-            <h1>Software Engineering</h1>
-
+        <section id="Intro">
+            <article>
+                <h1 class="introduction">Software Engineering</h1>
+                <p class="intro-description">Master the principles and practices of modern software development</p>
+            </article>
         </section>
         
-        <section>
-            <h2>Introduction</h2>
-            <span>Chapter 1</span>
-            <button onclick="location.href='Chapter-1.html'">View more</button>
-        </section>
+        <div class="chapter-grid">
+            <div class="chapter-card">
+                <h2>Introduction</h2>
+                <span class="chapter-number">Chapter 1</span>
+                <p class="chapter-description">Fundamentals of software engineering, including key concepts, methodologies, and the software development lifecycle.</p>
+                <button class="view-btn" onclick="location.href='Chapter1.html'">View More</button>
+            </div>
 
-        <section>
-            <h2>Software processes</h2>
-            <span>Chapter 2</span>
-            <button onclick="location.href='Chapter-2.html'">View more</button>
-        </section>
+            <div class="chapter-card">
+                <h2>Software Processes</h2>
+                <span class="chapter-number">Chapter 2</span>
+                <p class="chapter-description">Understanding various software development processes, from traditional waterfall to modern iterative approaches.</p>
+                <button class="view-btn" onclick="location.href='Chapter-2.html'">View More</button>
+            </div>
 
-        <section>
-            <h2>Agile software development</h2>
-            <span>Chapter 3</span>
-            <button onclick="location.href='Chapter-3.html'">View more</button>
-        </section>
+            <div class="chapter-card">
+                <h2>Agile Software Development</h2>
+                <span class="chapter-number">Chapter 3</span>
+                <p class="chapter-description">Explore agile methodologies, including Scrum, Kanban, and the principles of adaptive software development.</p>
+                <button class="view-btn" onclick="location.href='Chapter-3.html'">View More</button>
+            </div>
 
-        <section>
-            <h2>Requirements engineering</h2>
-            <span>Chapter 4</span>
-            <button onclick="location.href='Chapter-4.html'">View more</button>
-        </section>
+            <div class="chapter-card">
+                <h2>Requirements Engineering</h2>
+                <span class="chapter-number">Chapter 4</span>
+                <p class="chapter-description">Learn how to gather, analyze, and document software requirements effectively for successful project delivery.</p>
+                <button class="view-btn" onclick="location.href='Chapter-4.html'">View More</button>
+            </div>
 
-        <section>
-            <h2>System modeling</h2>
-            <span>Chapter 5</span>
-            <button onclick="location.href='Chapter-5.html'">View more</button>
-        </section>
-
+            <div class="chapter-card">
+                <h2>System Modeling</h2>
+                <span class="chapter-number">Chapter 5</span>
+                <p class="chapter-description">Master UML diagrams and modeling techniques to design and document software system architecture.</p>
+                <button class="view-btn" onclick="location.href='Chapter-5.html'">View More</button>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <section>
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/040/867/093/small_2x/technology-logo-computer-and-data-related-business-hi-tech-and-innovative-vector.jpg" alt="logo">
+        <section class="footer-section">
             <p><b>Systematic.dev</b></p>
-
             <p><i class="fa-solid fa-location-dot"></i> 123 Innovation Street, Tech City, 45678</p>
-
         </section>
 
-        <section>
-            <p><b>CONTACT US</b></p>
-            <i class="fa-solid fa-location-dot"></i>  
-            <i class="fa-brands fa-facebook"></i>  
-            <i class="fa-brands fa-twitter"></i>  
-            <i class="fa-brands fa-instagram"></i>  
-            <i class="fa-brands fa-linkedin"></i> 
+        <section class="footer-section">
+            <p><b>CONTACT US</b></p> 
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>  
+                <i class="fa-brands fa-twitter"></i>  
+                <i class="fa-brands fa-instagram"></i>  
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
         </section>
 
-        <section>
+        <section class="footer-section">
             <p>© Systematic.dev. All rights reserved</p>
+            <p><b>Bagunas, Johnrey V.</b></p>
         </section>
     </footer>
-    
 </body>
 </html>
