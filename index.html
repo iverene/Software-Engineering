@@ -4,148 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Engineering - Systematic.dev</title>
-    <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-
-        .chapter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .chapter-card {
-            background-color: var(--content-bg-color);
-            padding: 30px;
-            border-radius: 10px;
-            color: var(--secondary-color);
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            transition: 0.3s ease;
-            text-align: justify;
-        }
-
-        .chapter-card:hover {
-            transform: translateY(-5px);
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        }
-
-        .chapter-card h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-            transition: 0.3s;
-        }
-
-        .chapter-card h2:hover {
-            color: var(--main-white);
-            background-color: var(--secondary-color);
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        }
-
-        .chapter-number {
-            font-weight: bold;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            display: block;
-            font-size: 0.9em;
-        }
-
-        .chapter-description {
-            margin: 15px 0;
-            line-height: 1.6;
-            font-size: 0.95em;
-        }
-
-        .view-btn {
-            background-color: var(--secondary-color);
-            color: var(--main-white);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .view-btn:hover {
-            background-color: var(--main-white);
-            color: var(--secondary-color);
-            box-shadow: 0 0 0 2px var(--secondary-color);
-        }
-
-        .intro-description {
-            margin-top: 15px;
-            font-size: 1.2em;
-            opacity: 0.9;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="/src/output.css">
 </head>
-<body>
-    <header>
-        <div class="logo-section">
-            <a href="index.html" class="brand">Systematic.dev</a>
-        </div>
+<body class="bg-main-white text-main-blue min-h-screen flex flex-col font-poppins">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" class="brand-logo">Systematic.dev</a>
+            </div>
             
-        <nav>
-            <a href="">Projects</a>
-            <a href="">Blog</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-        </nav>
+            <nav class="nav-menu">
+                <a href="" class="nav-link">Projects</a>
+                <a href="" class="nav-link">Blog</a>
+                <a href="" class="nav-link">About</a>
+                <a href="" class="nav-link">Contact</a>
+            </nav>
 
-        <div class="auth">
-            <a href="" class="btn">Login / Sign Up</a>
+            <div class="auth-container">
+                <a href="" class="auth-btn">Login / Sign Up</a>
+            </div>
         </div>
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="main-content">
+
         <section id="Intro">
-            <article>
-                <h1 class="introduction">Software Engineering</h1>
+            <article class="intro-article">
+                <h1 class="page-title">Software Engineering</h1>
                 <p class="intro-description">Master the principles and practices of modern software development</p>
             </article>
         </section>
         
+        <!-- Chapter Grid -->
         <div class="chapter-grid">
+            <!-- Chapter 1 -->
             <div class="chapter-card">
-                <h2>Introduction</h2>
+                <h2 class="chapter-title">Introduction</h2>
                 <span class="chapter-number">Chapter 1</span>
                 <p class="chapter-description">Fundamentals of software engineering, including key concepts, methodologies, and the software development lifecycle.</p>
                 <button class="view-btn" onclick="location.href='Chapter1.html'">View More</button>
             </div>
 
+            <!-- Chapter 2 -->
             <div class="chapter-card">
-                <h2>Software Processes</h2>
+                <h2 class="chapter-title">Software Processes</h2>
                 <span class="chapter-number">Chapter 2</span>
                 <p class="chapter-description">Understanding various software development processes, from traditional waterfall to modern iterative approaches.</p>
                 <button class="view-btn" onclick="location.href='Chapter-2.html'">View More</button>
             </div>
 
+            <!-- Chapter 3 -->
             <div class="chapter-card">
-                <h2>Agile Software Development</h2>
+                <h2 class="chapter-title">Agile Software Development</h2>
                 <span class="chapter-number">Chapter 3</span>
                 <p class="chapter-description">Explore agile methodologies, including Scrum, Kanban, and the principles of adaptive software development.</p>
                 <button class="view-btn" onclick="location.href='Chapter-3.html'">View More</button>
             </div>
 
+            <!-- Chapter 4 -->
             <div class="chapter-card">
-                <h2>Requirements Engineering</h2>
+                <h2 class="chapter-title">Requirements Engineering</h2>
                 <span class="chapter-number">Chapter 4</span>
                 <p class="chapter-description">Learn how to gather, analyze, and document software requirements effectively for successful project delivery.</p>
                 <button class="view-btn" onclick="location.href='Chapter-4.html'">View More</button>
             </div>
 
+            <!-- Chapter 5 -->
             <div class="chapter-card">
-                <h2>System Modeling</h2>
+                <h2 class="chapter-title">System Modeling</h2>
                 <span class="chapter-number">Chapter 5</span>
                 <p class="chapter-description">Master UML diagrams and modeling techniques to design and document software system architecture.</p>
                 <button class="view-btn" onclick="location.href='Chapter-5.html'">View More</button>
@@ -153,25 +83,26 @@
         </div>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="site-footer">
         <section class="footer-section">
-            <p><b>Systematic.dev</b></p>
-            <p><i class="fa-solid fa-location-dot"></i> 123 Innovation Street, Tech City, 45678</p>
+            <p class="footer-text-bold">Systematic.dev</p>
+            <p class="footer-text"><i class="fa-solid fa-location-dot social-icon"></i> 123 Innovation Street, Tech City, 45678</p>
         </section>
 
         <section class="footer-section">
-            <p><b>CONTACT US</b></p> 
+            <p class="footer-text-bold">CONTACT US</p> 
             <div class="social-icons">
-                <i class="fa-brands fa-facebook"></i>  
-                <i class="fa-brands fa-twitter"></i>  
-                <i class="fa-brands fa-instagram"></i>  
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-facebook social-icon"></i>  
+                <i class="fa-brands fa-twitter social-icon"></i>  
+                <i class="fa-brands fa-instagram social-icon"></i>  
+                <i class="fa-brands fa-linkedin social-icon"></i>
             </div>
         </section>
 
         <section class="footer-section">
-            <p>© Systematic.dev. All rights reserved</p>
-            <p><b>Bagunas, Johnrey V.</b></p>
+            <p class="footer-text">© Systematic.dev. All rights reserved</p>
+            <p class="footer-text-bold">Bagunas, Johnrey V.</p>
         </section>
     </footer>
 </body>

@@ -1,1 +1,170 @@
 @import "tailwindcss";
+
+@theme {
+    --color-main-white: #f7f9fe;
+    --color-content-bg: #bed2ff;
+    --color-main-blue: #1d1fb6;
+    
+    --font-family-poppins: 'Poppins', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: var(--font-family-poppins);
+}
+
+@layer components {
+    /* Header and Navigation */
+    .site-header {
+        @apply sticky top-0 z-50 bg-main-white shadow-md;
+    }
+    
+    .header-container {
+        @apply flex items-center justify-between px-4 py-3 h-14;
+    }
+    
+    .brand-logo {
+        @apply text-main-blue font-bold text-base no-underline px-2 py-1 rounded-lg;
+    }
+    
+    .nav-menu {
+        @apply hidden md:flex-1 md:flex justify-center items-center gap-6;
+    }
+    
+    .nav-link {
+        @apply no-underline font-semibold text-main-blue px-2.5 py-1.5 rounded-md hover:underline transition-all duration-200;
+    }
+    
+    .auth-container {
+        @apply hidden md:flex items-center;
+    }
+    
+    .auth-btn {
+        @apply rounded-md no-underline font-semibold transition-all duration-200 ml-2.5 px-2.5 py-1.5 text-main-blue hover:bg-main-blue hover:text-main-white;
+    }
+    
+    /* Main Content */
+    .main-content {
+        @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5 -mt-12;
+    }
+    
+    .intro-article {
+        @apply bg-content-bg p-5 rounded-lg m-5 text-main-blue shadow-md my-15;
+    }
+    
+    .page-title {
+        @apply text-xl bg-main-blue p-5 rounded-lg m-5 text-main-white text-center shadow-md md:text-5xl font-bold;
+    }
+    
+    .intro-description {
+        @apply text-base mt-4 opacity-90 text-center md:text-xl;
+    }
+    
+    /* Chapter Grid */
+    .chapter-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 my-15;
+    }
+    
+    .chapter-card {
+        @apply lg:col-span-3 bg-content-bg p-7 rounded-lg text-main-blue shadow-md hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 text-justify;
+    }
+    
+    .chapter-title {
+        @apply text-2xl mb-2.5 text-main-blue font-bold hover:text-main-white hover:bg-main-blue hover:p-2.5 hover:rounded-md hover:shadow-md transition-all duration-300;
+    }
+    
+    .chapter-number {
+        @apply font-bold text-main-blue mb-4 block text-sm;
+    }
+    
+    .chapter-description {
+        @apply my-4 leading-relaxed text-sm;
+    }
+    
+    .view-btn {
+        @apply bg-main-blue text-main-white px-5 py-2.5 border-none rounded-md font-semibold cursor-pointer transition-all duration-300 no-underline inline-block mt-2.5 hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue;
+    }
+    
+    /* Article Styling */
+    .article-content {
+        @apply bg-content-bg p-5 rounded-lg m-5 text-main-blue shadow-md;
+    }
+    
+    .section-content {
+        @apply bg-main-white p-5 rounded-lg m-5;
+    }
+    
+    /* Images */
+    .content-image {
+        @apply block mx-auto w-1/2 border-4 border-main-blue rounded-lg shadow-2xl my-10;
+    }
+    
+    .image-caption {
+        @apply mt-5 mb-5 text-center italic text-main-blue;
+    }
+    
+    /* Typography */
+    .heading-1 {
+        @apply text-center text-5xl font-bold text-main-blue;
+    }
+    
+    .heading-2 {
+        @apply text-left text-2xl font-semibold text-main-blue hover:text-main-white hover:bg-main-blue hover:p-1.5 hover:rounded-md hover:shadow-md transition-all duration-300;
+    }
+    
+    /* Links */
+    .content-link {
+        @apply underline text-main-blue hover:text-main-white hover:no-underline transition-colors;
+    }
+    
+    /* Divider */
+    .divider {
+        @apply h-px bg-main-blue border-none m-5;
+    }
+    
+    /* Footer */
+    .site-footer {
+        @apply text-center p-4 bg-main-blue flex items-center justify-center gap-6;
+    }
+    
+    .footer-section {
+        @apply h-15 bg-main-blue text-main-white flex justify-around items-center gap-6;
+    }
+    
+    .footer-text {
+        @apply m-0;
+    }
+    
+    .footer-text-bold {
+        @apply font-bold m-0;
+    }
+    
+    .social-icons {
+        @apply flex gap-3;
+    }
+    
+    .social-icon {
+        @apply text-main-white cursor-pointer hover:opacity-75 transition-opacity;
+    }
+    
+    /* Dropdown Components */
+    .dropdown-container {
+        @apply relative inline-block;
+    }
+    
+    .dropdown-button {
+        @apply font-semibold text-base font-bold border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
+    }
+    
+    .dropdown-content {
+        @apply hidden absolute bg-main-white min-w-40 shadow-xl z-10 rounded-lg m-2;
+    }
+    
+    .dropdown-container:hover .dropdown-content {
+        @apply block;
+    }
+    
+    .dropdown-link {
+        @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
+    }
+}
