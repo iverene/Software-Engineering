@@ -153,7 +153,7 @@ body {
     }
     
     .dropdown-button {
-        @apply font-semibold text-base font-bold border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
+        @apply text-base font-bold border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
     }
     
     .dropdown-content {
