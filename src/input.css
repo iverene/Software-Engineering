@@ -199,6 +199,10 @@ body {
     }
     
     /* Footer */
+    .table-footer td {
+        @apply py-2 border-b-1 xl:border-none;
+    }
+
     .site-footer {
         @apply text-center p-4 bg-main-blue flex items-center justify-center gap-6;
     }
@@ -208,11 +212,11 @@ body {
     }
     
     .footer-text {
-        @apply m-0;
+        @apply text-main-white m-0;
     }
     
     .footer-text-bold {
-        @apply font-bold m-0;
+        @apply text-main-white font-bold m-0;
     }
     
     .social-icons {
