@@ -16,6 +16,9 @@ body {
 }
 
 @layer components {
+    h1 {
+        @apply text-left text-3xl lg:text-4xl font-extrabold text-main-blue
+    }
     h2 {
         @apply text-2xl font-bold text-main-blue mb-6;
     }
@@ -24,7 +27,7 @@ body {
     }
 
     p {
-        @apply text-base mb-4 leading-8 md:leading-9 text-neutral-gray;
+        @apply text-base leading-8 md:leading-9 text-neutral-gray;
     }
 
     .text-bold {
@@ -32,11 +35,15 @@ body {
     }
 
     hr {
-        @apply my-8 border-t-2 border-light-blue;
+        @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
     }
 
     ul {
         @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+    }
+
+    .border-title {
+        @apply border-b-2 pb-2;
     }
     
     .table-of-contents {
@@ -57,11 +64,11 @@ body {
     }
 
     .brand-container {
-        @apply flex items-center;
+        @apply flex items-center px-4 py-3;
     }
     
     .brand-logo {
-        @apply text-main-blue font-bold text-base no-underline px-2 py-1 rounded-lg;
+        @apply text-main-blue text-base no-underline px-2 py-1 rounded-lg;
     }
 
     .logo {
@@ -77,7 +84,7 @@ body {
     }
     
     .nav-link {
-        @apply no-underline font-semibold text-main-blue px-2.5 py-1.5 rounded-md hover:underline transition-all duration-200;
+        @apply no-underline text-main-blue px-2.5 py-1.5 rounded-md hover:underline transition-all duration-200;
     }
 
     .auth-container {
@@ -85,7 +92,7 @@ body {
     }
     
     .auth-btn {
-        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-light-blue font-semibold transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
+        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-light-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
     }
     
     /* Main Content */
@@ -137,6 +144,14 @@ body {
     
     .section-content {
         @apply bg-main-white p-5 rounded-lg m-5;
+    }
+
+    section {
+        @apply xl:pt-10;
+    }
+
+    article {
+        @apply mt-10;
     }
     
     /* Images */
@@ -198,7 +213,7 @@ body {
     }
     
     .dropdown-button {
-        @apply text-base font-bold border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
+        @apply text-base border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
     }
     
     .dropdown-content {
