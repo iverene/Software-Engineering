@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-    --color-main-white: #f7f9fe;
-    --color-content-bg: #bed2ff;
-    --color-main-blue: #1d1fb6;
+    --color-main-white: #f9fafc;
+    --color-content-bg: #dbe4ff;
+    --color-main-blue: #2596be;
+    --color-light-blue: #67bed9;
+    --color-neutral-gray: #2b2b2b;
     
     --font-family-poppins: 'Poppins', sans-serif;
 }
@@ -14,6 +16,37 @@ body {
 }
 
 @layer components {
+    h2 {
+        @apply text-2xl font-bold text-main-blue mb-6;
+    }
+    h3 {
+        @apply text-xl font-semibold text-main-blue mb-4;
+    }
+
+    p {
+        @apply text-base mb-4 leading-8 md:leading-9 text-neutral-gray;
+    }
+
+    .text-bold {
+        @apply font-bold text-main-blue;
+    }
+
+    hr {
+        @apply my-8 border-t-2 border-light-blue;
+    }
+
+    ul {
+        @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+    }
+    
+    .table-of-contents {
+        @apply list-none space-y-3;
+    }
+
+    .table-of-contents li {
+        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:underline underline-offset-8 hover:text-main-blue hover:border-main-blue lg:text-sm;
+    }
+
     /* Header and Navigation */
     .site-header {
         @apply sticky top-0 z-50 bg-main-white shadow-md;
@@ -22,9 +55,17 @@ body {
     .header-container {
         @apply flex items-center justify-between px-4 py-3 h-14;
     }
+
+    .brand-container {
+        @apply flex items-center;
+    }
     
     .brand-logo {
         @apply text-main-blue font-bold text-base no-underline px-2 py-1 rounded-lg;
+    }
+
+    .logo {
+        @apply h-8;
     }
     
     .nav-menu {
@@ -34,13 +75,13 @@ body {
     .nav-link {
         @apply no-underline font-semibold text-main-blue px-2.5 py-1.5 rounded-md hover:underline transition-all duration-200;
     }
-    
+
     .auth-container {
         @apply hidden md:flex items-center;
     }
     
     .auth-btn {
-        @apply rounded-md no-underline font-semibold transition-all duration-200 ml-2.5 px-2.5 py-1.5 text-main-blue hover:bg-main-blue hover:text-main-white;
+        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-light-blue font-semibold transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
     }
     
     /* Main Content */
@@ -166,5 +207,13 @@ body {
     
     .dropdown-link {
         @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
+    }
+
+    .table-container {
+        @apply border-collapse border border-light-blue w-full mb-6 mt-4;
+    }
+
+    .table-container th, .table-container td {
+        @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
     }
 }
