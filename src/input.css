@@ -54,6 +54,10 @@ body {
         @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:underline underline-offset-8 hover:text-main-blue hover:border-main-blue lg:text-sm;
     }
 
+    .table-of-contents li a.active {
+        @apply text-[#2596be] font-semibold border-[#2596be];
+    }
+
     /* Header and Navigation */
     .site-header {
         @apply sticky top-0 z-50 bg-main-white shadow-md;
@@ -162,6 +166,14 @@ body {
     .image-caption {
         @apply mt-5 mb-5 text-center italic text-main-blue;
     }
+
+    .images-container {
+        @apply flex justify-center items-center my-6;
+    }
+
+    .images {
+        @apply max-w-full h-auto;
+    }
     
     /* Typography */
     .heading-1 {
@@ -235,4 +247,5 @@ body {
     .table-container th, .table-container td {
         @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
     }
+
 }
