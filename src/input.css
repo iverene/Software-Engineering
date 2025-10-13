@@ -27,7 +27,7 @@ body {
     }
 
     p {
-        @apply text-base leading-8 md:leading-9 text-neutral-gray;
+        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3;
     }
 
     .text-bold {
@@ -38,8 +38,12 @@ body {
         @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
     }
 
-    ul {
+    ul, ol {
         @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+    }
+
+    ol {
+        @apply list-decimal list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
     }
 
     .border-title {
@@ -246,6 +250,10 @@ body {
 
     .table-container th, .table-container td {
         @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
+    }
+
+    .box-container {
+        @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
     }
 
 }
