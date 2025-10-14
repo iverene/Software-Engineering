@@ -21,6 +21,7 @@
                 <i class="fas fa-bars text-xl"></i>
             </button>
 
+            <!-- Navigation  -->
             <nav class="nav-menu">
                 <div class="dropdown-container">
                         <button class="dropdown-button">Chapters ▼</button>
@@ -32,7 +33,6 @@
                             <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
                         </div>
                     </div>
-
                 <a href="" class="nav-link">Tutorials ▼</a>
                 <a href="" class="nav-link">Projects</a>
             </nav>
@@ -48,6 +48,8 @@
              grid-cols-1 
              lg:grid-cols-[250px_minmax(0,1fr)] 
              lg:items-start">
+        
+        <!-- Desktop view of Table of Contents  -->
         <aside class="hidden lg:block w-[250px] sticky top-20 self-start lg:pl-5">
                     <h2>Table of Contents</h2>
                     <ul class="table-of-contents">
@@ -60,7 +62,8 @@
                         <li><a href="#sec-4-7">4.7 Requirements management</a></li>
                     </ul>
         </aside>
-        
+
+        <!-- Main Contents  -->
         <div class="flex flex-col lg:px-20 ">
             <section class="mt-0">
                 <h1>Requirements Engineering</h1>
@@ -88,6 +91,7 @@
                     </table>
                 </section>
                 
+                <!-- Objectives  -->
                 <article class="box-container">
                     <h2 class="border-title">Objectives</h2>
                     <p>The objective of this chapter is to introduce software requirements and to discuss the processes involved in discovering and documenting these requirements. When you have read the chapter you will:</p>
@@ -101,6 +105,7 @@
                 </article>
             </section>
 
+            <!-- Mobile view of Table of Contents  -->
             <aside class="block lg:hidden mt-10">
                 <hr class="mb-3">
                     <h2>Table of Contents</h2>
@@ -315,8 +320,7 @@
                         <li>Information about other activities that might be going on at the same time.</li>
                         <li>A description of the system state when the scenario finishes.</li>
                     </ol>
-                    </div>
-                    
+                    </div>   
                 </article>
                 
                 <article>
@@ -324,8 +328,7 @@
                     <p><span class="text-bold">Use cases</span> are a key requirements discovery technique introduced in the Objectory method and now central to UML. At their core, they identify the <span class="text-bold">actors</span> (users or systems) involved and the <span class="text-bold">type of interaction</span> with the system. Beyond this, use cases are expanded with <span class="text-bold">textual descriptions</span> or <span class="text-bold">graphical models</span> (e.g., UML sequence or state charts) to illustrate the details of how the interaction unfolds. This helps clarify system behavior and ensures stakeholders understand how the system will be used.</p>
                     <div class="images-container">
                         <img src="assets\4.7.png" alt="use cases" class="images">
-                    </div>
-                    
+                    </div>   
                 </article>
 
                 <article>
@@ -358,7 +361,6 @@
 
                     </div>
                     
-
                     <div class="images-container">
                         <img src="assets\4.9.png" alt="" class="images">
                     </div>
@@ -370,8 +372,7 @@
                             <li><span class="text-bold">Prototyping</span> - In this approach to validation, an executable model of the system in question is demonstrated to end-users and customers. They can experiment with this model to see if it meets their real needs.</li>
                             <li><span class="text-bold">Test-case generation</span> - Requirements should be testable. If the tests for the requirements are devised as part of the validation process, this often reveals requirements problems.</li>
                         </ol>
-                    </div>
-                    
+                    </div>    
                 </article>
             </section>
 
@@ -390,8 +391,6 @@
                         <li><span class="text-bold">Diverse user communities</span> — large systems serve many users with varying, sometimes conflicting priorities, so compromises made initially often need rebalancing as real use reveals gaps.</li>
                         </ol>
                     </div>
-                    
-
                     <p><span class="text-bold">Requirements management</span> is the process of tracking and controlling changes to system requirements. It involves maintaining links between requirements to assess impacts, establishing a formal change process, and starting management as soon as a draft document exists, while planning for changes should begin during requirements elicitation.</p>
                 </article>
 
@@ -411,8 +410,6 @@
                             <li><span class="text-bold">Tool support</span> - Requirements management involves the processing of large amounts of information about the requirements.</li>
                         </ol>
                     </div>
-                    
-
                 </article>
 
                 <article>
@@ -426,25 +423,19 @@
                             <li><span class="text-bold">Change implementation</span> - When a change is approved, the requirements document, and if needed, the system design and implementation, are updated. To make this process efficient, the document should be organized for easy modification, with minimal external references and modular sections. This way, individual parts can be updated or replaced without disrupting the rest of the document.</li>
                         </ol>
                     </div>
-                    
                     <p>There is often a temptation to <span class="text-bold">implement urgent requirements directly</span> and update the requirements document afterward, but this should be avoided as it risks creating inconsistencies between the specification and the system. Agile methods, like extreme programming, address this by handling changes <span class="text-bold">without formal change management</span>. Instead, users prioritize the new requirement, and if it is high priority, they decide which planned features should be dropped in the next iteration.</p>
                 </article>
             </section>
             
         </div>
 
+        <!-- Social Media on the right side -->
         <section class="hidden lg:flex flex-col gap-4 text-2xl xl:text-3xl fixed right-8 top-1/3 xl:mr-29">
             <a href="#" class="side-logo"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="side-logo"><i class="fa-brands fa-twitter"></i></a>
             <a href="#" class="side-logo"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" class="side-logo"><i class="fa-brands fa-linkedin"></i></a>
         </section>
-            
-
-
-        
-        
-        
     </main>
 
     <!-- Footer -->
