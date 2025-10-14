@@ -203,9 +203,6 @@
   .sticky {
     position: sticky;
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/3 {
     top: calc(1/3 * 100%);
   }
@@ -266,17 +263,11 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-auto {
     height: auto;
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/5 {
     width: calc(1/5 * 100%);
@@ -286,9 +277,6 @@
   }
   .border-collapse {
     border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .list-inside {
     list-style-position: inside;
@@ -316,15 +304,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
-  }
-  .justify-items-end {
-    justify-items: end;
-  }
-  .justify-items-start {
-    justify-items: start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -362,10 +341,6 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-b-1 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-  }
   .border-none {
     --tw-border-style: none;
     border-style: none;
@@ -377,15 +352,6 @@
     border-color: color-mix(in srgb, #2596be 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-main-blue) 20%, transparent);
-    }
-  }
-  .border-main-white {
-    border-color: var(--color-main-white);
-  }
-  .border-main-white\/20 {
-    border-color: color-mix(in srgb, #f9fafc 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-main-white) 20%, transparent);
     }
   }
   .bg-main-blue {
@@ -415,14 +381,11 @@
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
-  .pt-4 {
-    padding-top: calc(var(--spacing) * 4);
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
-  }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -468,9 +431,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -496,16 +456,6 @@
       @media (hover: hover) {
         color: var(--color-light-blue);
       }
-    }
-  }
-  .sm\:grid {
-    @media (width >= 40rem) {
-      display: grid;
-    }
-  }
-  .md\:col-span-3 {
-    @media (width >= 48rem) {
-      grid-column: span 3 / span 3;
     }
   }
   .md\:hidden {
@@ -573,11 +523,6 @@
       margin-right: calc(var(--spacing) * 29);
     }
   }
-  .xl\:flex {
-    @media (width >= 80rem) {
-      display: flex;
-    }
-  }
   .xl\:grid {
     @media (width >= 80rem) {
       display: grid;
@@ -593,11 +538,6 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
-  .xl\:flex-col {
-    @media (width >= 80rem) {
-      flex-direction: column;
-    }
-  }
   .xl\:flex-row {
     @media (width >= 80rem) {
       flex-direction: row;
@@ -608,44 +548,14 @@
       justify-content: space-around;
     }
   }
-  .xl\:justify-center {
+  .xl\:gap-30 {
     @media (width >= 80rem) {
-      justify-content: center;
-    }
-  }
-  .xl\:justify-end {
-    @media (width >= 80rem) {
-      justify-content: flex-end;
-    }
-  }
-  .xl\:justify-evenly {
-    @media (width >= 80rem) {
-      justify-content: space-evenly;
-    }
-  }
-  .xl\:justify-start {
-    @media (width >= 80rem) {
-      justify-content: flex-start;
-    }
-  }
-  .xl\:justify-items-start {
-    @media (width >= 80rem) {
-      justify-items: start;
-    }
-  }
-  .xl\:gap-20 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 20);
+      gap: calc(var(--spacing) * 30);
     }
   }
   .xl\:py-0 {
     @media (width >= 80rem) {
       padding-block: calc(var(--spacing) * 0);
-    }
-  }
-  .xl\:py-2 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 2);
     }
   }
   .xl\:pt-0 {
@@ -661,11 +571,6 @@
   .xl\:pl-37 {
     @media (width >= 80rem) {
       padding-left: calc(var(--spacing) * 37);
-    }
-  }
-  .xl\:text-left {
-    @media (width >= 80rem) {
-      text-align: left;
     }
   }
   .xl\:text-3xl {
@@ -1221,6 +1126,24 @@ body {
     @media (width >= 80rem) {
       --tw-border-style: none;
       border-style: none;
+    }
+  }
+  .footer-chapter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-main-blue);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
+    color: var(--color-white);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-light-blue);
+      }
     }
   }
   .site-footer {

@@ -203,6 +203,10 @@ body {
         @apply py-2 border-b-1 xl:border-none;
     }
 
+    .footer-chapter {
+        @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
+    }
+
     .site-footer {
         @apply text-center p-4 bg-main-blue flex items-center justify-center gap-6;
     }
