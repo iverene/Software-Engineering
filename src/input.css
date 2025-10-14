@@ -16,51 +16,6 @@ body {
 }
 
 @layer components {
-    h1 {
-        @apply text-left text-3xl lg:text-4xl font-extrabold text-main-blue
-    }
-    h2 {
-        @apply text-2xl font-bold text-main-blue mb-6;
-    }
-    h3 {
-        @apply text-xl font-semibold text-main-blue mb-4;
-    }
-
-    p {
-        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3;
-    }
-
-    .text-bold {
-        @apply font-bold text-main-blue;
-    }
-
-    hr {
-        @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
-    }
-
-    ul, ol {
-        @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
-    }
-
-    ol {
-        @apply list-decimal list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
-    }
-
-    .border-title {
-        @apply border-b-2 pb-2;
-    }
-    
-    .table-of-contents {
-        @apply list-none space-y-3;
-    }
-
-    .table-of-contents li {
-        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:underline underline-offset-8 hover:text-main-blue hover:border-main-blue lg:text-sm;
-    }
-
-    .table-of-contents li a.active {
-        @apply text-[#2596be] font-semibold border-[#2596be];
-    }
 
     /* Header and Navigation */
     .site-header {
@@ -153,14 +108,6 @@ body {
     .section-content {
         @apply bg-main-white p-5 rounded-lg m-5;
     }
-
-    section {
-        @apply xl:pt-10;
-    }
-
-    article {
-        @apply mt-10;
-    }
     
     /* Images */
     .content-image {
@@ -169,14 +116,6 @@ body {
     
     .image-caption {
         @apply mt-5 mb-5 text-center italic text-main-blue;
-    }
-
-    .images-container {
-        @apply flex justify-center items-center my-6;
-    }
-
-    .images {
-        @apply max-w-full h-auto;
     }
     
     /* Typography */
@@ -199,14 +138,6 @@ body {
     }
     
     /* Footer */
-    .table-footer td {
-        @apply py-2 border-b-1 xl:border-none;
-    }
-
-    .footer-chapter {
-        @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
-    }
-
     .site-footer {
         @apply text-center p-4 bg-main-blue flex items-center justify-center gap-6;
     }
@@ -252,6 +183,15 @@ body {
         @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
     }
 
+    /* Iverene's styles. Do not change. However, feel free to use these. */
+    section {
+        @apply xl:pt-10;
+    }
+
+    article {
+        @apply mt-10;
+    }
+
     .table-container {
         @apply border-collapse border border-light-blue w-full mb-6 mt-4;
     }
@@ -263,5 +203,69 @@ body {
     .box-container {
         @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
     }
+
+    .images-container {
+        @apply flex justify-center items-center my-6;
+    }
+
+    .images {
+        @apply max-w-full h-auto;
+    }
+
+    .table-footer td {
+        @apply py-2 border-b-1 xl:border-none;
+    }
+
+    .footer-chapter {
+        @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
+    }
+
+    h1 {
+        @apply text-left text-3xl lg:text-4xl font-extrabold text-main-blue
+    }
+    h2 {
+        @apply text-2xl font-bold text-main-blue mb-6;
+    }
+    h3 {
+        @apply text-xl font-semibold text-main-blue mb-4;
+    }
+
+    p {
+        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3;
+    }
+
+    .text-bold {
+        @apply font-bold text-main-blue;
+    }
+
+    hr {
+        @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
+    }
+
+    ul, ol {
+        @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+    }
+
+    ol {
+        @apply list-decimal list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+    }
+
+    .border-title {
+        @apply border-b-2 pb-2;
+    }
+    
+    .table-of-contents {
+        @apply list-none space-y-3;
+    }
+
+    .table-of-contents li {
+        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:bg-main-blue/25 rounded-r-sm  hover:text-neutral-gray hover:border-main-blue lg:text-sm;
+    }
+
+    .table-of-contents li a.active {
+        @apply text-[#2596be] font-semibold border-[#2596be];
+    }
+
+    /* End of Iverene's styles. Do not change. However, feel free to use these. */
 
 }
