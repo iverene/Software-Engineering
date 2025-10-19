@@ -60,7 +60,7 @@ body {
     }
     
     .auth-btn {
-        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-light-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5;
+        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
     }
 
     .site-footer {
