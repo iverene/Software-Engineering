@@ -7,11 +7,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-sky-100: oklch(95.1% 0.026 236.824);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-indigo-200: oklch(87% 0.065 274.039);
     --color-indigo-400: oklch(67.3% 0.182 276.935);
     --color-indigo-800: oklch(39.8% 0.195 277.366);
     --color-purple-50: oklch(97.7% 0.014 308.299);
+    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -428,6 +430,10 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-none {
     --tw-border-style: none;
     border-style: none;
@@ -441,6 +447,9 @@
       border-color: color-mix(in oklab, var(--color-main-blue) 20%, transparent);
     }
   }
+  .border-sky-100 {
+    border-color: var(--color-sky-100);
+  }
   .bg-content-bg\/20 {
     background-color: color-mix(in srgb, #dbe4ff 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -452,6 +461,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-content-bg) 40%, transparent);
     }
+  }
+  .bg-gray-50 {
+    background-color: var(--color-gray-50);
   }
   .bg-gray-200\/80 {
     background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 80%, transparent);
@@ -515,8 +527,8 @@
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
   }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
@@ -1594,6 +1606,9 @@ body {
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--color-light-blue);
+    background-color: var(--color-white);
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .table-container th, .table-container td {
     border-style: var(--tw-border-style);
@@ -1618,16 +1633,6 @@ body {
     padding: calc(var(--spacing) * 6);
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .images-container {
-    margin-block: calc(var(--spacing) * 6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .images {
-    height: auto;
-    max-width: 100%;
   }
   .table-footer td {
     border-bottom-style: var(--tw-border-style);
@@ -1747,8 +1752,8 @@ body {
     list-style-type: none;
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .table-of-contents li {
@@ -1767,9 +1772,9 @@ body {
     }
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in srgb, #2596be 25%, transparent);
+        background-color: color-mix(in srgb, #67bed9 10%, transparent);
         @supports (color: color-mix(in lab, red, red)) {
-          background-color: color-mix(in oklab, var(--color-main-blue) 25%, transparent);
+          background-color: color-mix(in oklab, var(--color-light-blue) 10%, transparent);
         }
       }
     }
@@ -1779,15 +1784,9 @@ body {
       }
     }
     @media (width >= 64rem) {
-      font-size: var(--text-sm);
-      line-height: var(--tw-leading, var(--text-sm--line-height));
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
-  }
-  .table-of-contents li a.active {
-    border-color: #2596be;
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
-    color: #2596be;
   }
 }
 @property --tw-space-y-reverse {

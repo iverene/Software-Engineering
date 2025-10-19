@@ -290,23 +290,17 @@ body {
     }
 
     .table-container {
-        @apply border-collapse border border-light-blue w-full mb-6 mt-4;
+        @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
     }
 
     .table-container th, .table-container td {
         @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
     }
 
+
+
     .box-container {
         @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
-    }
-
-    .images-container {
-        @apply flex justify-center items-center my-6;
-    }
-
-    .images {
-        @apply max-w-full h-auto;
     }
 
     .table-footer td {
@@ -352,17 +346,14 @@ body {
     }
     
     .table-of-contents {
-        @apply list-none space-y-3;
+        @apply list-none space-y-2;
     }
 
     .table-of-contents li {
-        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:bg-main-blue/25 rounded-r-sm  hover:text-neutral-gray hover:border-main-blue lg:text-sm;
-    }
-
-    .table-of-contents li a.active {
-        @apply text-[#2596be] font-semibold border-[#2596be];
+        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:bg-light-blue/10 rounded-r-sm  hover:text-neutral-gray hover:border-main-blue lg:text-base;
     }
 
     /* End of Iverene's styles. Do not change. However, feel free to use these. */
 
 }
+
