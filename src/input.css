@@ -60,7 +60,7 @@ body {
     }
     
     .auth-btn {
-        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
+        @apply rounded-md no-underline shadow-sm bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
     }
 
     .site-footer {
@@ -350,7 +350,7 @@ body {
     }
 
     .table-of-contents li {
-        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:bg-light-blue/10 rounded-r-sm  hover:text-neutral-gray hover:border-main-blue lg:text-base;
+        @apply text-gray-500 pl-5 no-underline hover:bg-light-blue/10 rounded-sm  hover:text-neutral-gray lg:text-base;
     }
 
     /* End of Iverene's styles. Do not change. However, feel free to use these. */
