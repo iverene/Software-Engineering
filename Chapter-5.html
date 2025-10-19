@@ -6,214 +6,294 @@
     <title>Chapter 5 - System Modeling</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!-- Link to your compiled CSS from input.css -->
     <link rel="stylesheet" href="/src/output.css">
 </head>
-<body class="bg-main-white text-main-blue min-h-screen flex flex-col">
+
+<body class="bg-gradient-to-br from-main-white via-content-bg to-purple-50 text-main-blue min-h-screen flex flex-col">
     <!-- Header -->
     <header class="site-header">
         <div class="header-container">
-            <div class="logo-section">
+            <section class="brand-container">
+                <img src="assets\logo.png" class="logo">
                 <a href="index.html" class="brand-logo">Systematic.dev</a>
-            </div>
+            </section>
             
+            <button class="md:hidden xl:hidden lg:hidden text-main-blue">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <!-- Navigation  -->
             <nav class="nav-menu">
-                <!-- Chapter Dropdown -->
                 <div class="dropdown-container">
-                    <button class="dropdown-button">Chapters ▼</button>
-                    <div class="dropdown-content">
-                        <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
-                        <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
-                        <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
-                        <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
-                        <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
+                        <button class="dropdown-button">Chapters <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
+                            <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
+                            <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
+                            <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
+                            <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
+                        </div>
                     </div>
-                </div>
-                
+                <a href="" class="nav-link">Tutorials <i class="fa-solid fa-chevron-down"></i></a>
                 <a href="" class="nav-link">Projects</a>
-                <a href="" class="nav-link">Blog</a>
-                <a href="" class="nav-link">About</a>
-                <a href="" class="nav-link">Contact</a>
-                
-                <!-- Contents Dropdown -->
-                <div class="dropdown-container">
-                    <button class="dropdown-button">Contents ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#Intro" class="dropdown-link">Introduction</a>
-                        <a href="#Chapter5-1" class="dropdown-link">Chapter 5.1</a>
-                        <a href="#Chapter5-2" class="dropdown-link">Chapter 5.2</a>
-                        <a href="#Chapter5-3" class="dropdown-link">Chapter 5.3</a>
-                        <a href="#Chapter5-4" class="dropdown-link">Chapter 5.4</a>
-                        <a href="#Chapter5-5" class="dropdown-link">Chapter 5.5</a>
-                    </div>
-                </div>
             </nav>
 
             <div class="auth-container">
-                <a href="" class="auth-btn">Login / Sign Up</a>
+                <a href="" class="auth-btn">Log In</a>
             </div>
         </div>
     </header>
+        
+<div class="min-h-screen px-6 lg:px-12 py-10">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-10">
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <section id="Intro">
-            <article class="intro-article">
-                <h1 class="page-title">System Modeling</h1>
-                <hr class="divider">
-                
-                <h2 class="heading-2">Objectives</h2>
-                <p>The aim of this chapter is to introduce some types of system model that may be developed as part of the requirements engineering and system design processes. When you have read the chapter, you will:</p>
-                
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>understand how graphical models can be used to represent software systems;</li>
-                    <li>understand why different types of model are required and the fundamental system modeling perspectives of context interaction, structure, and behavior;</li>
-                    <li>have been introduced to some of the diagram types in the Unified Modeling Language (UML) and how these diagrams may be used in system modeling;</li>
-                    <li>be aware of the ideas underlying model-driven engineering, where a system is automatically generated from structural and behavioral models.</li>
-                </ul>
+        <!-- Sidebar -->
+        <aside class="hidden lg:block lg:col-span-3">
+            <div class="sticky top-8 xl:top-20 p-6 sidebar">
+                    <h3 class="sidebar-title">Chapter Progress 📚</h3>
+                <nav class="text-sm relative" aria-label="Chapter Table of Contents">
+                    
+                    <div class="absolute left-9px top-0 h-full w-0.5 bg-gray-200/80"></div>
+
+                    <a href="#intro" class="nav-link-item active">
+                        <p class="sidebar-header">Chapter Overview</p>
+                        <h4 class="sidebar-description">Introduction and Objectives</h4>
+                    </a>
+                    
+                    <a href="#Chapter5-1" class="nav-link-item">
+                        <p class="sidebar-header">5.1 Context Models</p>
+                        <h4 class="sidebar-description">System Boundaries and Activity Diagrams</h4>
+                    </a>
+
+                    <a href="#Chapter5-2" class="nav-link-item">
+                        <p class="sidebar-header">5.2 Interaction Models</p>
+                        <h4 class="sidebar-description">Use Case and Sequence</h4>
+                    </a>
+                    
+                    <a href="#Chapter5-3" class="nav-link-item">
+                        <p class="sidebar-header">5.3 Structural Models</p>
+                        <h4 class="sidebar-description">Class Diagrams</h4>
+                    </a>
+                    
+                    <a href="#Chapter5-4" class="nav-link-item">
+                        <p class="sidebar-header">5.4 Behavioral Models</p>
+                        <h4 class="sidebar-description">State and Communication</h4>
+                    </a>
+
+                    <a href="#Chapter5-5" class="nav-link-item">
+                        <p class="sidebar-header">5.5 Model-driven Engineering</p>
+                        <h4 class="sidebar-description">Component and Node</h4>
+                    </a>
+                    
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lg:col-span-9 space-y-10">
+
+            <section id="intro" class="glass-card p-8">
+
+            <!-- Title -->
+            <article class="mb-5 sm:mb-10">
+                <h1 class="chapter-header">System Modeling</h1>
+                <h2 class="chapter-subheader">Objectives</h2>
             </article>
 
-            <article class="article-content">
-                <p class="mb-4">System modeling involves creating abstract models that show different views or perspectives of a system. It's typically done using graphical notations, most commonly based on the Unified Modeling Language (UML). However, formal (mathematical) models can also be used, mainly for detailed specifications. This chapter focuses on graphical UML modeling, while formal modeling is covered in Chapter 12.</p>
-                
-                <p class="mb-4">Models are used during the requirements engineering process to help derive the requirements for a system, during the design process to describe the system to engineers implementing the system and after implementation to document the system's structure and operation. You may develop models of both the existing system and the system to be developed:</p>
-                
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">Models of the existing system are used during requirements engineering. They help clarify what the existing system does and can be used as a basis for discussing its strengths and weaknesses. These then lead to requirements for the new system.</li>
-                    <li class="mb-2">Models of the new system are used during requirements engineering to help explain the proposed requirements to other system stakeholders. Engineers use these models to discuss design proposals and to document the system for implementation. In a model-driven engineering process, it is possible to generate a complete or partial system implementation from the system model.</li>
-                </ol>
+            <!-- Objectives -->
+            <article class="mb-8 sm:mb-10">
+                <p>This chapter introduces various system model types used in requirements engineering and design. Upon completion, you will:</p>
 
-                <p class="mb-4">A system model is an abstraction, not a full representation—it deliberately omits detail to highlight the most important aspects of the system. While a representation aims to preserve all information (like a translation), an abstraction simplifies to focus on key features (like a newspaper summary of a book).</p>
-                
-                <p class="mb-4">You may develop different models to represent the system from different perspectives. For example:</p>
-
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">An external perspective, where you model the context or environment of the system.</li>
-                    <li class="mb-2">An interaction perspective where you model the interactions between a system and its environment or between the components of a system.</li>
-                    <li class="mb-2">A structural perspective, where you model the organization of a system or the structure of the data that is processed by the system.</li>
-                    <li class="mb-2">A behavioral perspective, where you model the dynamic behavior of the system and how it responds to events.</li>
-                </ol>
-
-                <p class="mb-4">This section explains that system architecture should be documented from multiple perspectives, aligning with Kruchten's 4 + 1 view model, which is covered in Chapter 6.</p>
-                
-                <p class="mb-4">In this chapter, system modeling is done using the Unified Modeling Language (UML)—a standard for object-oriented modeling. UML includes many diagram types, but a 2007 survey found that five key types are most commonly used to capture a system's essentials:</p>
-
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2"><strong>Activity diagrams</strong> – represent processes or data processing workflows.</li>
-                    <li class="mb-2"><strong>Use case diagrams</strong> – show system interactions with its environment.</li>
-                    <li class="mb-2"><strong>Sequence diagrams</strong> – illustrate interactions over time between actors and system components.</li>
-                    <li class="mb-2"><strong>Class diagrams</strong> – define object classes and their relationships.</li>
-                    <li class="mb-2"><strong>State diagrams</strong> – depict how the system responds to events.</li>
-                </ol>
-
-                <p class="mb-4">This section emphasizes that, due to space constraints, only the five key UML diagram types are discussed.</p>
-                
-                <p class="mb-4">When creating system models, there is <strong>flexibility</strong> in how strictly you follow UML notations—the level of <strong>detail and formality</strong> should match the model's purpose. Graphical models are typically used in three main ways:</p>
-                
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">To facilitate discussion about an existing or proposed system.</li>
-                    <li class="mb-2">To document an existing system.</li>
-                    <li class="mb-2">To provide a detailed description that can support system implementation.</li>
-                </ol>
-
-                <p class="mb-4">Models used to support discussion among software engineers—especially in agile modeling—can be incomplete and use informal notation, as long as they effectively communicate key ideas. Their main goal is to facilitate understanding, not to serve as formal documentation. On the other hand, when models are used for documentation, they don't need to cover the entire system, but they must be accurate and follow correct notation, as they serve as a reliable reference for the system's structure and behavior.</p>
-                
-                <img src="assets/jarey-image1.png" class="content-image" alt="System modeling illustration">
-                
-                <p class="mb-4">In model-based development, where models are used to generate source code, they must be both complete and correct. Precision is crucial because the models directly influence the implementation. This means even small differences in symbols—like stick vs. block arrowheads—must be used accurately, as they carry distinct meanings and errors could lead to incorrect system behavior.</p>
+                <div class="overflow-x-auto">
+                <table class="w-full border border-gray-100 rounded-xl shadow-sm bg-white">
+                    <tbody class="divide-y divide-gray-100 text-gray-700">
+                    <tr>
+                        <td class="p-3 sm:p-4"><i class="fa-solid fa-diagram-project text-main-blue"></i></td>
+                        <td class="p-3 sm:p-4">Understand how graphical models represent software systems.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 sm:p-4"><i class="fa-solid fa-layer-group text-main-blue"></i></td>
+                        <td class="p-3 sm:p-4">Recognize different model perspectives (context, interaction, structure, behavior).</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 sm:p-4"><i class="fa-solid fa-sitemap text-main-blue"></i></td>
+                        <td class="p-3 sm:p-4">Be familiar with <strong>UML diagram types</strong> and their use in system modeling.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 sm:p-4"><i class="fa-solid fa-code-branch text-main-blue"></i></td>
+                        <td class="p-3 sm:p-4">Gain awareness of <strong>model-driven engineering</strong>.</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
             </article>
-        </section>
 
-        <section id="Chapter5-1" class="section-content">
-            <article class="article-content">
-                <h2 class="heading-2">5.1 Context Models</h2>
-            
-                <p class="mb-4">Early in system specification, it's important to define the system boundaries—determining what functionality will be handled by the system itself and what will remain in the environment or be managed by other systems. This requires collaboration with stakeholders to decide which business processes will be automated and which will remain manual or external. Identifying overlaps with existing systems is also crucial to avoid redundancy. Making these decisions early helps reduce system costs and simplifies requirements and design. In some cases, the boundary is obvious—such as replacing an old system—while in others, it must be clarified during requirements engineering.</p>
+            <article>
+                <p>System modeling creates abstract views of a system using graphical notations—primarily the Unified Modeling Language (UML)—to represent key perspectives such as structure, behavior, and interaction.</p>
+                <p>Models serve different purposes throughout development: during <strong>requirements engineering</strong> to understand current systems and propose new ones, during <strong>design</strong> to communicate system structure, and after implementation for <strong>documentation</strong>.</p>
+                <p>You may develop different models to represent the system from different perspectives. For example:</p>
 
-                <p class="mb-4">When specifying a system like a patient information system for mental healthcare (MHC-PMS), a key decision is whether it should only manage consultation and treatment data, or also store personal patient information. Relying on other systems for personal data avoids duplication, but introduces risks: it may slow down access and make the system dependent on the availability of external systems. If those systems fail, the MHC-PMS may become unusable, highlighting the trade-off between efficiency and reliability.</p>
+                <!-- Model Perspectives -->
+                <section>
+                <h3 class="text-lg sm:text-xl font-semibold text-[var(--color-main-blue)] mb-3">Model Perspectives</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div class="p-4 bg-content-bg/20 rounded-xl border border-gray-100">
+                    <strong>External</strong> – context or environment of the system.
+                    </div>
+                    <div class="p-4 bg-content-bg/20 rounded-xl border border-gray-100">
+                    <strong>Interaction</strong> – communication between system and environment.
+                    </div>
+                    <div class="p-4 bg-content-bg/20 rounded-xl border border-gray-100">
+                    <strong>Structural</strong> – organization and data structure.
+                    </div>
+                    <div class="p-4 bg-content-bg/20 rounded-xl border border-gray-100">
+                    <strong>Behavioral</strong> – dynamic responses and event handling.
+                    </div>
+                </div>
+                </section>
 
-                <img src="assets/figure5.1.png" class="content-image" alt="Context of MHC-PMS">
-                <figcaption class="image-caption"><strong>Figure 5.1: </strong>The context of the MHC-PMS</figcaption>
+                <p>This section explains that system architecture should be documented from multiple perspectives, aligning with Kruchten's 4 + 1 view model, which is covered in Chapter 6.</p>
+                <p>In this chapter, system modeling is done using the Unified Modeling Language (UML)—a standard for object-oriented modeling. UML includes many diagram types, but a 2007 survey found that five key types are most commonly used to capture a system's essentials:</p>
 
-                <p class="mb-4">Defining a system boundary is not purely a technical decision—it can be influenced by social and organizational factors. For example, boundaries might be set to keep analysis within a single site, avoid dealing with difficult stakeholders, or even inflate project scope to justify expanding a development team. Once boundary decisions are made, the next step is to analyze the system's context—identifying how it interacts with its environment. This usually begins with creating a simple architectural model to illustrate key components and external dependencies.</p>
+                <!-- Key UML Diagrams -->
+                <section>
+                <h3 class="text-lg sm:text-xl font-semibold text-main-blue mb-3">Key UML Diagrams</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border border-gray-100 rounded-xl bg-white text-neutral-gray shadow-sm">
+                    <thead class="bg-content-bg/40 text-neutral-gray font-semibold">
+                        <tr>
+                        <th class="p-3 sm:p-4 text-left">Diagram Type</th>
+                        <th class="p-3 sm:p-4 text-left">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr><td class="p-3 sm:p-4">Activity Diagram</td><td class="p-3 sm:p-4">Process workflows</td></tr>
+                        <tr><td class="p-3 sm:p-4">Use Case Diagram</td><td class="p-3 sm:p-4">System interactions</td></tr>
+                        <tr><td class="p-3 sm:p-4">Sequence Diagram</td><td class="p-3 sm:p-4">Time-based interactions</td></tr>
+                        <tr><td class="p-3 sm:p-4">Class Diagram</td><td class="p-3 sm:p-4">Object relationships</td></tr>
+                        <tr><td class="p-3 sm:p-4">State Diagram</td><td class="p-3 sm:p-4">Event responses</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+                </section>
 
-                <p class="mb-4">Figure 5.1 presents a context model for the mental health patient information system (MHC-PMS), illustrating its interactions with other systems in its environment. It shows that the MHC-PMS is connected to:</p>
-
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>An appointments system</li>
-                    <li>A general patient record system (for shared patient data)</li>
-                    <li>A management reporting system</li>
-                    <li>A hospital bed allocation system</li>
-                    <li>A statistics system (used for research)</li>
-                    <li>A prescription system (used to generate medication prescriptions)</li>
-                </ul>
-
-                <p class="mb-4">Context models typically show the system's environment, including other automated systems, but they don't detail the types of relationships between these systems and the one being specified. External systems might produce, consume, or share data with the system, and connections can vary—networked or not, co-located or remote. These relationship details impact the system's requirements and design and must be considered. Therefore, simple context models are used alongside other models, like business process models, which describe the human and automated workflows involving these systems.</p>
-
-                <img src="assets/figure5.2.png" class="content-image" alt="Process model">
-                <figcaption class="image-caption"><strong>Figure 5.2: </strong>Process model of involuntary detention</figcaption>
-                
-                <p class="mb-4">Figure 5.2 illustrates a key system process using a UML activity diagram that depicts how the MHC-PMS supports managing patients who may need to be detained involuntarily for their own or others' safety, under strict legal safeguards that require regular reviews.</p>
-                
-                <p class="mb-4">The diagram shows the flow of control between activities, starting with a filled circle and ending with a filled circle inside another circle. Activities (rounded rectangles) represent specific subprocesses, and arrows show the sequence of work. The diagram also uses the UML stereotype feature to identify different supporting systems involved.</p>
-                
-                <p class="mb-4">A solid bar indicates synchronization points: when multiple activities lead to one bar, all must complete before moving on; when flow moves from a bar to multiple activities, those can run in parallel. For example, in Figure 5.2, informing social care and the patient's next of kin, and updating the detention register, can happen concurrently.</p>
-            </article> 
-        </section>
-
-        <section id="Chapter5-2" class="section-content">
-            <article class="article-content">
-                <h2 class="heading-2">5.2 Interaction models</h2>
-                
-                <p class="mb-4">All systems involve some form of interaction—between users and the system, between the system and other systems, or among components within the system. Modeling these interactions is crucial: user interaction models help identify user requirements; system-to-system interaction models reveal potential communication issues; and component interaction models help assess whether the system's structure can meet performance and reliability goals.</p>
-                
-                <p class="mb-4">Two key approaches to interaction modeling are:</p>
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">Use case modeling—primarily captures interactions between the system and external actors, like users or other systems.</li>
-                    <li class="mb-2">Sequence diagrams—detail interactions between system components and may include external agents.</li>
+                <!-- Purpose of Modeling -->
+                <section>
+                <h3 class="text-lg sm:text-xl font-semibold text-main-blue mb-3">Purpose of Modeling</h3>
+                <ol class="list-decimal list-inside space-y-2">
+                    <li>Facilitate discussion about a system.</li>
+                    <li>Document existing structures and behaviors.</li>
+                    <li>Guide detailed implementation.</li>
                 </ol>
-                
-                <p class="mb-4">Use case models provide a high-level overview, while sequence diagrams offer detailed views of interactions within those use cases. Although UML also supports communication diagrams for modeling interactions, they are essentially alternative views of sequence diagrams and thus are not discussed here. Some tools even generate communication diagrams automatically from sequence diagrams.</p>
-                
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.2.1 Use case modeling</h3>
+                </section>
 
-                <p class="mb-4">Use case modeling, developed by Jacobson et al. in the 1990s and included in the first UML release, is widely used for requirements elicitation. A use case represents a simple scenario describing what a user expects from a system, focusing on a discrete task involving external interaction.</p>
+                <!-- Figure -->
+                <figure>
+                <img src="assets/jarey-image1.png" alt="System modeling summary illustration"
+                    class="w-full max-w-3xl rounded-2xl border border-gray-100 shadow-md">
+                </figure>
+                <figcaption><strong>Figure 5.0: </strong>The Unified Modeling Language</figcaption>
+
+                <p>
+                Informal models—common in agile development—prioritize understanding, while documentation models must be precise and correctly notated. In <strong>model-based development</strong>, precision is vital since models can directly generate source code, making accurate notation essential.
+                </p>
+            </article>
+            </section>
+
+        <!-- Context Models Section -->
+        <section id="Chapter5-1" class="glass-card p-8">
+          <article>
+            <h2 class="heading-title">5.1 Context Models</h2>
+            <p>Defining <strong>system boundaries</strong> is a crucial early step. It involves deciding which functionalities belong within the system and which remain external. Collaboration ensures clarity and avoids redundancy.</p>
+
+            <figure>
+              <img src="assets/figure5.1.png" alt="Context of the MHC-PMS system" class="max-w-full h-auto rounded-xl shadow-md border border-gray-100" />
+              <figcaption><strong>Figure 5.1:</strong> The context of the MHC-PMS</figcaption>
+            </figure>
+
+            <p>System boundaries are influenced by both technical and <strong>organizational constraints</strong>. Once defined, a <strong>context model</strong> visualizes the system’s interaction with external entities.</p>
+
+            <ul class="list-disc list-inside space-y-2 my-5 text-neutral-gray marker:text-main-blue">
+              <li>Appointments System</li>
+              <li>Patient Record System</li>
+              <li>Management Reporting System</li>
+              <li>Bed Allocation System</li>
+              <li>Statistics System</li>
+              <li>Prescription System</li>
+            </ul>
+
+            <figure>
+              <img src="assets/figure5.2.png" alt="UML activity diagram of patient detention process" class="chapter-image" />
+              <figcaption><strong>Figure 5.2:</strong> Process model of involuntary detention (UML Activity Diagram)</figcaption>
+            </figure>
+
+            <p>This activity diagram illustrates the MHC-PMS process for managing involuntary patient detention while ensuring legal compliance.</p>
+          </article>
+        </section>
+
+        <section id="Chapter5-2" class="glass-card p-8">
+            <article>
+                <h2 class="heading-title">5.2 Interaction models</h2>
+
+                <p>All systems involve some form of interaction—between users and the system, between the system and other systems, or among components within the system. Modeling these interactions is crucial: user interaction models help identify user requirements; system-to-system interaction models reveal potential communication issues; and component interaction models help assess whether the system's structure can meet performance and reliability goals.</p>
                 
-                <p class="mb-4">Graphically, a use case is depicted as an ellipse, with involved actors shown as stick figures. For example, Figure 5.3 illustrates a use case from the MHC-PMS where the system uploads data to a more general patient record system. This general system maintains summary patient data, while the MHC-PMS records detailed consultation data.</p>
+                <p>Two key approaches to interaction modeling are:</p>
+                <table class="table-container mt-8">
+                        <thead>
+                            <tr>
+                            <th class="text-main-blue">Use case modeling</th>
+                            <th class="text-main-blue">Sequence diagrams</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td >primarily captures interactions between the system and external actors, like users or other systems.</td>
+                            <td >detail interactions between system components and may include external agents.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                <p>Use case models provide a high-level overview, while sequence diagrams offer detailed views of interactions within those use cases. Although UML also supports communication diagrams for modeling interactions, they are essentially alternative views of sequence diagrams and thus are not discussed here. Some tools even generate communication diagrams automatically from sequence diagrams.</p>
+                
+                <h3 class="sub-chapter-title">5.2.1 Use case modeling</h3>
+
+                <p>Use case modeling, developed by Jacobson et al. in the 1990s and included in the first UML release, is widely used for requirements elicitation. A use case represents a simple scenario describing what a user expects from a system, focusing on a discrete task involving external interaction.</p>
+                <p>Graphically, a use case is depicted as an ellipse, with involved actors shown as stick figures. For example, Figure 5.3 illustrates a use case from the MHC-PMS where the system uploads data to a more general patient record system. This general system maintains summary patient data, while the MHC-PMS records detailed consultation data.</p>
             
-                <img src="assets/figure5.3.png" class="content-image" alt="Transfer data use case">
-                <figcaption class="image-caption"><strong>Figure 5.3: </strong>Transfer-data use case</figcaption>
+                <figure>
+                    <img src="assets/figure5.3.png" class="chapter-image" alt="Transfer data use case">
+                </figure>
+                
+                <figcaption><strong>Figure 5.3: </strong>Transfer-data use case</figcaption>
 
-                <p class="mb-4">In the use case shown in Figure 5.3, there are two actors: the operator transferring the data and the patient record system. While stick figures were originally meant to represent humans, they are now also used to depict external systems or hardware.</p>
-                
-                <p class="mb-4">Formally, use case diagrams use lines without arrows, since arrows in UML typically indicate message flow direction, but in use cases, messages flow both ways. However, in Figure 5.3, arrows are used informally to show that the medical receptionist initiates the transaction and data flows to the patient record system.</p>
-                
-                <p class="mb-4">Use case diagrams provide a simple overview of interactions but lack detail. To better understand the use case, more detailed descriptions are needed, which can be in the form of textual explanations, structured tables, or sequence diagrams. The choice depends on the use case and the required detail level, with tabular descriptions often being the most practical. Figure 5.4 shows such a tabular description for the 'Transfer data' use case.</p>
-                
-                <p class="mb-4">Composite use case diagrams combine multiple use cases into one view. Sometimes, all interactions with a system can be shown in a single composite diagram, but often this isn't feasible due to the sheer number of use cases. In those situations, you create several diagrams, each focusing on related use cases. For example, Figure 5.5 presents all the use cases involving the actor Medical Receptionist in the MHC-PMS, grouping relevant interactions for clarity.</p>
+                <p>In the use case shown in Figure 5.3, there are two actors: the operator transferring the data and the patient record system. While stick figures were originally meant to represent humans, they are now also used to depict external systems or hardware.</p>
+                <p>Formally, use case diagrams use lines without arrows, since arrows in UML typically indicate message flow direction, but in use cases, messages flow both ways. However, in Figure 5.3, arrows are used informally to show that the medical receptionist initiates the transaction and data flows to the patient record system.</p>
+                <p>Use case diagrams provide a simple overview of interactions but lack detail. To better understand the use case, more detailed descriptions are needed, which can be in the form of textual explanations, structured tables, or sequence diagrams. The choice depends on the use case and the required detail level, with tabular descriptions often being the most practical. Figure 5.4 shows such a tabular description for the 'Transfer data' use case.</p>
+                <p>Composite use case diagrams combine multiple use cases into one view. Sometimes, all interactions with a system can be shown in a single composite diagram, but often this isn't feasible due to the sheer number of use cases. In those situations, you create several diagrams, each focusing on related use cases. For example, Figure 5.5 presents all the use cases involving the actor Medical Receptionist in the MHC-PMS, grouping relevant interactions for clarity.</p>
 
-                <img src="assets/figure5.4.png" class="content-image" alt="Tabular description">
-                <figcaption class="image-caption"><strong>Figure 5.4: </strong>Tabular description of the 'Transfer data' use case</figcaption>
+                <figure>
+                    <img src="assets/figure5.4.png" class="chapter-image" alt="Tabular description">
+                </figure>
+                <figcaption><strong>Figure 5.4: </strong>Tabular description of the 'Transfer data' use case</figcaption>
 
-                <img src="assets/figure5.5.png" class="content-image" alt="Use cases with medical receptionist">
-                <figcaption class="image-caption"><strong>Figure 5.5: </strong>Use cases involving the role 'medical receptionist'</figcaption>
+                <figure>
+                    <img src="assets/figure5.5.png" class="chapter-image" alt="Use cases with medical receptionist">
+                </figure>
+                <figcaption><strong>Figure 5.5: </strong>Use cases involving the role 'medical receptionist'</figcaption>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.2.2 Sequence diagrams</h3>
+                <h3 class="sub-chapter-title">5.2.2 Sequence diagrams</h3>
 
-                <p class="mb-4">Sequence diagrams in UML are primarily used to model the order of interactions between actors and system objects, as well as inter-object communication. While UML offers a rich and detailed syntax for capturing various interaction types, this section focuses on the fundamentals.</p>
-                
-                <p class="mb-4">As the name suggests, a sequence diagram represents the chronological flow of messages in a specific use case or scenario. For example, Figure 5.6 illustrates the interactions involved in the "View patient information" use case, where a medical receptionist accesses certain patient details. This diagram helps visualize how different parts of the system collaborate over time to fulfill that request.</p>
-                
-                <p class="mb-4">In a UML sequence diagram, the actors and objects involved in the interaction are listed horizontally across the top. From each of these, a vertical dotted line (called a lifeline) extends downward, representing that entity's activity over time.</p>
-                
-                <p class="mb-4">Interactions between these entities—such as method calls or messages—are shown as horizontal arrows, annotated with details like the method name, parameters, and return values. A rectangle on a lifeline indicates when the object is actively participating in the interaction (its "activation" period).</p>
-                
-                <p class="mb-4">The sequence of events is read from top to bottom, showing the order in which actions occur.</p>
-                
-                <p class="mb-4">Additionally, if there are alternative flows in the process, an "alt" box is used. Each alternative is labeled with a condition in square brackets, indicating under what circumstances each branch is executed.</p>
+                <p>Sequence diagrams in UML are primarily used to model the order of interactions between actors and system objects, as well as inter-object communication. While UML offers a rich and detailed syntax for capturing various interaction types, this section focuses on the fundamentals.</p>
+                <p>As the name suggests, a sequence diagram represents the chronological flow of messages in a specific use case or scenario. For example, Figure 5.6 illustrates the interactions involved in the "View patient information" use case, where a medical receptionist accesses certain patient details. This diagram helps visualize how different parts of the system collaborate over time to fulfill that request.</p>
+                <p>In a UML sequence diagram, the actors and objects involved in the interaction are listed horizontally across the top. From each of these, a vertical dotted line (called a lifeline) extends downward, representing that entity's activity over time.</p>
+                <p>Interactions between these entities—such as method calls or messages—are shown as horizontal arrows, annotated with details like the method name, parameters, and return values. A rectangle on a lifeline indicates when the object is actively participating in the interaction (its "activation" period).</p>
+                <p>The sequence of events is read from top to bottom, showing the order in which actions occur.</p>
+                <p>Additionally, if there are alternative flows in the process, an "alt" box is used. Each alternative is labeled with a condition in square brackets, indicating under what circumstances each branch is executed.</p>
 
-                <img src="assets/figure5.6.png" class="content-image" alt="Sequence diagram">
-                <figcaption class="image-caption"><strong>Figure 5.6: </strong>Sequence diagram for the 'View patient information' use case</figcaption>
+                <figure>
+                    <img src="assets/figure5.6.png" class="chapter-image" alt="Sequence diagram">
+                </figure>  
+                <figcaption><strong>Figure 5.6: </strong>Sequence diagram for the 'View patient information' use case</figcaption>
 
                 <p class="mb-4">You can read Figure 5.6 as follows:</p>
                 <ol class="list-decimal list-inside my-4 leading-relaxed">
@@ -223,306 +303,425 @@
                     <li class="mb-2">If the authorization is successful, the patient information is retrieved from the database and used to populate the form on the medical receptionist's screen. However, if the authorization fails, the system returns an error message instead of the data, indicating that access is denied.</li>
                 </ol>
 
-                <img src="assets/figure5.7.png" class="content-image" alt="Transfer data sequence">
-                <figcaption class="image-caption"><strong>Figure 5.7: </strong>Sequence diagram for transfer data</figcaption>
+                <figure>
+                    <img src="assets/figure5.7.png" class="chapter-image" alt="Transfer data sequence">
+                </figure>
+                <figcaption><strong>Figure 5.7: </strong>Sequence diagram for transfer data</figcaption>
 
-                <p class="mb-4">Figure 5.7 illustrates a sequence diagram from the MHC-PMS that introduces two new modeling features:</p>
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>Direct actor-to-actor communication, and</li>
-                    <li>Dynamic object creation during an operation sequence.</li>
-                </ul>
+                <p>Figure 5.7 illustrates a sequence diagram from the MHC-PMS that introduces two new modeling features:</p>
+
+                <div class="grid grid-cols-1 gap-3 sm:gap-4">
+                    <div class="p-4 bg-content-bg/20 rounded-xl border border-gray-100 font-semibold">Direct actor-to-actor communication, and</div>
+                    <div class="p-4 bg-content-bg/20 rounded-xl border border-gray-100 font-semibold">Dynamic object creation during an operation sequence.</div>
+                </div>
                 
-                <p class="mb-4">The flow of the diagram can be understood as follows:</p>
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
+                <p>The flow of the diagram can be understood as follows:</p>
+                <ol class="list-decimal list-inside my-4 leading-relaxed ">
                     <li class="mb-2">The medical receptionist logs in to the Patient Record System (PRS).</li>
                     <li class="mb-2">Two transfer options are available:
-                        <ul class="list-disc list-inside ml-6 mt-2">
+                        <ul class="list-disc list-inside ml-6 mt-2 text-neutral-gray font-semibold">
                             <li>Direct transfer of updated patient information.</li>
                             <li>Transfer of summary health data from the MHC-PMS to the PRS.</li>
                         </ul>
                     </li>
                     <li class="mb-2">In both cases, the authorization system is used to verify the receptionist's access permissions.</li>
                     <li class="mb-2">Depending on the selected action:
-                        <ul class="list-disc list-inside ml-6 mt-2">
+                        <ul class="list-disc list-inside ml-6 mt-2 text-neutral-gray font-semibold">
                             <li>Personal information may be transferred directly from the user interface to the PRS, or</li>
                             <li>A Summary object is created from the database, and that summary is uploaded to the PRS.</li>
                         </ul>
                     </li>
                     <li class="mb-2">Once the transfer is complete, the PRS sends a status message, and the receptionist logs off.</li>
                 </ol>
-                
-                <p class="mb-4">This diagram shows how system interactions can involve both direct communication and runtime object creation, adding depth to the modeling of system behavior.</p>
-                
-                <p class="mb-4">This point emphasizes the level of detail needed in sequence diagrams based on their purpose. If you're using sequence diagrams during early phases of system development, such as for requirements engineering or high-level design, you don't need to include every interaction, especially those that depend on later implementation choices.</p>
-                
-                <p class="mb-4">For instance, in Figure 5.7, the method for obtaining the user identifier to check authorization can be delayed until the implementation phase. While the User object might be involved in the final system, this detail is unnecessary at the early design stage. By leaving out such specifics, the diagram stays focused on core system behavior without getting bogged down in decisions that are yet to be made.</p>
-                
-                <p class="mb-4">Thus, sequence diagrams at this stage should prioritize key interactions and general workflows, while more detailed interactions can be added later when the design and implementation choices are clearer.</p>
+
+                <p>This diagram shows how system interactions can involve both direct communication and runtime object creation, adding depth to the modeling of system behavior.</p>
+                <p>This point emphasizes the level of detail needed in sequence diagrams based on their purpose. If you're using sequence diagrams during early phases of system development, such as for requirements engineering or high-level design, you don't need to include every interaction, especially those that depend on later implementation choices.</p>
+                <p>For instance, in Figure 5.7, the method for obtaining the user identifier to check authorization can be delayed until the implementation phase. While the User object might be involved in the final system, this detail is unnecessary at the early design stage. By leaving out such specifics, the diagram stays focused on core system behavior without getting bogged down in decisions that are yet to be made.</p>
+                <p>Thus, sequence diagrams at this stage should prioritize key interactions and general workflows, while more detailed interactions can be added later when the design and implementation choices are clearer.</p>
             </article>
         </section>
 
-        <section id="Chapter5-3" class="section-content">
-            <article class="article-content">
-                <h2 class="heading-2">5.3 Structural models</h2>
+        <section id="Chapter5-3" class="glass-card p-8">
+            <article>
+                <h2 class="heading-title">5.3 Structural models</h2>
                 
-                <p class="mb-4">Structural models represent a system's components and their relationships. These can be static models (showing the system's design) or dynamic models (showing how the system behaves during execution). While static models focus on system architecture, dynamic models illustrate its runtime behavior.</p>
-                
-                <p class="mb-4">In architectural design, UML component, package, and deployment diagrams are commonly used. This section specifically focuses on class diagrams to model the static structure of an object-oriented system.</p>
+                <p>Structural models represent a system's components and their relationships. These can be static models (showing the system's design) or dynamic models (showing how the system behaves during execution). While static models focus on system architecture, dynamic models illustrate its runtime behavior.</p>
+                <p>In architectural design, UML component, package, and deployment diagrams are commonly used. This section specifically focuses on class diagrams to model the static structure of an object-oriented system.</p>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.3.1 Class diagrams</h3>
+                <h3 class="sub-chapter-title">5.3.1 Class diagrams</h3>
                 
-                <p class="mb-4">Class diagrams are used in object-oriented systems to represent the classes and their associations. A class defines a type of object in the system, while an association indicates a relationship between classes. Initially, classes represent real-world entities (like patients or prescriptions), but as development progresses, additional implementation objects are added for system functionality.</p>
-                
-                <p class="mb-4">Class diagrams in UML can vary in detail. Early models focus on identifying essential real-world objects and their relationships. A simple class diagram, for example, may just show class names and associations, like the Patient and Patient Record classes with a connecting line to indicate their relationship.</p>
+                <p>Class diagrams are used in object-oriented systems to represent the classes and their associations. A class defines a type of object in the system, while an association indicates a relationship between classes. Initially, classes represent real-world entities (like patients or prescriptions), but as development progresses, additional implementation objects are added for system functionality.</p>
+                <p>Class diagrams in UML can vary in detail. Early models focus on identifying essential real-world objects and their relationships. A simple class diagram, for example, may just show class names and associations, like the Patient and Patient Record classes with a connecting line to indicate their relationship.</p>
 
-                <img src="assets/figure5.8.png" class="content-image" alt="UML classes">
-                <figcaption class="image-caption"><strong>Figure 5.8: </strong>UML classes and association</figcaption>
+                <figure>
+                    <img src="assets/figure5.8.png" class="chapter-image" alt="UML classes">
+                </figure>
+                <figcaption><strong>Figure 5.8: </strong>UML classes and association</figcaption>
 
-                <p class="mb-4">In Figure 5.8, class diagrams can also indicate the multiplicity of associations. In this case, the 1:1 relationship means that each Patient has one Patient Record, and vice versa. Other types of multiplicities are also possible, such as specifying a many-to-many relationship with a * (wildcard), indicating an indefinite number of associated objects.</p>
+                <p>In Figure 5.8, class diagrams can also indicate the multiplicity of associations. In this case, the 1:1 relationship means that each Patient has one Patient Record, and vice versa. Other types of multiplicities are also possible, such as specifying a many-to-many relationship with a * (wildcard), indicating an indefinite number of associated objects.</p>
+                <p>In Figure 5.9, the diagram extends to show that Patients are linked to multiple other classes, and associations can be named to clarify the nature of the relationship. Additionally, the role of each object in the relationship can be specified, providing more context to the interaction between classes.</p>
                 
-                <p class="mb-4">In Figure 5.9, the diagram extends to show that Patients are linked to multiple other classes, and associations can be named to clarify the nature of the relationship. Additionally, the role of each object in the relationship can be specified, providing more context to the interaction between classes.</p>
-                
-                <p class="mb-4">At this level, class diagrams resemble semantic data models, which are typically used in database design to represent data entities, their attributes, and relationships between them. The concept was introduced in the 1970s by Chen and further developed by Codd and others.</p>
-                
-                <p class="mb-4">While UML doesn't have a specific notation for semantic data modeling (since it focuses on object-oriented design), you can still represent a semantic model using object classes (representing entities), attributes (as class attributes), and associations (as relationships between classes). Essentially, semantic data models can be seen as a simpler form of object classes, lacking operations but focusing on data structure.</p>
+                <p>At this level, class diagrams resemble semantic data models, which are typically used in database design to represent data entities, their attributes, and relationships between them. The concept was introduced in the 1970s by Chen and further developed by Codd and others.</p>
+                <p>While UML doesn't have a specific notation for semantic data modeling (since it focuses on object-oriented design), you can still represent a semantic model using object classes (representing entities), attributes (as class attributes), and associations (as relationships between classes). Essentially, semantic data models can be seen as a simpler form of object classes, lacking operations but focusing on data structure.</p>
 
-                <img src="assets/figure5.9.png" class="content-image" alt="MHC-PMS classes">
-                <figcaption class="image-caption"><strong>Figure 5.9: </strong>Classes and associations in the MHC-PMS</figcaption>
+                <figure>
+                    <img src="assets/figure5.9.png" class="chapter-image" alt="MHC-PMS classes">
+                </figure>
+                <figcaption><strong>Figure 5.9: </strong>Classes and associations in the MHC-PMS</figcaption>
 
-                <img src="assets/figure5.10.png" class="w-1/5 block mx-auto border-4 border-main-blue rounded-lg shadow-2xl" alt="Consultation class">
-                <figcaption class="image-caption"><strong>Figure 5.10: </strong>The consultation class</figcaption>
+                <figure>
+                    <img src="assets/figure5.10.png" class="chapter-image" alt="Consultation class">
+                </figure>
+                <figcaption><strong>Figure 5.10: </strong>The consultation class</figcaption>
 
-                <p class="mb-4">To add detail to a class diagram, you can extend the simple class rectangle by including attributes and operations.</p>
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>Attributes define the characteristics of an object (e.g., a Patient object might have an Address attribute).</li>
-                    <li>Operations represent actions or methods that can be performed on the object (e.g., a ChangeAddress operation that updates a patient's address when they move).</li>
-                </ul>
+                <p>To add detail to a class diagram, you can extend the simple class rectangle by including attributes and operations.</p>
+
+                <table class="min-w-full border border-gray-100 rounded-xl bg-white shadow-sm">
+                    <tbody class="divide-y divide-gray-100 text-neutral-gray font-semibold">
+                        <tr><td class="p-3 sm:p-4">Attributes define the characteristics of an object (e.g., a Patient object might have an Address attribute).</td></tr>
+                        <tr><td class="p-3 sm:p-4">Operations represent actions or methods that can be performed on the object (e.g., a ChangeAddress operation that updates a patient's address when they move).</td></tr>
+                    </tbody>
+                </table>
                 
-                <p class="mb-4">These are added inside the class rectangle, typically with attributes listed in the top section and operations in the bottom section, creating a more detailed representation of the class.</p>
+                <p>These are added inside the class rectangle, typically with attributes listed in the top section and operations in the bottom section, creating a more detailed representation of the class.</p>
                 
-                <p class="mb-4">This is illustrated in Figure 5.10 where:</p>
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
+                <p>This is illustrated in Figure 5.10 where:</p>
+
+                <ol class="list-decimal list-inside my-4 leading-relaxed text-neutral-gray font-semibold pl-4">
                     <li class="mb-2">The name of the object class is in the top section.</li>
                     <li class="mb-2">The class attributes are in the middle section. This must include the attribute names and, optionally, their types.</li>
                     <li class="mb-2">The operations (called methods in Java and other OO programming languages) associated with the object class are in the lower section of the rectangle.</li>
                 </ol>
                 
-                <p class="mb-4">Figure 5.10 outlines the Consultation class, which includes both attributes and operations. The attributes capture key details of the consultation, such as Date, Duration, and PatientID to identify the patient involved. The operations include RecordVoiceNote, where doctors can record audio notes during the consultation, which are later transcribed, and GeneratePrescription, which allows the doctor to create an electronic prescription for medication. This model illustrates the key processes involved in handling consultations and prescriptions within the system.</p>
+                <p>Figure 5.10 outlines the Consultation class, which includes both attributes and operations. The attributes capture key details of the consultation, such as Date, Duration, and PatientID to identify the patient involved. The operations include RecordVoiceNote, where doctors can record audio notes during the consultation, which are later transcribed, and GeneratePrescription, which allows the doctor to create an electronic prescription for medication. This model illustrates the key processes involved in handling consultations and prescriptions within the system.</p>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.3.2 Generalization</h3>
+                <h3 class="sub-chapter-title">5.3.2 Generalization</h3>
                 
-                <p class="mb-4">Generalization is a technique used to simplify complex systems by grouping entities into broader categories. Instead of focusing on the specific characteristics of each individual entity, we classify them into more general types (such as animals, cars, or houses). This approach enables us to identify common traits shared by all members of a class. For instance, squirrels and rats are both rodents, so we can generalize that all rodents have teeth for gnawing. This method helps reduce complexity and makes it easier to apply general rules or statements across similar entities.</p>
+                <p>Generalization is a technique used to simplify complex systems by grouping entities into broader categories. Instead of focusing on the specific characteristics of each individual entity, we classify them into more general types (such as animals, cars, or houses). This approach enables us to identify common traits shared by all members of a class. For instance, squirrels and rats are both rodents, so we can generalize that all rodents have teeth for gnawing. This method helps reduce complexity and makes it easier to apply general rules or statements across similar entities.</p>
                 
-                <img src="assets/figure5.11.png" class="content-image" alt="Generalization hierarchy">
-                <figcaption class="image-caption"><strong>Figure 5.11: </strong>A Generalization in hierarchy</figcaption>
+                <figure>
+                    <img src="assets/figure5.11.png" class="chapter-image" alt="Generalization hierarchy">
+                </figure>
+                <figcaption class=""><strong>Figure 5.11: </strong>A Generalization in hierarchy</figcaption>
 
-                <p class="mb-4">In system modeling, generalization helps to consolidate common attributes and behaviors into a single class, reducing redundancy and simplifying maintenance. By grouping related classes under a more general parent class, changes to common properties only need to be made in one place. This practice enhances efficiency, as modifications are automatically inherited by all subclasses. In object-oriented languages like Java, generalization is achieved through class inheritance.</p>
+                <p>In system modeling, generalization helps to consolidate common attributes and behaviors into a single class, reducing redundancy and simplifying maintenance. By grouping related classes under a more general parent class, changes to common properties only need to be made in one place. This practice enhances efficiency, as modifications are automatically inherited by all subclasses. In object-oriented languages like Java, generalization is achieved through class inheritance.</p>
+                <p>The UML uses a specific notation for generalization, represented by an arrow with a hollow triangle pointing towards the parent class. For example, in a medical system, "General Practitioner" and "Hospital Doctor" can be generalized as "Doctor." Furthermore, the "Hospital Doctor" class can be further specialized into subclasses such as "Trainee Doctor," "Registered Doctor," and "Consultant," each with distinct responsibilities and levels of expertise.</p>
+                <p>In a generalization hierarchy, lower-level (subclass) classes inherit the attributes and operations of their higher-level (superclass) classes. This inheritance means that subclasses automatically have all the attributes and operations defined in the superclass, but they can also introduce more specific attributes and operations that are unique to them. For example, all doctors (the superclass) will have common attributes like "name" and "phone number," but hospital doctors (a subclass) will also have attributes like "staff number" and "department," which general practitioners (another subclass) do not need. Instead, general practitioners may have attributes like "practice name" and "address," as they work independently. In Figure 5.12, this generalization hierarchy is shown, where the class "Doctor" has operations for registering and de-registering doctors within the MHC-PMS system. Subclasses like "Hospital Doctor" and "General Practitioner" can extend or modify this base functionality to suit their specific needs.</p>
                 
-                <p class="mb-4">The UML uses a specific notation for generalization, represented by an arrow with a hollow triangle pointing towards the parent class. For example, in a medical system, "General Practitioner" and "Hospital Doctor" can be generalized as "Doctor." Furthermore, the "Hospital Doctor" class can be further specialized into subclasses such as "Trainee Doctor," "Registered Doctor," and "Consultant," each with distinct responsibilities and levels of expertise.</p>
-                
-                <p class="mb-4">In a generalization hierarchy, lower-level (subclass) classes inherit the attributes and operations of their higher-level (superclass) classes. This inheritance means that subclasses automatically have all the attributes and operations defined in the superclass, but they can also introduce more specific attributes and operations that are unique to them. For example, all doctors (the superclass) will have common attributes like "name" and "phone number," but hospital doctors (a subclass) will also have attributes like "staff number" and "department," which general practitioners (another subclass) do not need. Instead, general practitioners may have attributes like "practice name" and "address," as they work independently. In Figure 5.12, this generalization hierarchy is shown, where the class "Doctor" has operations for registering and de-registering doctors within the MHC-PMS system. Subclasses like "Hospital Doctor" and "General Practitioner" can extend or modify this base functionality to suit their specific needs.</p>
-                
-                <img src="assets/figure5.12.png" class="content-image" alt="Generalization with detail">
-                <figcaption class="image-caption"><strong>Figure 5.12: </strong>A generalization hierarchy with added detail</figcaption>
+                <figure>
+                    <img src="assets/figure5.12.png" class="chapter-image" alt="Generalization with detail">
+                </figure>
+                <figcaption class=""><strong>Figure 5.12: </strong>A generalization hierarchy with added detail</figcaption>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.3.3 Aggregation</h3>
+                <h3 class="sub-chapter-title">5.3.3 Aggregation</h3>
                 
-                <p class="mb-4">In system modeling, aggregation is used to represent the relationship where one object (the whole) is composed of other objects (the parts). For example, a study pack may consist of a book, PowerPoint slides, quizzes, and reading recommendations. In UML, aggregation is depicted using a diamond shape next to the class that represents the whole object. For instance, in Figure 5.13, a "Patient Record" is shown as an aggregation of "Patient" and an indefinite number of "Consultations," indicating that the patient record is composed of these components. This illustrates how objects can be structured from other, smaller objects.</p>
+                <p>In system modeling, aggregation is used to represent the relationship where one object (the whole) is composed of other objects (the parts). For example, a study pack may consist of a book, PowerPoint slides, quizzes, and reading recommendations. In UML, aggregation is depicted using a diamond shape next to the class that represents the whole object. For instance, in Figure 5.13, a "Patient Record" is shown as an aggregation of "Patient" and an indefinite number of "Consultations," indicating that the patient record is composed of these components. This illustrates how objects can be structured from other, smaller objects.</p>
             </article>
         </section>
 
-        <section id="Chapter5-4" class="section-content">
-            <article class="article-content">
-                <h2 class="heading-2">5.4 Behavioral models</h2>
+        <section id="Chapter5-4" class="glass-card p-8">
+            <article>
+                <h2 class="heading-title">5.4 Behavioral models</h2>
                 
-                <p class="mb-4">Behavioral models represent the dynamic aspects of a system during its execution, showing how the system responds to stimuli from its environment. These stimuli can be of two types:</p>
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">Data: This refers to incoming data that the system needs to process.</li>
-                    <li class="mb-2">Events: These are actions or occurrences that trigger specific system processes. Events may or may not be associated with data.</li>
-                </ol>
-                <p class="mb-4">Behavioral models help illustrate how the system behaves over time in response to these inputs.</p>
+                <p>Behavioral models represent the dynamic aspects of a system during its execution, showing how the system responds to stimuli from its environment. These stimuli can be of two types:</p>
+                <table class="table-container mt-8">
+                        <thead>
+                            <tr>
+                            <th class="text-main-blue">Data</th>
+                            <th class="text-main-blue">Events</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td >This refers to incoming data that the system needs to process.</td>
+                            <td >These are actions or occurrences that trigger specific system processes. Events may or may not be associated with data.</td>
+                            </tr>
+                        </tbody>
+                </table>
+                <p>Behavioral models help illustrate how the system behaves over time in response to these inputs.</p>
 
-                <img src="assets/figure5.13.png" class="content-image" alt="Aggregation association">
-                <figcaption class="image-caption"><strong>Figure 5.13: </strong>The aggregation association</figcaption>
+                <figure>
+                    <img src="assets/figure5.13.png" class="chapter-image" alt="Aggregation association">
+                </figure>
+                <figcaption><strong>Figure 5.13: </strong>The aggregation association</figcaption>
 
-                <img src="assets/jarey-image2.png" class="content-image" alt="Business systems">
+                <figure>
+                    <img src="assets/jarey-image2.png" class="chapter-image" alt="Business systems">
+                </figure>
                 
-                <p class="mb-4">Business systems often fall into two categories based on how they are driven:</p>
+                <p>Business systems often fall into two categories based on how they are driven:</p>
 
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
+                <ol class="list-decimal list-inside my-4 leading-relaxed ">
                     <li class="mb-2">Data-Driven Systems: These systems are primarily controlled by the data they receive. Their processing involves actions on this data and the generation of outputs. For example, a phone billing system processes data about customer calls, calculates costs, and generates a bill.</li>
                     <li class="mb-2">Event-Driven Systems: These systems are triggered by specific events rather than data. They perform minimal data processing. A real-time system like a landline phone switching system responds to events such as a "receiver off hook" to generate a dial tone, or key presses to capture a phone number.</li>
                 </ol>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.4.1 Data-driven modeling</h3>
+                <h3 class="tsub-chapter-title">5.4.1 Data-driven modeling</h3>
                 
-                <p class="mb-4">Data-driven models illustrate the sequence of actions involved in processing input data and generating output. They are especially useful during requirements analysis, as they show the end-to-end processing of data—how it moves through the system from input to output.</p>
-                
-                <p class="mb-4">In the 1970s, methods like DeMarco's Structured Analysis introduced Data Flow Diagrams (DFDs) to model data processing. These models helped analysts and designers understand the movement of data through a system and were simple and intuitive for explaining system processes to users.</p>
-                
-                <p class="mb-4">Although UML does not support traditional DFDs, it introduced activity diagrams in UML 2.0, which are similar in purpose. These diagrams show the processing steps (activities) and the flow of data (represented as objects). For example, an insulin pump software model can use activity diagrams to depict the processing sequence and data interactions, much like data-flow diagrams did.</p>
+                <p>Data-driven models illustrate the sequence of actions involved in processing input data and generating output. They are especially useful during requirements analysis, as they show the end-to-end processing of data—how it moves through the system from input to output.</p>
+                <p>In the 1970s, methods like DeMarco's Structured Analysis introduced Data Flow Diagrams (DFDs) to model data processing. These models helped analysts and designers understand the movement of data through a system and were simple and intuitive for explaining system processes to users.</p> 
+                <p>Although UML does not support traditional DFDs, it introduced activity diagrams in UML 2.0, which are similar in purpose. These diagrams show the processing steps (activities) and the flow of data (represented as objects). For example, an insulin pump software model can use activity diagrams to depict the processing sequence and data interactions, much like data-flow diagrams did.</p>
 
-                <img src="assets/figure5.14.png" class="content-image" alt="Activity model">
-                <figcaption class="image-caption"><strong>Figure 5.14: </strong>An activity model of the insulin pump's operation</figcaption>
+                <figure>
+                    <img src="assets/figure5.14.png" class="chapter-image" alt="Activity model">
+                </figure>
+                <figcaption><strong>Figure 5.14: </strong>An activity model of the insulin pump's operation</figcaption>
 
-                <p class="mb-4">An alternative to using data-driven models for depicting sequence processing is through UML sequence diagrams. While sequence diagrams are typically used to model interactions, they can also represent sequential data processing by showing messages that flow from left to right. For example, in Figure 5.15, a sequence diagram models the processing of an order and sending it to a supplier.</p>
-                
-                <p class="mb-4">Unlike data-flow diagrams, which emphasize system functions, sequence diagrams focus on the objects involved in the system. This makes sequence diagrams useful for illustrating how objects interact and how data is processed in a sequential manner. The equivalent data-flow diagram for the same order processing system can be found on the book's web pages for comparison.</p>
+                <p>An alternative to using data-driven models for depicting sequence processing is through UML sequence diagrams. While sequence diagrams are typically used to model interactions, they can also represent sequential data processing by showing messages that flow from left to right. For example, in Figure 5.15, a sequence diagram models the processing of an order and sending it to a supplier.</p>
+                <p>Unlike data-flow diagrams, which emphasize system functions, sequence diagrams focus on the objects involved in the system. This makes sequence diagrams useful for illustrating how objects interact and how data is processed in a sequential manner. The equivalent data-flow diagram for the same order processing system can be found on the book's web pages for comparison.</p>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.4.2 Event-driven modeling</h3>
+                <h3 class="sub-chapter-title">5.4.2 Event-driven modeling</h3>
                 
-                <p class="mb-4">Event-driven modeling focuses on how a system responds to external and internal events. It operates on the premise that a system has a finite number of states, and that events or stimuli trigger transitions between these states. For instance, in a system controlling a valve, an event such as an operator command may cause the system to transition from the state "Valve open" to "Valve closed." This approach is particularly useful for real-time systems, where the system must respond to events as they occur. Event-based modeling was first introduced in real-time design methods by Ward and Mellor (1985) and Harel (1987, 1988).</p>
+                <p>Event-driven modeling focuses on how a system responds to external and internal events. It operates on the premise that a system has a finite number of states, and that events or stimuli trigger transitions between these states. For instance, in a system controlling a valve, an event such as an operator command may cause the system to transition from the state "Valve open" to "Valve closed." This approach is particularly useful for real-time systems, where the system must respond to events as they occur. Event-based modeling was first introduced in real-time design methods by Ward and Mellor (1985) and Harel (1987, 1988).</p>
 
-                <img src="assets/figure5.15.png" class="content-image" alt="Order processing">
-                <figcaption class="image-caption"><strong>Figure 5.15: </strong>Order processing</figcaption>
+                <figure>
+                    <img src="assets/figure5.15.png" class="chapter-image" alt="Order processing">
+                </figure>
+                <figcaption><strong>Figure 5.15: </strong>Order processing</figcaption>
 
-                <img src="assets/figure5.16.png" class="content-image" alt="Microwave state diagram">
-                <figcaption class="image-caption"><strong>Figure 5.16: </strong>A state diagram of a microwave oven</figcaption>
+                <figure>
+                    <img src="assets/figure5.16.png" class="chapter-image" alt="Microwave state diagram">
+                </figure>
+                <figcaption><strong>Figure 5.16: </strong>A state diagram of a microwave oven</figcaption>
 
-                <p class="mb-4">The UML supports event-based modeling through state diagrams, which are based on Statecharts (Harel, 1987, 1988). These diagrams represent the different system states and the events that trigger transitions from one state to another. While state diagrams don't display data flow within the system, they can include information about the computations that occur within each state.</p>
+                <p>The UML supports event-based modeling through state diagrams, which are based on Statecharts (Harel, 1987, 1988). These diagrams represent the different system states and the events that trigger transitions from one state to another. While state diagrams don't display data flow within the system, they can include information about the computations that occur within each state.</p>
+                <p>To illustrate event-driven modeling, a simple example of microwave control software is used. While real microwave ovens are far more complex, this simplified version is easier to understand. The basic microwave system includes a power switch (for full or half power), a numeric keypad to input cooking time, a start/stop button, and an alphanumeric display. This system's behavior can be modeled using a state diagram to capture the transitions between states, such as "Waiting for input," "Cooking," and "Paused."</p>
                 
-                <p class="mb-4">To illustrate event-driven modeling, a simple example of microwave control software is used. While real microwave ovens are far more complex, this simplified version is easier to understand. The basic microwave system includes a power switch (for full or half power), a numeric keypad to input cooking time, a start/stop button, and an alphanumeric display. This system's behavior can be modeled using a state diagram to capture the transitions between states, such as "Waiting for input," "Cooking," and "Paused."</p>
+                <p>I have assumed that the sequence of actions in using the microwave is:</p>
+                    <ol class="list-decimal list-inside my-4 leading-relaxed text-neutral-gray font-semibold pl-4">
+                        <li class="mb-2">Select the power level (either half power or full power).</li>
+                        <li class="mb-2">Input the cooking time using a numeric keypad.</li>
+                        <li class="mb-2">Press Start and the food is cooked for the given time.</li>
+                    </ol>
                 
-                <p class="mb-4">I have assumed that the sequence of actions in using the microwave is:</p>
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">Select the power level (either half power or full power).</li>
-                    <li class="mb-2">Input the cooking time using a numeric keypad.</li>
-                    <li class="mb-2">Press Start and the food is cooked for the given time.</li>
-                </ol>
-                
-                <p class="mb-4">In a UML state diagram, system states are represented by rounded rectangles, each of which can include a brief description of the actions that occur in that state, often following a "do" keyword. Labeled arrows indicate the events or stimuli that trigger transitions from one state to another. The start and end states can be shown using filled circles, similar to the notation in activity diagrams.</p>
-                
-                <p class="mb-4">For the microwave example, the state diagram would include states like "Waiting for Input," "Cooking," and "Paused." Safety checks such as ensuring the door is closed before cooking starts could be modeled as conditions or guards on the transitions. When cooking is complete, an event (like the cooking timer finishing) would trigger the "Completion" state, where the buzzer sounds as an alert. The alphanumeric display can show various warnings, like "Door Open" or "Cooking Complete," depending on the current state.</p>
-                
-                <p class="mb-4">In Figure 5.16, the state diagram begins with the system in a "Waiting" state, where it awaits user input. The system responds to either the full-power or half-power button being pressed, which allows the user to select the desired power level. If the user changes their mind, they can press the other button to switch the power level.</p>
-                
-                <p class="mb-4">Once the time is set and if the door is closed, the Start button becomes enabled. Pressing the Start button transitions the system into the "Cooking" state. During the cooking process, the microwave operates for the specified duration. After the cooking cycle ends, the system returns to the "Waiting" state, ready for the next user interaction.</p>
-                
-                <p class="mb-4">This flow clearly defines the user interactions and system responses, and can be represented as transitions in a UML state diagram, with each state and event triggering specific actions or conditions.</p>
+                <p>In a UML state diagram, system states are represented by rounded rectangles, each of which can include a brief description of the actions that occur in that state, often following a "do" keyword. Labeled arrows indicate the events or stimuli that trigger transitions from one state to another. The start and end states can be shown using filled circles, similar to the notation in activity diagrams.</p>
+                <p>For the microwave example, the state diagram would include states like "Waiting for Input," "Cooking," and "Paused." Safety checks such as ensuring the door is closed before cooking starts could be modeled as conditions or guards on the transitions. When cooking is complete, an event (like the cooking timer finishing) would trigger the "Completion" state, where the buzzer sounds as an alert. The alphanumeric display can show various warnings, like "Door Open" or "Cooking Complete," depending on the current state.</p>
+                <p>In Figure 5.16, the state diagram begins with the system in a "Waiting" state, where it awaits user input. The system responds to either the full-power or half-power button being pressed, which allows the user to select the desired power level. If the user changes their mind, they can press the other button to switch the power level.</p>
+                <p>Once the time is set and if the door is closed, the Start button becomes enabled. Pressing the Start button transitions the system into the "Cooking" state. During the cooking process, the microwave operates for the specified duration. After the cooking cycle ends, the system returns to the "Waiting" state, ready for the next user interaction.</p>
+                <p>This flow clearly defines the user interactions and system responses, and can be represented as transitions in a UML state diagram, with each state and event triggering specific actions or conditions.</p>
 
-                <img src="assets/figure5.17.png" class="content-image" alt="States and stimuli">
-                <figcaption class="image-caption"><strong>Figure 5.17: </strong>States and stimuli for the microwave oven</figcaption>
+                <figure>
+                    <img src="assets/figure5.17.png" class="chapter-image" alt="States and stimuli">
+                </figure>
+                <figcaption><strong>Figure 5.17: </strong>States and stimuli for the microwave oven</figcaption>
 
-                <p class="mb-4">The UML notation allows for the inclusion of detailed activities within each state. For example, Figure 5.17 provides a tabular description of each state, specifying the stimuli that trigger state transitions. This level of detail is important in system specification, where understanding the exact conditions for state changes is crucial.</p>
-                
-                <p class="mb-4">However, state-based modeling can become cumbersome as the number of states in the system grows, especially for larger systems. To manage this complexity, you can use the concept of superstates, which group multiple related states under a single higher-level state. This approach allows you to hide complexity in the high-level model and expand it when needed for greater detail.</p>
-                
-                <p class="mb-4">For instance, in Figure 5.18, the Operation state is a superstate. This superstate is expanded to reveal its substates, which include:</p>
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>Status check: The system checks for any problems.</li>
-                    <li>Alarm: If any issues are found, an alarm is triggered and the system enters a disabled state.</li>
-                    <li>Cooking: The microwave runs for the specified time.</li>
-                    <li>Buzzer: After cooking, a buzzer sounds to indicate completion.</li>
-                    <li>Door open: If the door is opened during operation, the system enters the disabled state, as shown in Figure 5.15.</li>
-                </ul>
-                
-                <p class="mb-4">This hierarchical approach helps manage the complexity by abstracting lower-level states into more manageable superstates, while still allowing for detailed breakdowns when needed.</p>
+                <p>The UML notation allows for the inclusion of detailed activities within each state. For example, Figure 5.17 provides a tabular description of each state, specifying the stimuli that trigger state transitions. This level of detail is important in system specification, where understanding the exact conditions for state changes is crucial.</p>
+                <p>However, state-based modeling can become cumbersome as the number of states in the system grows, especially for larger systems. To manage this complexity, you can use the concept of superstates, which group multiple related states under a single higher-level state. This approach allows you to hide complexity in the high-level model and expand it when needed for greater detail.</p>
+                <p>For instance, in Figure 5.18, the Operation state is a superstate. This superstate is expanded to reveal its substates, which include:</p>
 
-                <img src="assets/figure5.18.png" class="content-image" alt="Microwave operation">
-                <figcaption class="image-caption"><strong>Figure 5.18: </strong>Microwave oven operation</figcaption>
+                <article class="my-6 flex justify-center">
+                    <table class="w-75vw border border-gray-100 rounded-xl shadow-sm bg-white">
+                    <tbody class="divide-y divide-gray-100 text-gray-700">
+                        <tr>
+                            <td class="p-3 sm:p-4"><strong>Status check: </strong>The system checks for any problems.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 sm:p-4"><strong>Alarm: </strong>If any issues are found, an alarm is triggered and the system enters a disabled state.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 sm:p-4"><strong>Cooking: </strong>The microwave runs for the specified time.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 sm:p-4"><strong>Buzzer: </strong>After cooking, a buzzer sounds to indicate completion.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 sm:p-4"><strong>Door open: </strong>If the door is opened during operation, the system enters the disabled state, as shown in Figure 5.15.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </article>
+                
+                
+                <p>This hierarchical approach helps manage the complexity by abstracting lower-level states into more manageable superstates, while still allowing for detailed breakdowns when needed.</p>
+
+                <figure>
+                    <img src="assets/figure5.18.png" class="chapter-image" alt="Microwave operation">
+                </figure>
+                <figcaption><strong>Figure 5.18: </strong>Microwave oven operation</figcaption>
+
             </article>
         </section>
 
-        <section id="Chapter5-5" class="section-content">
-            <article class="article-content">
-                <h2 class="heading-2">5.5 Model-driven engineering</h2>
+        <section id="Chapter5-5" class="glass-card p-8">
+            <article>
+                <h2 class="heading-title">5.5 Model-driven engineering</h2>
                 
-                <p class="mb-4">Model-driven engineering (MDE) is a software development approach where the primary outputs are models rather than traditional code. The models serve as high-level representations of the system, and the actual program code is automatically generated from these models.</p>
-                
-                <p class="mb-4">The key idea behind MDE is that it raises the level of abstraction in the development process. Engineers focus on creating models that describe the system's behavior, structure, and functionality, without having to worry about low-level details such as programming languages or platform-specific execution concerns. This can potentially lead to faster development cycles, improved consistency, and easier maintenance by automating code generation directly from the models.</p>
-                
-                <p class="mb-4">Model-Driven Engineering (MDE) has its origins in Model-Driven Architecture (MDA), which was introduced by the Object Management Group (OMG) in 2001 as a new approach to software development. While MDE and MDA are often used interchangeably, MDE is broader in scope.</p>
-                
-                <p class="mb-4">MDA mainly focuses on the design and implementation phases of software development, providing models that can be automatically transformed into executable code. However, MDE goes beyond just design and implementation, addressing all aspects of the software engineering process, from requirements engineering to testing.</p>
-                
-                <p class="mb-4">In summary, while MDA is centered on design and implementation, MDE includes areas like model-based requirements engineering, model-driven software processes, and model-based testing, making it a more comprehensive approach to software development.</p>
-                
-                <p class="mb-4">Model-Driven Engineering (MDE) offers both advantages and challenges, and its adoption in software engineering is still evolving. Here are the main arguments for and against MDE:</p>
-                
-                <p class="mb-4"><strong>For MDE:</strong></p>
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>High-Level Abstraction: MDE enables engineers to focus on designing systems at a high level, abstracting away the complexities of implementation. This reduces the likelihood of errors, speeds up the development process, and facilitates the creation of reusable, platform-independent models.</li>
-                    <li>Platform Independence: MDE allows system implementations to be generated for different platforms using the same model. By creating a translator for a new platform, all existing platform-independent models can be quickly adapted, making it easier to rehost systems on new technologies.</li>
-                </ul>
-                
-                <p class="mb-4"><strong>Against MDE:</strong></p>
-                <ul class="list-disc list-inside my-4 leading-relaxed">
-                    <li>Wrong Abstractions for Implementation: While models are useful for facilitating design discussions, the abstractions in these models may not always match the realities of the implementation. For example, an informal design model may not be easily translated into a working system, especially if off-the-shelf configurable packages are used for implementation.</li>
-                    <li>Limited Relevance to Shorter Lifespan Systems: The advantages of platform independence are most relevant for large, long-lifetime systems where platforms may become obsolete. For these systems, issues like requirements engineering, security, dependability, integration with legacy systems, and testing are often more critical than platform reusability.</li>
-                </ul>
-                
-                <p class="mb-4">In summary, while MDE holds promise for simplifying software development through abstraction and platform independence, its practical impact may be limited for certain types of systems, especially where other engineering challenges outweigh platform adaptation concerns.</p>
-                
-                <p class="mb-4">Model-Driven Engineering (MDE) has seen some significant successes, particularly in large organizations like IBM and Siemens, and in complex, long-lifetime systems like air traffic management. The Object Management Group (OMG) has reported these successes on their website, showcasing MDE's potential for large-scale, mission-critical applications.</p>
-                
-                <p class="mb-4">However, despite these successes, MDE has not yet achieved widespread adoption in the software engineering industry. Similar to formal methods, which are discussed in Chapter 12, MDE is considered a promising approach but is not universally accepted or implemented. The challenge remains in balancing the costs and risks of using MDE with its potential benefits. While MDE can offer significant advantages, particularly in terms of high-level abstraction and platform independence, its practical application on a broad scale still faces hurdles that need to be overcome.</p>
+                <p>Model-driven engineering (MDE) is a software development approach where the primary outputs are models rather than traditional code. The models serve as high-level representations of the system, and the actual program code is automatically generated from these models.</p>
+                <p>The key idea behind MDE is that it raises the level of abstraction in the development process. Engineers focus on creating models that describe the system's behavior, structure, and functionality, without having to worry about low-level details such as programming languages or platform-specific execution concerns. This can potentially lead to faster development cycles, improved consistency, and easier maintenance by automating code generation directly from the models.</p>
+                <p>Model-Driven Engineering (MDE) has its origins in Model-Driven Architecture (MDA), which was introduced by the Object Management Group (OMG) in 2001 as a new approach to software development. While MDE and MDA are often used interchangeably, MDE is broader in scope.</p>
+                <p>MDA mainly focuses on the design and implementation phases of software development, providing models that can be automatically transformed into executable code. However, MDE goes beyond just design and implementation, addressing all aspects of the software engineering process, from requirements engineering to testing.</p>
+                <p>In summary, while MDA is centered on design and implementation, MDE includes areas like model-based requirements engineering, model-driven software processes, and model-based testing, making it a more comprehensive approach to software development.</p>
+                <p>Model-Driven Engineering (MDE) offers both advantages and challenges, and its adoption in software engineering is still evolving. Here are the main arguments for and against MDE:</p>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.5.1 Model-driven architecture</h3>
+                 <table class="min-w-full border border-gray-100 rounded-xl bg-white text-neutral-gray shadow-sm">
+                    <thead class="bg-content-bg/40 text-neutral-gray font-semibold">
+                        <tr>
+                        <th class="p-3 sm:p-4 text-left"><strong>For MDE:</strong></th>
+                        <th class="p-3 sm:p-4 text-left"><strong>Against MDE:</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr><td class="p-3 sm:p-4"><strong>High-Level Abstraction: </strong> MDE enables engineers to focus on designing systems at a high level, abstracting away the complexities of implementation. This reduces the likelihood of errors, speeds up the development process, and facilitates the creation of reusable, platform-independent models.</td>
+                            <td class="p-3 sm:p-4"><strong>Platform Independence: </strong>MDE allows system implementations to be generated for different platforms using the same model. By creating a translator for a new platform, all existing platform-independent models can be quickly adapted, making it easier to rehost systems on new technologies.</td>
+                        </tr>
+                        <tr><td class="p-3 sm:p-4"><strong>Wrong Abstractions for Implementation: </strong>While models are useful for facilitating design discussions, the abstractions in these models may not always match the realities of the implementation. For example, an informal design model may not be easily translated into a working system, especially if off-the-shelf configurable packages are used for implementation.</td>
+                        <td class="p-3 sm:p-4"><strong>Limited Relevance to Shorter Lifespan Systems: </strong>The advantages of platform independence are most relevant for large, long-lifetime systems where platforms may become obsolete. For these systems, issues like requirements engineering, security, dependability, integration with legacy systems, and testing are often more critical than platform reusability.</td>
+                        </tr>
+                    </tbody>
+                </table>
                 
-                <p class="mb-4">Model-Driven Architecture (MDA) is a software design and implementation approach that focuses on using models to describe a system at various levels of abstraction. MDA leverages a subset of UML models to represent the system's design. The core idea is to start with a platform-independent model (PIM), which describes the system's functionality without being tied to any specific technology or platform.</p>
+                <p>In summary, while MDE holds promise for simplifying software development through abstraction and platform independence, its practical impact may be limited for certain types of systems, especially where other engineering challenges outweigh platform adaptation concerns.</p>
                 
-                <p class="mb-4">From this high-level model, it is theoretically possible to automatically generate a working program with minimal or no manual intervention. The aim is to abstract away platform-specific details during the design phase, allowing for more flexible and adaptable systems. By creating models at different abstraction levels, MDA facilitates easier adaptation and reconfiguration for different platforms and technologies.</p>
+                <p>Model-Driven Engineering (MDE) has seen some significant successes, particularly in large organizations like IBM and Siemens, and in complex, long-lifetime systems like air traffic management. The Object Management Group (OMG) has reported these successes on their website, showcasing MDE's potential for large-scale, mission-critical applications.</p>
                 
-                <img src="assets/figure5.19.png" class="content-image" alt="MDA transformations">
-                <figcaption class="image-caption"><strong>Figure 5.19: </strong>MDA transformations</figcaption>
-                
-                <p class="mb-4">The Model-Driven Architecture (MDA) method recommends producing three types of system models to guide the design and implementation process:</p>
-                <ol class="list-decimal list-inside my-4 leading-relaxed">
-                    <li class="mb-2">Computation Independent Model (CIM): This model focuses on the essential abstractions of the system's domain, independent of any computational or technical details. It captures key concepts and their relationships within the system, often resulting in multiple CIMs that represent different perspectives (e.g., a security model or a patient record model). CIMs define important domain concepts such as assets, roles, or entities like patients and consultations.</li>
-                    <li class="mb-2">Platform Independent Model (PIM): The PIM describes the system's operation and functionality without specifying platform-related implementation details. It focuses on the static structure of the system (such as class diagrams) and its response to external and internal events. PIMs are typically represented using UML models and can be adapted to different platforms.</li>
-                    <li class="mb-2">Platform Specific Models (PSM): These models are derived from the PIM and incorporate platform-specific details. Each PSM corresponds to a different application platform (e.g., middleware, databases) and adds the required technical specifications. Multiple layers of PSMs can be created, with each layer introducing additional platform-specific details as needed (e.g., starting with middleware-specific models, then refining for a specific database).</li>
-                </ol>
-                
-                <p class="mb-4">Together, these models help abstract the system's design and facilitate automatic transformation into working code across different platforms.</p>
-                
-                <img src="assets/figure5.20.png" class="content-image" alt="MDA models">
-                <figcaption class="image-caption"><strong>Figure 5.20: </strong>MDA models for the MHC-PMS</figcaption>
-                
-                <p class="mb-4">Transformations between models can be automated, such as converting a PSM into executable code. However, fully automatic CIM-to-PIM translation is still experimental and requires human input. This often involves linking concepts across CIMs (e.g., mapping a "role" in a security CIM to a "staff member" in a hospital CIM). Mellor and Balcer (2002) call these mappings "bridges."</p>
-                
-                <p class="mb-4">The translation of Platform-Independent Models (PIMs) to Platform-Specific Models (PSMs) is a more advanced and well-established process, supported by a range of commercial tools. These tools utilize comprehensive libraries of platform-specific rules and design patterns to automatically convert a PIM into the corresponding PSM. Furthermore, a single PIM may be used to generate multiple PSMs, enabling software systems to be deployed across different platforms such as J2EE and .NET without duplicating development effort. In such cases, only the PIM requires ongoing maintenance, while the PSMs for each designated platform can be generated automatically, thereby enhancing efficiency and consistency in system implementation.</p>
-                
-                <p class="mb-4">Although Model-Driven Architecture (MDA) tools provide platform-specific translators, these typically offer only partial support for translating Platform-Independent Models (PIMs) into Platform-Specific Models (PSMs). This limitation arises because a system's execution environment extends beyond standard platforms such as J2EE or .NET, encompassing additional elements such as company-specific application systems, proprietary libraries, and user interface components. Since these aspects differ widely across organizations, standardized tool support is often inadequate. Consequently, the introduction of MDA may require the development of special-purpose translators tailored to the local environment. In certain cases, such as user interface generation, fully automated translation from PIM to PSM may not be feasible.</p>
-                
-                <p class="mb-4">There exists a fundamental tension between agile methods and model-driven architecture (MDA), as the emphasis on extensive up-front modeling conflicts with the principles outlined in the Agile Manifesto. Many agile developers are therefore skeptical of model-driven engineering. Proponents of MDA, however, argue that it can be applied in an iterative manner, aligning it with agile practices (Mellor et al., 2004). In theory, if transformations were fully automated and complete programs could be generated directly from Platform-Independent Models (PIMs), MDA could integrate seamlessly into agile development by eliminating the need for manual coding. In practice, however, current MDA tools lack support for essential agile practices such as regression testing and test-driven development, limiting their compatibility with agile processes.</p>
+                <p>However, despite these successes, MDE has not yet achieved widespread adoption in the software engineering industry. Similar to formal methods, which are discussed in Chapter 12, MDE is considered a promising approach but is not universally accepted or implemented. The challenge remains in balancing the costs and risks of using MDE with its potential benefits. While MDE can offer significant advantages, particularly in terms of high-level abstraction and platform independence, its practical application on a broad scale still faces hurdles that need to be overcome.</p>
 
-                <h3 class="text-xl font-semibold text-main-blue mt-6 mb-3">5.5.2 Executable UML</h3>
+                <h3 class="sub-chapter-title">5.5.1 Model-driven architecture</h3>
                 
-                <p class="mb-4">The central concept of model-driven engineering is the possibility of fully automating the transformation of models into executable code. Achieving this requires the development of graphical models with precisely defined semantics, along with mechanisms for specifying how the operations described in the model are to be implemented. This capability is provided by Executable UML (xUML), a specialized subset of UML 2 (Mellor and Balcer, 2002). While the detailed workings of xUML are beyond the current scope, its main features can be briefly outlined to highlight its role in supporting model execution.</p>
+                <p>Model-Driven Architecture (MDA) is a software design and implementation approach that focuses on using models to describe a system at various levels of abstraction. MDA leverages a subset of UML models to represent the system's design. The core idea is to start with a platform-independent model (PIM), which describes the system's functionality without being tied to any specific technology or platform.</p>
                 
-                <p class="mb-4">UML was originally intended as a language for software design and documentation rather than as a programming language. Its focus was on expressiveness rather than precise semantics, introducing concepts such as use case diagrams, which are valuable for design but too informal for execution. To enable execution, UML has been refined into a smaller, more rigorous subset. In this executable subset, the number of model types is reduced to three key types:</p>
+                <p>From this high-level model, it is theoretically possible to automatically generate a working program with minimal or no manual intervention. The aim is to abstract away platform-specific details during the design phase, allowing for more flexible and adaptable systems. By creating models at different abstraction levels, MDA facilitates easier adaptation and reconfiguration for different platforms and technologies.</p>
+                
+                <figure>
+                    <img src="assets/figure5.19.png" class="chapter-image" alt="MDA transformations">
+                </figure>
+                <figcaption class=""><strong>Figure 5.19: </strong>MDA transformations</figcaption>
+                
+                <p>The Model-Driven Architecture (MDA) method recommends producing three types of system models to guide the design and implementation process:</p>
+
+                 <table class="min-w-full border border-gray-100 rounded-xl bg-white text-neutral-gray shadow-sm">
+                    <thead class="bg-content-bg/40 text-neutral-gray font-semibold">
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr><td class="p-3 sm:p-4"><strong>Computation Independent Model (CIM): </strong></td>
+                            <td class="p-3 sm:p-4">This model focuses on the essential abstractions of the system's domain, independent of any computational or technical details. It captures key concepts and their relationships within the system, often resulting in multiple CIMs that represent different perspectives (e.g., a security model or a patient record model). CIMs define important domain concepts such as assets, roles, or entities like patients and consultations.</td>
+                        </tr>
+                        <tr><td class="p-3 sm:p-4"><strong>Platform Independent Model (PIM): </strong></td>
+                            <td class="p-3 sm:p-4">The PIM describes the system's operation and functionality without specifying platform-related implementation details. It focuses on the static structure of the system (such as class diagrams) and its response to external and internal events. PIMs are typically represented using UML models and can be adapted to different platforms.</td>
+                        </tr>
+                        <tr><td class="p-3 sm:p-4"><strong>Platform Specific Models (PSM): </strong></td>
+                            <td class="p-3 sm:p-4">These models are derived from the PIM and incorporate platform-specific details. Each PSM corresponds to a different application platform (e.g., middleware, databases) and adds the required technical specifications. Multiple layers of PSMs can be created, with each layer introducing additional platform-specific details as needed (e.g., starting with middleware-specific models, then refining for a specific database).</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                
+                <p>Together, these models help abstract the system's design and facilitate automatic transformation into working code across different platforms.</p>
+                
+                <figure>
+                    <img src="assets/figure5.20.png" class="chapter-image" alt="MDA models">
+                </figure>
+                <figcaption class=""><strong>Figure 5.20: </strong>MDA models for the MHC-PMS</figcaption>
+                
+                <p>Transformations between models can be automated, such as converting a PSM into executable code. However, fully automatic CIM-to-PIM translation is still experimental and requires human input. This often involves linking concepts across CIMs (e.g., mapping a "role" in a security CIM to a "staff member" in a hospital CIM). Mellor and Balcer (2002) call these mappings "bridges."</p>
+                <p>The translation of Platform-Independent Models (PIMs) to Platform-Specific Models (PSMs) is a more advanced and well-established process, supported by a range of commercial tools. These tools utilize comprehensive libraries of platform-specific rules and design patterns to automatically convert a PIM into the corresponding PSM. Furthermore, a single PIM may be used to generate multiple PSMs, enabling software systems to be deployed across different platforms such as J2EE and .NET without duplicating development effort. In such cases, only the PIM requires ongoing maintenance, while the PSMs for each designated platform can be generated automatically, thereby enhancing efficiency and consistency in system implementation.</p>
+                <p>Although Model-Driven Architecture (MDA) tools provide platform-specific translators, these typically offer only partial support for translating Platform-Independent Models (PIMs) into Platform-Specific Models (PSMs). This limitation arises because a system's execution environment extends beyond standard platforms such as J2EE or .NET, encompassing additional elements such as company-specific application systems, proprietary libraries, and user interface components. Since these aspects differ widely across organizations, standardized tool support is often inadequate. Consequently, the introduction of MDA may require the development of special-purpose translators tailored to the local environment. In certain cases, such as user interface generation, fully automated translation from PIM to PSM may not be feasible.</p>
+                <p>There exists a fundamental tension between agile methods and model-driven architecture (MDA), as the emphasis on extensive up-front modeling conflicts with the principles outlined in the Agile Manifesto. Many agile developers are therefore skeptical of model-driven engineering. Proponents of MDA, however, argue that it can be applied in an iterative manner, aligning it with agile practices (Mellor et al., 2004). In theory, if transformations were fully automated and complete programs could be generated directly from Platform-Independent Models (PIMs), MDA could integrate seamlessly into agile development by eliminating the need for manual coding. In practice, however, current MDA tools lack support for essential agile practices such as regression testing and test-driven development, limiting their compatibility with agile processes.</p>
+
+                <h3 class="sub-chapter-title">5.5.2 Executable UML</h3>
+                
+                <p>The central concept of model-driven engineering is the possibility of fully automating the transformation of models into executable code. Achieving this requires the development of graphical models with precisely defined semantics, along with mechanisms for specifying how the operations described in the model are to be implemented. This capability is provided by Executable UML (xUML), a specialized subset of UML 2 (Mellor and Balcer, 2002). While the detailed workings of xUML are beyond the current scope, its main features can be briefly outlined to highlight its role in supporting model execution.</p>
+                <p>UML was originally intended as a language for software design and documentation rather than as a programming language. Its focus was on expressiveness rather than precise semantics, introducing concepts such as use case diagrams, which are valuable for design but too informal for execution. To enable execution, UML has been refined into a smaller, more rigorous subset. In this executable subset, the number of model types is reduced to three key types:</p>
+                
                 <ol class="list-decimal list-inside my-4 leading-relaxed">
                     <li class="mb-2">Domain models, which define the main concerns of the system using UML class diagrams that capture objects, attributes, and associations.</li>
                     <li class="mb-2">Class models, which specify classes together with their attributes and operations.</li>
                     <li class="mb-2">State models, which attach a state diagram to each class to represent its lifecycle.</li>
                 </ol>
                 
-                <p class="mb-4">The dynamic behavior of a system can be defined in two ways: declaratively, using the Object Constraint Language (OCL), or procedurally, through UML's action language. The action language functions as a high-level programming language, allowing developers to reference objects and their attributes while specifying the actions to be executed. This provides a precise means of modeling system behavior in executable terms.</p>
+                <p>The dynamic behavior of a system can be defined in two ways: declaratively, using the Object Constraint Language (OCL), or procedurally, through UML's action language. The action language functions as a high-level programming language, allowing developers to reference objects and their attributes while specifying the actions to be executed. This provides a precise means of modeling system behavior in executable terms.</p>
             </article>
         </section>
-    </main>
+      </main>
+    </div>
+</div>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <section class="footer-section">
-            <p class="footer-text-bold">Systematic.dev</p>
-            <p class="footer-text"><i class="fa-solid fa-location-dot social-icon"></i> 123 Innovation Street, Tech City, 45678</p>
-        </section>
+    <footer class="bg-white py-4 px-6 xl:py-0 grid grid-row-2 gap-3">
 
-        <section class="footer-section">
-            <p class="footer-text-bold">CONTACT US</p> 
-            <div class="social-icons">
-                <i class="fa-brands fa-facebook social-icon"></i>  
-                <i class="fa-brands fa-twitter social-icon"></i>  
-                <i class="fa-brands fa-instagram social-icon"></i>  
-                <i class="fa-brands fa-linkedin social-icon"></i>
-            </div>
-        </section>
+        <!-- Mobile view of Chapters -->
+        <table class="border-collapse border border-none text-main-blue xl:hidden">
+        <tbody class="table-footer py-2 xl:pt-0">
+            <tr>
+            <td><a href="chapter-1.html" class="hover:text-light-blue">Introduction</a></td>
+            <td class="xl:hidden"><i class="fa-solid fa-plus "></i></td>
+            </tr>
+            <tr>
+            <td><a href="chapter-2.html" class="hover:text-light-blue">Software Processes</a></td>
+            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+            </tr>
+            <tr>
+            <td><a href="chapter-3.html" class="hover:text-light-blue">Agile Software Development</a></td>
+            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+            </tr>
+            <tr>
+            <td><a href="chapter-4.html" class="hover:text-light-blue">Requirements Engineering</a></td>
+            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+            </tr>
+            <tr>
+            <td><a href="chapter-5.html" class="hover:text-light-blue">System Modeling</a></td>
+            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+            </tr>
+        </tbody>
+        </table>
 
-        <section class="footer-section">
-            <p class="footer-text">© Systematic.dev. All rights reserved</p>
-            <p class="footer-text-bold">Bagunas, Johnrey V.</p>
-        </section>
+        <!-- Desktop view of Chapters -->
+        <section class="hidden xl:grid xl:grid-cols-5 gap-3 mx-30 text-sm">
+                <div class="footer-chapter">
+                    <a href="chapter-1.html" class="font-medium">Introduction</a>
+                    <i class="fa-solid fa-plus xl:hidden"></i>
+                </div>
+
+                <div class="footer-chapter">
+                    <a href="chapter-2.html" class="font-medium">Software Processes</a>
+                    <i class="fa-solid fa-plus xl:hidden"></i>
+                </div>
+
+                <div class="footer-chapter">
+                    <a href="chapter-3.html" class="font-medium">Agile Software Development</a>
+                    <i class="fa-solid fa-plus xl:hidden"></i>
+                </div>
+
+                <div class="footer-chapter">
+                    <a href="chapter-4.html" class="font-medium">Requirements Engineering</a>
+                    <i class="fa-solid fa-plus xl:hidden"></i>
+                </div>
+
+                <div class="footer-chapter">
+                    <a href="chapter-5.html" class="font-medium">System Modeling</a>
+                    <i class="fa-solid fa-plus xl:hidden"></i>
+                </div>
+            </section>
+    
+        <!-- Brand & Address -->
+        <section class="flex flex-col justify-center items-center xl:flex-row xl:justify-around xl:pt-0">
+            <section class="flex flex-col justify-center items-center xl:flex-row xl:gap-30 xl:pt-0">
+                <section class="brand-container font-bold">
+                    <img src="assets\logo.png" class="logo">
+                    <a href="index.html" class="brand-logo">Systematic.dev</a>
+                </section>
+                <p class="flex items-start gap-2 text-sm">
+                <i class="fa-solid fa-location-dot text-xl text-main-blue"></i>
+                123 Innovation Street, Tech City, 45678
+                </p>
+            </section>
+
+            <!-- Social Media -->
+            <section class="flex flex-col items-center text-main-blue py-4 xl:hidden">
+                <div class="flex gap-4">
+                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                </div>
+            </section>
+            
+
+    </section>
+            <!-- Footer Bottom -->
+            <section class="flex flex-col border-t border-main-blue/20 pt-2 text-center xl:flex-row xl:justify-around">
+                <p class="text-sm">© Systematic.dev. All rights reserved.</p>
+                <p class="font-semibold text-sm text-main-blue">Bagunas, Johnrey V.</p>
+            </section>
     </footer>
 </body>
 </html>
