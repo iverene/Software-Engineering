@@ -353,6 +353,12 @@ body {
         @apply text-gray-500 pl-5 no-underline rounded-sm hover:bg-main-blue   hover:text-white lg:text-base;
     }
 
+    .cards-container {
+        @apply flex flex-col gap-5 m-10 items-center justify-evenly lg:flex-row;
+    }
+
+
+
     /* End of Iverene's styles. Do not change. However, feel free to use these. */
 
 }
