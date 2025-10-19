@@ -15,9 +15,14 @@ body {
     font-family: var(--font-family-poppins);
 }
 
+/* ==========================================================
+   🌐 MAIN PAGE STYLE — Software Engineering (Systematic.dev)
+   This section styles the main Software Engineering page.
+   ========================================================== */
+
 @layer components {
 
-    /* Header and Navigation */
+    /* ---------- Header and Navigation ---------- */
     .site-header {
         @apply sticky top-0 z-50 bg-main-white shadow-md;
     }
@@ -55,27 +60,95 @@ body {
     }
     
     .auth-btn {
-        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-light-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
+        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-light-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5;
     }
-    
-    /* Main Content */
+
+    .site-footer {
+        @apply bg-main-white text-main-blue p-8;
+    }
+
+    .footer-grid {
+        @apply md:grid md:grid-cols-3 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
+    }
+
+    /* Logo & Address */
+    .footer-brand {
+        @apply flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0 md:col-span-1;
+    }
+
+    .footer-logo {
+        @apply w-14 h-14;
+    }
+
+    .footer-brand-name {
+        @apply text-light-blue hover:text-main-blue text-2xl font-extrabold transition-colors;
+    }
+
+    .footer-address {
+        @apply text-sm text-gray-400 text-center md:text-left flex items-start;
+    }
+
+    .footer-address i {
+        @apply mr-2 mt-1 text-light-blue;
+    }
+
+    /* Group Info */
+    .footer-group {
+        @apply mb-8 md:mb-0 text-center md:text-left;
+    }
+
+    .footer-group-title {
+        @apply text-lg font-bold text-main-blue mb-4 border-b border-main-blue inline-block pb-1;
+    }
+
+    .footer-group-list {
+        @apply text-sm space-y-2 text-main-blue;
+    }
+
+    /* Social Links */
+    .footer-social {
+        @apply flex flex-col items-center md:items-end;
+    }
+
+    .footer-social-title {
+        @apply uppercase text-lg font-bold text-main-blue mb-4;
+    }
+
+    .footer-social-icons {
+        @apply flex space-x-6 text-2xl;
+    }
+
+    .footer-social-link {
+        @apply text-light-blue hover:text-main-blue transition-colors;
+    }
+
+    .footer-credits {
+        @apply text-xs text-gray-500;
+    }
+
+    /* ---------- Index Background ---------- */
     .main-content {
-        @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5 -mt-12;
+        @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5;
     }
     
+    /* ---------- Intro Section ---------- */
+
     .intro-article {
-        @apply bg-content-bg p-5 rounded-lg m-5 text-main-blue shadow-md my-15;
+        @apply flex flex-col justify-center items-center text-center bg-main-blue py-24 md:py-32 px-6 shadow-2xl rounded-xl md:rounded-lg;
     }
-    
     .page-title {
-        @apply text-xl bg-main-blue p-5 rounded-lg m-5 text-main-white text-center shadow-md md:text-5xl font-bold;
+        @apply text-center text-5xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-main-white mb-6 hover:drop-shadow-lg transition-all duration-100;
     }
-    
+
     .intro-description {
-        @apply text-base mt-4 opacity-90 text-center md:text-xl;
+        @apply text-center text-lg sm:text-xl md:text-2xl font-light text-main-white/90 max-w-3xl mx-auto mb-10;
     }
-    
-    /* Chapter Grid */
+
+    .intro-btn {
+        @apply inline-block text-center bg-light-blue text-main-blue font-semibold text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-main-white hover:text-main-blue ring-4 ring-light-blue/50 no-underline;
+    }
+
+    /* ---------- Chapter Grid Styles---------- */
     .chapter-grid {
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 my-15;
     }
@@ -85,7 +158,7 @@ body {
     }
     
     .chapter-title {
-        @apply text-2xl mb-2.5 text-main-blue font-bold hover:text-main-white hover:bg-main-blue hover:p-2.5 hover:rounded-md hover:shadow-md transition-all duration-300;
+        @apply text-2xl mb-2.5 text-main-blue font-bold;
     }
     
     .chapter-number {
@@ -99,88 +172,112 @@ body {
     .view-btn {
         @apply bg-main-blue text-main-white px-5 py-2.5 border-none rounded-md font-semibold cursor-pointer transition-all duration-300 no-underline inline-block mt-2.5 hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue;
     }
-    
-    /* Article Styling */
-    .article-content {
-        @apply bg-content-bg p-5 rounded-lg m-5 text-main-blue shadow-md;
-    }
-    
-    .section-content {
-        @apply bg-main-white p-5 rounded-lg m-5;
-    }
-    
-    /* Images */
+
+    /* ---------- Images ---------- */
     .content-image {
         @apply block mx-auto w-1/2 border-4 border-main-blue rounded-lg shadow-2xl my-10;
     }
-    
-    .image-caption {
-        @apply mt-5 mb-5 text-center italic text-main-blue;
+
+    figure{
+        @apply flex flex-col items-center my-8;
     }
-    
-    /* Typography */
-    .heading-1 {
-        @apply text-center text-5xl font-bold text-main-blue;
+    figcaption{
+        @apply text-center mt-5 mb-6 italic text-neutral-gray/70;
     }
-    
-    .heading-2 {
-        @apply text-left text-2xl font-semibold text-main-blue hover:text-main-white hover:bg-main-blue hover:p-1.5 hover:rounded-md hover:shadow-md transition-all duration-300;
-    }
-    
-    /* Links */
+
+    /* ---------- Links ---------- */
     .content-link {
         @apply underline text-main-blue hover:text-main-white hover:no-underline transition-colors;
     }
-    
-    /* Divider */
+
+    /* ---------- Divider ---------- */
     .divider {
         @apply h-px bg-main-blue border-none m-5;
     }
-    
-    /* Footer */
-    .site-footer {
-        @apply text-center p-4 bg-main-blue flex items-center justify-center gap-6;
-    }
-    
-    .footer-section {
-        @apply h-15 bg-main-blue text-main-white flex justify-around items-center gap-6;
-    }
-    
-    .footer-text {
-        @apply text-main-white m-0;
-    }
-    
-    .footer-text-bold {
-        @apply text-main-white font-bold m-0;
-    }
-    
-    .social-icons {
-        @apply flex gap-3;
-    }
-    
-    .social-icon {
-        @apply text-main-white cursor-pointer hover:opacity-75 transition-opacity;
-    }
-    
-    /* Dropdown Components */
+
+    /* ---------- Dropdown Components ---------- */
     .dropdown-container {
         @apply relative inline-block;
     }
-    
+
     .dropdown-button {
         @apply text-base border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
     }
-    
+
     .dropdown-content {
         @apply hidden absolute bg-main-white min-w-40 shadow-xl z-10 rounded-lg m-2;
     }
-    
+
     .dropdown-container:hover .dropdown-content {
         @apply block;
     }
-    
+
     .dropdown-link {
         @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
+    }
+
+    /* ---------- Johnrey Styles ---------- */
+
+    /* ---------- Font Styles ---------- */
+
+    .chapter-header {
+        @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-gray mb-3;
+    }
+    .chapter-subheader {
+        @apply text-xl sm:text-3xl font-semibold md:mt-10 text-main-blue;
+    }
+    .sub-chapter-title {
+        @apply text-xl font-semibold text-main-blue mt-6 mb-3;
+    }
+    strong {
+        @apply font-bold text-main-blue;
+    }
+
+    /* ---------- Article Content Styling -----------*/
+    .article-content {
+        @apply bg-main-white p-5 rounded-lg m-5 text-main-blue shadow-xl border border-blue-100/50;
+    }
+
+    .heading-title {
+        @apply text-left text-2xl font-semibold text-main-blue ;
+    }
+    
+    .glass-card {
+        @apply bg-white/80 backdrop-blur-md rounded-3xl border border-white/40 shadow-xl shadow-indigo-200/20;
+    }
+
+    .glass-card p {
+        @apply m-0;
+    }
+
+    .glass-card article {
+        @apply space-y-4;
+    }
+    
+    .chapter-image{
+        @apply max-w-full h-auto rounded-xl shadow-md border border-gray-100;
+    }
+
+    /* ---------- Sidebar Styling -----------*/
+
+    .sidebar {
+        @apply bg-white/75 backdrop-blur-sm rounded-2xl border border-white/50 shadow-lg shadow-indigo-200/10;
+    }
+
+    .sidebar-title {
+        @apply text-lg md:text-xl font-bold text-indigo-800 mb-6 border-gray-200 pb-4;
+    }
+
+    .sidebar p {
+        @apply m-0;
+    }
+
+    .sidebar-description {
+        @apply text-xs text-neutral-gray/70 leading-tight;   
+   }
+
+    .nav-link-item {
+        @apply block pl-5 mb-5 relative border-l-2 border-transparent hover:border-indigo-400 transition-all;
     }
 
     /* Iverene's styles. Do not change. However, feel free to use these. */
