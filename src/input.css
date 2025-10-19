@@ -350,7 +350,7 @@ body {
     }
 
     .table-of-contents li {
-        @apply text-gray-500 pl-5 no-underline hover:bg-light-blue/10 rounded-sm  hover:text-neutral-gray lg:text-base;
+        @apply text-gray-500 pl-5 no-underline rounded-sm hover:bg-main-blue   hover:text-white lg:text-base;
     }
 
     /* End of Iverene's styles. Do not change. However, feel free to use these. */
