@@ -60,7 +60,7 @@ body {
     }
     
     .auth-btn {
-        @apply rounded-md no-underline bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
+        @apply rounded-md no-underline shadow-sm bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
     }
 
     .site-footer {
@@ -290,23 +290,17 @@ body {
     }
 
     .table-container {
-        @apply border-collapse border border-light-blue w-full mb-6 mt-4;
+        @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
     }
 
     .table-container th, .table-container td {
         @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
     }
 
+
+
     .box-container {
         @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
-    }
-
-    .images-container {
-        @apply flex justify-center items-center my-6;
-    }
-
-    .images {
-        @apply max-w-full h-auto;
     }
 
     .table-footer td {
@@ -352,17 +346,20 @@ body {
     }
     
     .table-of-contents {
-        @apply list-none space-y-3;
+        @apply list-none space-y-2;
     }
 
     .table-of-contents li {
-        @apply text-neutral-gray border-l-2 border-light-blue pl-5 no-underline hover:bg-main-blue/25 rounded-r-sm  hover:text-neutral-gray hover:border-main-blue lg:text-sm;
+        @apply text-gray-500 pl-5 no-underline rounded-sm hover:bg-main-blue   hover:text-white lg:text-base;
     }
 
-    .table-of-contents li a.active {
-        @apply text-[#2596be] font-semibold border-[#2596be];
+    .cards-container {
+        @apply flex flex-col gap-5 m-10 items-center justify-evenly lg:flex-row;
     }
+
+
 
     /* End of Iverene's styles. Do not change. However, feel free to use these. */
 
 }
+
