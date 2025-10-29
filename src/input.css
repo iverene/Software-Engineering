@@ -344,17 +344,42 @@ body {
     .border-title {
         @apply border-b-2 pb-2;
     }
-    
+     /* Table of Contents */
     .table-of-contents {
         @apply list-none space-y-2;
     }
 
     .table-of-contents li {
-        @apply text-gray-500 pl-5 no-underline rounded-sm hover:bg-main-blue   hover:text-white lg:text-base;
+        @apply text-gray-500 pl-5 no-underline rounded-sm  hover:text-main-blue lg:text-base;
     }
 
+    .toc-item {
+        @apply relative;
+    }
+
+    .toc-link {
+        @apply block w-full p-1 transition-all duration-200;
+    }
+
+    .toc-submenu {
+        @apply max-h-0 overflow-hidden transition-all duration-500 border-l-2 border-gray-200;
+    }
+
+    .toc-item:hover .toc-submenu {
+        @apply max-h-96; 
+    }
+
+    .toc-subitem {
+        @apply text-gray-500 list-none;
+    }
+
+    .toc-sublink {
+        @apply block px-4 py-2 text-sm transition-all duration-200;
+    }
+
+
     .cards-container {
-        @apply flex flex-col gap-5 m-10 items-center justify-evenly lg:flex-row;
+        @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
     }
 
 
