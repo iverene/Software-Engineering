@@ -282,11 +282,11 @@ body {
 
     /* Iverene's styles. Do not change. However, feel free to use these. */
     section {
-        @apply xl:pt-10;
+        @apply xl:pt-0;
     }
 
     article {
-        @apply mt-10;
+        @apply mt-10 xl:pt-20;
     }
 
     .table-container {

@@ -1648,11 +1648,14 @@ body {
   }
   section {
     @media (width >= 80rem) {
-      padding-top: calc(var(--spacing) * 10);
+      padding-top: calc(var(--spacing) * 0);
     }
   }
   article {
     margin-top: calc(var(--spacing) * 10);
+    @media (width >= 80rem) {
+      padding-top: calc(var(--spacing) * 20);
+    }
   }
   .table-container {
     margin-top: calc(var(--spacing) * 4);
