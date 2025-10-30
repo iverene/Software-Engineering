@@ -279,6 +279,9 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -749,9 +752,19 @@
       width: calc(var(--spacing) * 200);
     }
   }
+  .md\:w-\[640px\] {
+    @media (width >= 48rem) {
+      width: 640px;
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:gap-5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 5);
     }
   }
   .md\:bg-gradient-to-br {
@@ -765,19 +778,26 @@
       padding: calc(var(--spacing) * 3);
     }
   }
-  .md\:p-5 {
+  .md\:p-8 {
     @media (width >= 48rem) {
-      padding: calc(var(--spacing) * 5);
-    }
-  }
-  .md\:px-5 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 5);
+      padding: calc(var(--spacing) * 8);
     }
   }
   .md\:px-8 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:text-base {
+    @media (width >= 48rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .md\:text-sm\/6 {
+    @media (width >= 48rem) {
+      font-size: var(--text-sm);
+      line-height: calc(var(--spacing) * 6);
     }
   }
   .lg\:col-span-3 {
@@ -909,11 +929,6 @@
   .xl\:py-0 {
     @media (width >= 80rem) {
       padding-block: calc(var(--spacing) * 0);
-    }
-  }
-  .xl\:py-3 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 3);
     }
   }
   .xl\:py-4 {
@@ -1773,6 +1788,9 @@ body {
     line-height: calc(var(--spacing) * 8);
     color: var(--color-neutral-gray);
     @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 2);
+    }
+    @media (width >= 48rem) {
       --tw-leading: calc(var(--spacing) * 9);
       line-height: calc(var(--spacing) * 9);
     }
@@ -1943,6 +1961,38 @@ body {
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     --tw-duration: 200ms;
     transition-duration: 200ms;
+  }
+  .toc-details {
+    & summary::-webkit-details-marker {
+      display: none;
+    }
+  }
+  .toc-summary {
+    display: flex;
+    cursor: pointer;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .toc-summary a {
+    color: var(--color-neutral-gray);
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-main-blue);
+      }
+    }
+  }
+  .toc-icon {
+    margin-right: calc(var(--spacing) * 1);
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  details[open] .toc-icon {
+    transform: rotate(90deg);
   }
   .cards-container {
     margin: calc(var(--spacing) * 10);

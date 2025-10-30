@@ -300,7 +300,7 @@ body {
     }
 
     p {
-        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3 xl:py-2;
+        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3 md:py-2 xl:py-2;
     }
 
     .text-bold {
@@ -342,9 +342,6 @@ body {
     }
 
     
-    
-
-    
      /* Table of Contents */
     .table-of-contents {
         @apply list-none space-y-2;
@@ -376,6 +373,26 @@ body {
 
     .toc-sublink {
         @apply block px-4 py-2 text-sm transition-all duration-200;
+    }
+
+    .toc-details {
+      @apply [&_summary::-webkit-details-marker]:hidden;
+    }
+
+    .toc-summary {
+      @apply flex items-center justify-between cursor-pointer py-1 list-none;
+    }
+
+    .toc-summary a {
+      @apply text-neutral-gray hover:text-main-blue;
+    }
+
+    .toc-icon {
+      @apply transition-transform duration-300 mr-1;
+    }
+
+    details[open] .toc-icon {
+      transform: rotate(90deg);
     }
 
     /* Flip Cards */
