@@ -280,35 +280,13 @@ body {
         @apply block pl-5 mb-5 relative border-l-2 border-transparent hover:border-indigo-400 transition-all;
     }
 
-    /* Iverene's styles. Do not change. However, feel free to use these. */
+    /* Iverene's styles */
     section {
-        @apply xl:pt-10;
+        @apply xl:pt-0;
     }
 
     article {
-        @apply mt-10;
-    }
-
-    .table-container {
-        @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
-    }
-
-    .table-container th, .table-container td {
-        @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
-    }
-
-
-
-    .box-container {
-        @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
-    }
-
-    .table-footer td {
-        @apply py-2 border-b-1 xl:border-none;
-    }
-
-    .footer-chapter {
-        @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
+        @apply mt-10 xl:pt-20;
     }
 
     h1 {
@@ -322,7 +300,7 @@ body {
     }
 
     p {
-        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3;
+        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3 md:py-2 xl:py-2;
     }
 
     .text-bold {
@@ -344,22 +322,90 @@ body {
     .border-title {
         @apply border-b-2 pb-2;
     }
+
+
+    /* Table */
+    .table-container {
+        @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
+    }
+
+    .table-container th, .table-container td {
+        @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
+    }
+
+    .table-footer td {
+            @apply py-2 border-b-1 xl:border-none;
+        }
+
+    .box-container {
+        @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
+    }
+
     
+     /* Table of Contents */
     .table-of-contents {
         @apply list-none space-y-2;
     }
 
     .table-of-contents li {
-        @apply text-gray-500 pl-5 no-underline rounded-sm hover:bg-main-blue   hover:text-white lg:text-base;
+        @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue lg:text-base;
     }
 
+    .toc-item {
+        @apply relative;
+    }
+
+    .toc-link {
+        @apply block w-full p-1 transition-all duration-200;
+    }
+
+    .toc-submenu {
+        @apply max-h-0 overflow-hidden transition-all duration-500 border-l-2 border-gray-200 hover:border-main-blue;
+    }
+
+    .toc-item:hover .toc-submenu {
+        @apply max-h-96; 
+    }
+
+    .toc-subitem {
+        @apply text-gray-500 list-none;
+    }
+
+    .toc-sublink {
+        @apply block px-4 py-2 text-sm transition-all duration-200;
+    }
+
+    .toc-details {
+      @apply [&_summary::-webkit-details-marker]:hidden;
+    }
+
+    .toc-summary {
+      @apply flex items-center justify-between cursor-pointer py-1 list-none;
+    }
+
+    .toc-summary a {
+      @apply text-neutral-gray hover:text-main-blue;
+    }
+
+    .toc-icon {
+      @apply transition-transform duration-300 mr-1;
+    }
+
+    details[open] .toc-icon {
+      transform: rotate(90deg);
+    }
+
+    /* Flip Cards */
     .cards-container {
-        @apply flex flex-col gap-5 m-10 items-center justify-evenly lg:flex-row;
+        @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
     }
 
+    /* Footer */
+    .footer-chapter {
+            @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
+        }
 
-
-    /* End of Iverene's styles. Do not change. However, feel free to use these. */
+    /* End of Iverene's styles */
 
 }
 
