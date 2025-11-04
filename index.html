@@ -20,7 +20,7 @@
             <nav class="nav-menu">
                 <a href="" class="nav-link">Projects</a>
                 <a href="" class="nav-link">Blog</a>
-                <a href="#about" class="nav-link">About</a>
+                <a href="" class="nav-link">About</a>
                 <a href="" class="nav-link">Contact</a>
             </nav>
 
@@ -34,11 +34,11 @@
     <main class="main-content">
 
         <!-- Hero Section -->
-        <section class="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-5 xl:py-15 gap-10">
+        <section class="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-5 xl:py-18 gap-10">
 
         <article class="flex-1 text-center lg:text-left space-y-6">
             <h1 class="text-2xl xl:text-5xl font-bold text-neutral-700 text-center xl:text-left leading-tight animate-fade-in">
-            Master the principles and practices of <span class="text-main-blue ">modern software development</span>
+            Master the principles and practices of <span class="text-main-blue typing">modern software development</span>
             </h1>
             <p class="text-neutral-gray text-lg max-w-xl mx-auto lg:mx-0 animate-fade-in">
             <span class="text-main-blue font-semibold">Systematic.dev</span> is an interactive online learning platform designed to help you build a strong foundation in modern software development practices.
@@ -173,44 +173,97 @@
         </section>
 
         <!-- Our Team Section -->
-        <section>
-            <h1 class="text-3xl xl:text-4xl text-center font-bold text-neutral-700 mb-4">
-            Our <span class="text-main-blue">Team</span>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <h1 class="text-3xl xl:text-4xl text-center font-bold text-neutral-700 mb-6 xl:mb-13">Meet Our <span class="text-main-blue">Team</span>
             </h1>
+
+            <!-- Members Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 items-start">
+                
+                <!-- Team Member -->
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Bagunas.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">John Rey V. Bagunas</h3>
+                        <p class="position">Leader</p> 
+                        <a href="https://github.com/BagunasJohnrey" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                    
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Causapin.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Iverene Grace M. Causapin</h3>
+                        <p class="position">Frontend and Backend Developer</p> 
+                        <a href="https://github.com/iverene" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/De-Castro.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Jeric De Castro</h3>
+                        <p class="position">Backend Developer</p> 
+                        <a href="https://github.com/decastrojeric" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Manimtim.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Hazel Ann Manimtim</h3>
+                        <p class="position">Frontend Developer</p> 
+                        <a href="https://github.com/Hazelannmanimtim02" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Pagkaliwagan.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Noilee Ann Pagkaliwagan</h3>
+                        <p class="position">Frontend Developer</p> 
+                        <a href="https://github.com/NoileeAnnPagkaliwagan" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                
+            </div>
         </section>
-
-
-            
-        
+ 
     </main>
 
-<footer class="site-footer">
-    <div class="footer-grid">
+<footer class="site-footer w-full">
+    <div class="footer-grid max-w-7xl mx-auto px-6">
         
         <!-- Brand Section -->
-        <section class="footer-brand">
+        <div class="footer-brand">
             <img src="assets/logo.png" alt="Systematic.dev Logo" class="footer-logo">
             <a href="index.html" class="footer-brand-name">Systematic.dev</a>
             <p class="footer-address">
                 <i class="fa-solid fa-location-dot"></i> 
                 123 Innovation Street, Tech City, 45678
             </p>
-        </section>
-
-        <!-- Group Section -->
-        <section class="footer-group">
-            <h1 class="footer-group-title">Group 5</h1>
-            <p class="text-sm font-medium text-main-blue mb-3">Leader: Bagunas Johnrey V.</p>
-            <ul class="footer-group-list">
-                <li>Causapin, Iverene Grace</li>
-                <li>De Castro, Jeric</li>
-                <li>Manimtim, Hazel</li>
-                <li>Pagkaliwangan, Noilee</li>
-            </ul>
-        </section>
+        </div>
 
         <!-- Social Section -->
-        <section class="footer-social">
+        <div class="footer-social">
             <p class="footer-social-title">CONNECT WITH US</p> 
             <div class="footer-social-icons">
                 <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fa-brands fa-facebook"></i></a> 
@@ -220,7 +273,7 @@
             </div>
             <p class="footer-credits">Project by: Group 5</p>
             <p class="footer-credits">© Systematic.dev. All rights reserved</p>
-        </section>
+        </div>
 
     </div>
 </footer>

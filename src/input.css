@@ -68,7 +68,7 @@ body {
     }
 
     .footer-grid {
-        @apply md:grid md:grid-cols-3 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
+        @apply grid md:grid-cols-2 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
     }
 
     /* Logo & Address */
@@ -123,7 +123,7 @@ body {
     }
 
     .footer-credits {
-        @apply text-xs text-gray-500;
+        @apply text-sm text-gray-500;
     }
 
     /* ---------- Index Background ---------- */
@@ -131,22 +131,6 @@ body {
         @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5;
     }
     
-    /* ---------- Intro Section ---------- */
-
-    .intro-article {
-        @apply flex flex-col justify-center items-center text-center bg-main-blue py-24 md:py-32 px-6 shadow-2xl rounded-xl md:rounded-lg;
-    }
-    .page-title {
-        @apply text-center text-5xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-main-white mb-6 hover:drop-shadow-lg transition-all duration-100;
-    }
-
-    .intro-description {
-        @apply text-center text-lg sm:text-xl md:text-2xl font-light text-main-white/90 max-w-3xl mx-auto mb-10;
-    }
-
-    .intro-btn {
-        @apply inline-block text-center bg-light-blue text-main-blue font-semibold text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-main-white hover:text-main-blue ring-4 ring-light-blue/50 no-underline;
-    }
 
     /* ---------- Chapter Grid Styles---------- */
 .chapter-grid {
@@ -179,6 +163,34 @@ body {
   @apply bg-main-blue text-white px-6 py-2.5 rounded-full font-medium
   transition-all duration-300 hover:bg-white hover:text-main-blue hover:ring-2 hover:ring-main-blue mx-auto;
 }
+
+/* Team Card Styles */
+.team-card {
+  @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-md
+         hover:-translate-y-2 hover:shadow-xl 
+         transition-all duration-300 ease-out;
+}
+
+.team-image {
+  @apply w-full h-80 object-cover;
+}
+
+.name-container {
+  @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col items-center justify-center;
+}
+
+.name {
+  @apply text-sm text-main-blue m-0 text-left;
+}
+
+.position {
+  @apply text-sm text-gray-500 m-0 text-left;
+}
+
+.profile-button {
+    @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border ;
+}
+
 
 
     /* ---------- Images ---------- */
@@ -425,20 +437,20 @@ body {
 }
 
 @layer utilities {
-    @keyframes focus-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      filter: blur(12px);
-      opacity: 0;
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
     }
-    100% {
-      filter: blur(0px);
-      opacity: 1;
+
+    @keyframes blink {
+    50% { border-color: transparent; }
     }
-  }
-  .animate-focus-in-expand {
-    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
+
+    .typing {
+    @apply inline-block align-middle overflow-hidden border-r-2 border-main-blue whitespace-nowrap;
+    width: 0; 
+    animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    }
 
   @keyframes fade-in {
     0% {
