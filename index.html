@@ -33,20 +33,42 @@
     <!-- Main Content -->
     <main class="main-content">
 
-        <section id="Intro">
-            <article class="intro-article">
-                <h1 class="page-title">Software Engineering</h1>
-                <p class="intro-description">Master the principles and practices of modern software development</p>
-                <div class="mt-8 text-center">
-                    <a href="Chapter-1.html" class="intro-btn">
-                        Start the Chapter &darr;
-                    </a>
-                </div>
-            </article>
+        <!-- Hero Section -->
+        <section class="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-15 gap-10">
+
+        <!-- Left side: Texts and Buttons -->
+        <article class="flex-1 text-center lg:text-left space-y-6">
+            <h1 class="text-2xl xl:text-5xl font-bold text-neutral-700 leading-tight animate-fade-in">
+            Master the principles and practices of <span class="text-main-blue ">modern software development</span>
+            </h1>
+            <p class="text-neutral-gray text-lg max-w-xl mx-auto lg:mx-0 animate-fade-in">
+            Systematic.dev is an interactive online learning platform designed to help you build a strong foundation in modern software development practices.
+            </p>
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-8 animate-fade-in">
+            <a href="/courses"
+                class="px-8 py-3 bg-main-blue text-white font-medium rounded-full shadow hover:bg-[#1d7a9d] transition-all">
+                Start Learning
+            </a>
+            <a href="#chapters"
+                class="px-8 py-3 border-2 border-main-blue text-main-blue font-medium rounded-full hover:bg-main-blue hover:text-white transition-all">
+                Browse Chapters
+            </a>
+            </div>
+        </article>
+
+        
+        <div class="flex-1 relative w-full h-[430px]">
+            <img src="assets/hero1.jpg" class="absolute top-0 left-25 w-55 rounded-2xl shadow-lg rotate-[-5deg] animate-slide-in-fwd-tl">
+            <img src="assets/hero2.jpg" class="absolute top-10 right-10 w-60 rounded-2xl shadow-lg rotate-[4deg] animate-slide-in-fwd-right">
+            <img src="assets/hero3.jpg" class="absolute bottom-10 left-1/2 -translate-x-1/2 w-68 rounded-2xl shadow-lg rotate-[2deg] animate-slide-in-fwd-bottom">
+        </div>
+
         </section>
+
         
         <!-- Chapter Grid -->
-        <div class="chapter-grid">
+        <div class="chapter-grid" id="chapters">
             <!-- Chapter 1 -->
             <div class="chapter-card">
                 <h2 class="chapter-title">Introduction</h2>
