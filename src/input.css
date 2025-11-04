@@ -149,29 +149,37 @@ body {
     }
 
     /* ---------- Chapter Grid Styles---------- */
-    .chapter-grid {
-        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 my-15;
-    }
-    
-    .chapter-card {
-        @apply lg:col-span-3 bg-content-bg p-7 rounded-lg text-main-blue shadow-md hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 text-justify;
-    }
-    
-    .chapter-title {
-        @apply text-2xl mb-2.5 text-main-blue font-bold;
-    }
-    
-    .chapter-number {
-        @apply font-bold text-main-blue mb-4 block text-sm;
-    }
-    
-    .chapter-description {
-        @apply my-4 leading-relaxed text-sm;
-    }
-    
-    .view-btn {
-        @apply bg-main-blue text-main-white px-5 py-2.5 border-none rounded-md font-semibold cursor-pointer transition-all duration-300 no-underline inline-block mt-2.5 hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue;
-    }
+.chapter-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16 px-4;
+}
+
+.chapter-card {
+  @apply bg-white p-8 rounded-2xl shadow-md border border-neutral-100
+  hover:-translate-y-2 hover:shadow-xl hover:border-main-blue/30
+  transition-all duration-300 ease-out flex flex-col justify-between text-center;
+}
+
+.chapter-head {
+    @apply flex flex-col items-center gap-3 mb-3;
+}
+
+.chapter-number {
+  @apply text-sm font-semibold text-main-blue uppercase tracking-wider mb-2;
+}
+
+.chapter-title {
+  @apply text-xl md:text-2xl font-bold text-neutral-gray mb-3;
+}
+
+.chapter-description {
+  @apply text-neutral-gray text-sm md:text-base leading-relaxed mb-6;
+}
+
+.view-btn {
+  @apply bg-main-blue text-white px-6 py-2.5 rounded-full font-medium
+  transition-all duration-300 hover:bg-white hover:text-main-blue hover:ring-2 hover:ring-main-blue mx-auto;
+}
+
 
     /* ---------- Images ---------- */
     .content-image {
