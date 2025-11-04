@@ -34,19 +34,18 @@
     <main class="main-content">
 
         <!-- Hero Section -->
-        <section class="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-15 gap-10">
+        <section class="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-5 xl:py-15 gap-10">
 
-        <!-- Left side: Texts and Buttons -->
         <article class="flex-1 text-center lg:text-left space-y-6">
-            <h1 class="text-2xl xl:text-5xl font-bold text-neutral-700 leading-tight animate-fade-in">
+            <h1 class="text-2xl xl:text-5xl font-bold text-neutral-700 text-center xl:text-left leading-tight animate-fade-in">
             Master the principles and practices of <span class="text-main-blue ">modern software development</span>
             </h1>
             <p class="text-neutral-gray text-lg max-w-xl mx-auto lg:mx-0 animate-fade-in">
-            Systematic.dev is an interactive online learning platform designed to help you build a strong foundation in modern software development practices.
+            <span class="text-main-blue font-semibold">Systematic.dev</span> is an interactive online learning platform designed to help you build a strong foundation in modern software development practices.
             </p>
 
             <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-8 animate-fade-in">
-            <a href="/courses"
+            <a href="/Chapter-1.html"
                 class="px-8 py-3 bg-main-blue text-white font-medium rounded-full shadow hover:bg-[#1d7a9d] transition-all">
                 Start Learning
             </a>
@@ -58,17 +57,33 @@
         </article>
 
         
-        <div class="flex-1 relative w-full h-[430px]">
-            <img src="assets/hero1.jpg" class="absolute top-0 left-25 w-55 rounded-2xl shadow-lg rotate-[-5deg] animate-slide-in-fwd-tl">
-            <img src="assets/hero2.jpg" class="absolute top-10 right-10 w-60 rounded-2xl shadow-lg rotate-[4deg] animate-slide-in-fwd-right">
-            <img src="assets/hero3.jpg" class="absolute bottom-10 left-1/2 -translate-x-1/2 w-68 rounded-2xl shadow-lg rotate-[2deg] animate-slide-in-fwd-bottom">
+        <!-- Images Container -->
+        <div class="flex-1 relative w-full h-[300px] sm:h-[350px] lg:h-[430px]">
+            <!-- Background gradient (only visible on larger screens) -->
+            <div class="hidden lg:block absolute z-0 w-[400px] xl:w-[500px] h-[400px] xl:h-[500px] bg-gradient-to-br from-blue-100 to-blue-50 rounded-full blur-3xl left-1/2 -translate-x-1/2 top-10 opacity-70 animate-float-scale"></div>
+
+            <div class="relative w-full h-full">
+                <!-- Mobile layout -->
+                <div class="lg:hidden flex justify-center items-end h-full space-x-1">
+                    <img src="assets/hero1.jpg" class="w-36 rounded-xl shadow-lg rotate-[-5deg] z-10 animate-slide-in-fwd-tl">
+                    <img src="assets/hero2.jpg" class="w-40 rounded-xl shadow-lg rotate-[4deg] z-10 animate-slide-in-fwd-right">
+                    <img src="assets/hero3.jpg" class="w-38 rounded-xl shadow-lg rotate-[2deg] z-10 animate-slide-in-fwd-bottom">
+                </div>
+                
+                <!-- Desktop layout  -->
+                <div class="hidden lg:block relative w-full h-full">
+                    <img src="assets/hero1.jpg" class="absolute top-0 left-0 w-44 xl:w-55 rounded-2xl shadow-lg rotate-[-5deg] z-10 animate-slide-in-fwd-tl">
+                    <img src="assets/hero2.jpg" class="absolute top-10 right-0 w-48 xl:w-60 rounded-2xl shadow-lg rotate-[4deg] z-10 animate-slide-in-fwd-right">
+                    <img src="assets/hero3.jpg" class="absolute bottom-10 left-1/2 -translate-x-1/2 w-52 xl:w-68 rounded-2xl shadow-lg rotate-[2deg] z-10 animate-slide-in-fwd-bottom">
+                </div>
+            </div>
         </div>
 
         </section>
 
         
         <!-- Chapter Grid -->
-        <div class="chapter-grid" id="chapters">
+        <section class="chapter-grid" id="chapters">
             <!-- Chapter 1 -->
             <div class="chapter-card">
                 <h2 class="chapter-title">Introduction</h2>
@@ -108,7 +123,9 @@
                 <p class="chapter-description">Master UML diagrams and modeling techniques to design and document software system architecture.</p>
                 <button class="view-btn" onclick="location.href='Chapter-5.html'">View More</button>
             </div>
-        </div>
+        </section>
+            
+        
     </main>
 
 <footer class="site-footer">
