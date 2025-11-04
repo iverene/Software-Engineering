@@ -553,9 +553,6 @@
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
-  .pt-15 {
-    padding-top: calc(var(--spacing) * 15);
-  }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
@@ -1718,19 +1715,42 @@ body {
       padding-top: calc(var(--spacing) * 0);
     }
   }
-  article {
-    margin-top: calc(var(--spacing) * 10);
+  .content {
+    margin-top: calc(var(--spacing) * 8);
+    padding-top: calc(var(--spacing) * 13);
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 14);
+    }
     @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+    @media (width >= 80rem) {
+      padding-top: calc(var(--spacing) * 16);
+    }
+  }
+  .sub-content {
+    padding-top: calc(var(--spacing) * 16);
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 18);
+    }
+    @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 20);
+    }
+    @media (width >= 80rem) {
+      padding-top: calc(var(--spacing) * 25);
     }
   }
   h1 {
     text-align: left;
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
     color: var(--color-main-blue);
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
     @media (width >= 64rem) {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -1754,20 +1774,15 @@ body {
   }
   p {
     margin-block: calc(var(--spacing) * 3);
+    padding-block: calc(var(--spacing) * 2);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     --tw-leading: calc(var(--spacing) * 8);
     line-height: calc(var(--spacing) * 8);
     color: var(--color-neutral-gray);
     @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 2);
-    }
-    @media (width >= 48rem) {
       --tw-leading: calc(var(--spacing) * 9);
       line-height: calc(var(--spacing) * 9);
-    }
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 2);
     }
   }
   .text-bold {
