@@ -254,6 +254,25 @@
     @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
   }
 
+  /* New mobile-specific dropdown styles */
+.mobile-dropdown-container {
+  @apply relative;
+}
+.mobile-dropdown-button {
+  @apply text-base border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer w-full text-left flex justify-between items-center rounded-md;
+}
+.mobile-dropdown-content {
+  @apply hidden bg-main-white shadow-md rounded-lg mt-2 overflow-hidden transition-all duration-300 ease-in-out;
+}
+.mobile-dropdown-container .mobile-dropdown-content {
+  @apply block max-h-0;
+}
+.mobile-dropdown-container input:checked ~ .mobile-dropdown-content {
+  @apply max-h-96; 
+}
+.mobile-dropdown-link {
+  @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors;
+}
   /* ---------- Johnrey Styles ---------- */
 
   /* ---------- Font and Article Content Styling ---------- */
@@ -305,6 +324,10 @@
     @apply text-lg md:text-xl font-bold text-main-blue mb-6 border-gray-200 pb-4;
   }
 
+  .sidebar-header {
+    @apply text-sm font-medium text-neutral-gray hover:text-main-blue transition-colors;
+  }
+
   .sidebar p {
     @apply m-0;
   }
@@ -314,7 +337,11 @@
   }
 
   .nav-link-item {
-    @apply block pl-5 mb-5 relative border-l-2 border-transparent hover:border-main-blue transition-all;
+    @apply block pl-5 mb-3 relative border-l-2 border-transparent hover:border-main-blue transition-all;
+  }
+
+  .nav-link-item-mobile {
+    @apply block pl-5 relative border-l-2 border-transparent hover:border-main-blue transition-all;
   }
 
   /* Iverene's styles */
