@@ -1,18 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-    --color-main-white: #f9fafc;
-    --color-content-bg: #dbe4ff;
-    --color-main-blue: #2596be;
-    --color-light-blue: #67bed9;
-    --color-neutral-gray: #2b2b2b;
-    
-    --font-family-poppins: 'Poppins', sans-serif;
-}
+  --color-main-white: #f9fafc;
+  --color-content-bg: #dbe4ff;
+  --color-main-blue: #2596be;
+  --color-light-blue: #67bed9;
+  --color-neutral-gray: #2b2b2b;
 
-body {
-    scroll-behavior: smooth;
-    font-family: var(--font-family-poppins);
+  --font-family-poppins: "Poppins", sans-serif;
 }
 
 /* ==========================================================
@@ -21,436 +16,462 @@ body {
    ========================================================== */
 
 @layer components {
+  html {
+    /* Adjust this value to match your navbar's height */
+    @apply scroll-pt-[80px];
+  }
 
-    /* ---------- Header and Navigation ---------- */
-    .site-header {
-        @apply sticky top-0 z-50 bg-main-white shadow-md;
-    }
-    
-    .header-container {
-        @apply flex items-center justify-between px-4 py-3 h-14;
-    }
+  body {
+    @apply scroll-smooth;
+    font-family: var(--font-family-poppins);
+  }
 
-    .brand-container {
-        @apply flex items-center px-4 py-3;
-    }
-    
-    .brand-logo {
-        @apply text-main-blue text-base no-underline px-2 py-1 rounded-lg;
-    }
+  /* ---------- Header and Navigation ---------- */
+  .site-header {
+    @apply sticky top-0 z-50 bg-main-white shadow-md;
+  }
 
-    .logo {
-        @apply h-8;
-    }
+  .header-container {
+    @apply flex items-center justify-between px-4 py-3 h-14;
+  }
 
-    .side-logo {
-        @apply text-main-blue hover:text-light-blue;
-    }
-    
-    .nav-menu {
-        @apply hidden md:flex-1 md:flex justify-center items-center gap-6;
-    }
-    
-    .nav-link {
-        @apply no-underline text-main-blue px-2.5 py-1.5 rounded-md hover:underline transition-all duration-200;
-    }
+  .brand-container {
+    @apply flex items-center px-4 py-3;
+  }
 
-    .auth-container {
-        @apply hidden md:flex items-center;
-    }
-    
-    .auth-btn {
-        @apply rounded-md no-underline shadow-sm bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5 ;
-    }
+  .brand-logo {
+    @apply text-main-blue text-base no-underline px-2 py-1 rounded-lg;
+  }
 
-    .site-footer {
-        @apply bg-main-white text-main-blue p-8;
-    }
+  .logo {
+    @apply h-8;
+  }
 
-    .footer-grid {
-        @apply grid md:grid-cols-2 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
-    }
+  .side-logo {
+    @apply text-main-blue hover:text-light-blue;
+  }
 
-    /* Logo & Address */
-    .footer-brand {
-        @apply flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0 md:col-span-1;
-    }
+  .nav-menu {
+    @apply hidden md:flex-1 md:flex justify-center items-center gap-6;
+  }
 
-    .footer-logo {
-        @apply w-14 h-14;
-    }
+  .nav-link {
+    @apply no-underline text-main-blue px-2.5 py-1.5 rounded-md hover:underline transition-all duration-200;
+  }
 
-    .footer-brand-name {
-        @apply text-light-blue hover:text-main-blue text-2xl font-extrabold transition-colors;
-    }
+  .auth-container {
+    @apply hidden md:flex items-center;
+  }
 
-    .footer-address {
-        @apply text-sm text-gray-400 text-center md:text-left flex items-start;
-    }
+  .auth-btn {
+    @apply rounded-md no-underline shadow-sm bg-main-blue text-main-white hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue transition-all duration-200 ml-2.5 px-4.5 py-1.5;
+  }
 
-    .footer-address i {
-        @apply mr-2 mt-1 text-light-blue;
-    }
+  .site-footer {
+    @apply bg-main-white text-main-blue p-8;
+  }
 
-    /* Group Info */
-    .footer-group {
-        @apply mb-8 md:mb-0 text-center md:text-left;
-    }
+  .footer-grid {
+    @apply grid md:grid-cols-2 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
+  }
 
-    .footer-group-title {
-        @apply text-lg font-bold text-main-blue mb-4 border-b border-main-blue inline-block pb-1;
-    }
+  /* Logo & Address */
+  .footer-brand {
+    @apply flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0 md:col-span-1;
+  }
 
-    .footer-group-list {
-        @apply text-sm space-y-2 text-main-blue;
-    }
+  .footer-logo {
+    @apply w-14 h-14;
+  }
 
-    /* Social Links */
-    .footer-social {
-        @apply flex flex-col items-center md:items-end;
-    }
+  .footer-brand-name {
+    @apply text-light-blue hover:text-main-blue text-2xl font-extrabold transition-colors;
+  }
 
-    .footer-social-title {
-        @apply uppercase text-lg font-bold text-main-blue mb-4;
-    }
+  .footer-address {
+    @apply text-sm text-gray-400 text-center md:text-left flex items-start;
+  }
 
-    .footer-social-icons {
-        @apply flex space-x-6 text-2xl;
-    }
+  .footer-address i {
+    @apply mr-2 mt-1 text-light-blue;
+  }
 
-    .footer-social-link {
-        @apply text-light-blue hover:text-main-blue transition-colors;
-    }
+  /* Group Info */
+  .footer-group {
+    @apply mb-8 md:mb-0 text-center md:text-left;
+  }
 
-    .footer-credits {
-        @apply text-sm text-gray-500;
-    }
+  .footer-group-title {
+    @apply text-lg font-bold text-main-blue mb-4 border-b border-main-blue inline-block pb-1;
+  }
 
-    /* ---------- Index Background ---------- */
-    .main-content {
-        @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5;
-    }
-    
+  .footer-group-list {
+    @apply text-sm space-y-2 text-main-blue;
+  }
 
-    /* ---------- Chapter Grid Styles---------- */
-.chapter-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16 px-4;
-}
+  /* Social Links */
+  .footer-social {
+    @apply flex flex-col items-center md:items-end;
+  }
 
-.chapter-card {
-  @apply bg-white p-8 rounded-2xl shadow-md border border-neutral-100
+  .footer-social-title {
+    @apply uppercase text-lg font-bold text-main-blue mb-4;
+  }
+
+  .footer-social-icons {
+    @apply flex space-x-6 text-2xl;
+  }
+
+  .footer-social-link {
+    @apply text-light-blue hover:text-main-blue transition-colors;
+  }
+
+  .footer-credits {
+    @apply text-sm text-gray-500;
+  }
+
+  /* ---------- Index Background ---------- */
+  .main-content {
+    @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5;
+  }
+
+  /* ---------- Chapter Grid Styles---------- */
+  .chapter-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16 px-4;
+  }
+
+  .chapter-card {
+    @apply bg-white p-8 rounded-2xl shadow-md border border-neutral-100
   hover:-translate-y-2 hover:shadow-xl hover:border-main-blue/30
   transition-all duration-300 ease-out flex flex-col justify-between text-center;
-}
+  }
 
-.chapter-head {
+  .chapter-head {
     @apply flex flex-col items-center gap-3 mb-3;
-}
+  }
 
-.chapter-number {
-  @apply text-sm font-semibold text-main-blue uppercase tracking-wider mb-2;
-}
+  .chapter-number {
+    @apply text-sm font-semibold text-main-blue uppercase tracking-wider mb-2;
+  }
 
-.chapter-title {
-  @apply text-xl md:text-2xl font-bold text-neutral-gray mb-3;
-}
+  .chapter-title {
+    @apply text-xl md:text-2xl font-bold text-neutral-gray mb-3;
+  }
 
-.chapter-description {
-  @apply text-neutral-gray text-sm md:text-base leading-relaxed mb-6;
-}
+  .chapter-description {
+    @apply text-neutral-gray text-sm md:text-base leading-relaxed mb-6;
+  }
 
-.view-btn {
-  @apply bg-main-blue text-white px-6 py-2.5 rounded-full font-medium
+  .view-btn {
+    @apply bg-main-blue text-white px-6 py-2.5 rounded-full font-medium
   transition-all duration-300 hover:bg-white hover:text-main-blue hover:ring-2 hover:ring-main-blue mx-auto;
-}
+  }
 
-/* Team Card Styles */
-.team-card {
-  @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-md
+  /* Team Card Styles */
+  .team-card {
+    @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-md
          hover:-translate-y-2 hover:shadow-xl 
          transition-all duration-300 ease-out;
-}
+  }
 
-.team-image {
-  @apply w-full h-80 object-cover;
-}
+  .team-image {
+    @apply w-full h-80 object-cover;
+  }
 
-.name-container {
-  @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col items-center justify-center;
-}
+  .name-container {
+    @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col items-center justify-center;
+  }
 
-.name {
-  @apply text-sm text-main-blue m-0 text-left;
-}
+  .name {
+    @apply text-sm text-main-blue m-0 text-left;
+  }
 
-.position {
-  @apply text-sm text-gray-500 m-0 text-left;
-}
+  .position {
+    @apply text-sm text-gray-500 m-0 text-left;
+  }
 
-.profile-button {
-    @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border ;
-}
+  .profile-button {
+    @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border;
+  }
 
+  /* ---------- Images ---------- */
+  .content-image {
+    @apply block mx-auto w-1/2 border-4 border-main-blue rounded-lg shadow-2xl my-10;
+  }
 
+  figure {
+    @apply flex flex-col items-center my-8;
+  }
+  figcaption {
+    @apply text-center mt-5 mb-6 italic text-neutral-gray/70;
+  }
 
-    /* ---------- Images ---------- */
-    .content-image {
-        @apply block mx-auto w-1/2 border-4 border-main-blue rounded-lg shadow-2xl my-10;
-    }
+  /* ---------- Links ---------- */
+  .content-link {
+    @apply underline text-main-blue hover:text-main-white hover:no-underline transition-colors;
+  }
 
-    figure{
-        @apply flex flex-col items-center my-8;
-    }
-    figcaption{
-        @apply text-center mt-5 mb-6 italic text-neutral-gray/70;
-    }
+  /* ---------- Divider ---------- */
+  .divider {
+    @apply h-px bg-main-blue border-none m-5;
+  }
 
-    /* ---------- Links ---------- */
-    .content-link {
-        @apply underline text-main-blue hover:text-main-white hover:no-underline transition-colors;
-    }
+  /* ---------- Dropdown Components ---------- */
+  .dropdown-container {
+    @apply relative inline-block;
+  }
 
-    /* ---------- Divider ---------- */
-    .divider {
-        @apply h-px bg-main-blue border-none m-5;
-    }
+  .dropdown-button {
+    @apply text-base border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
+  }
 
-    /* ---------- Dropdown Components ---------- */
-    .dropdown-container {
-        @apply relative inline-block;
-    }
+  .dropdown-content {
+    @apply hidden absolute bg-main-white min-w-40 shadow-xl z-10 rounded-lg m-2;
+  }
 
-    .dropdown-button {
-        @apply text-base border-none outline-none text-main-blue px-4 py-3.5 bg-main-white m-0 cursor-pointer;
-    }
+  .dropdown-container:hover .dropdown-content {
+    @apply block;
+  }
 
-    .dropdown-content {
-        @apply hidden absolute bg-main-white min-w-40 shadow-xl z-10 rounded-lg m-2;
-    }
+  .dropdown-link {
+    @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
+  }
 
-    .dropdown-container:hover .dropdown-content {
-        @apply block;
-    }
+  /* ---------- Johnrey Styles ---------- */
 
-    .dropdown-link {
-        @apply text-main-blue px-4 py-3 no-underline block text-left hover:bg-main-blue hover:text-main-white transition-colors rounded-md;
-    }
+  /* ---------- Font and Article Content Styling ---------- */
 
-    /* ---------- Johnrey Styles ---------- */
+  .chapter-header {
+    @apply text-5xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-neutral-gray mb-3;
+  }
+  .chapter-subheader {
+    @apply text-2xl md:text-3xl lg:text-4xl  font-semibold mb-0 lg:mb-3 text-main-blue;
+  }
 
-    /* ---------- Font Styles ---------- */
+  strong {
+    @apply font-bold text-main-blue;
+  }
+  .article-content {
+    @apply bg-main-white p-5 rounded-lg m-5 text-main-blue shadow-xl border border-blue-100/50;
+  }
 
-    .chapter-header {
-        @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-gray mb-3;
-    }
-    .chapter-subheader {
-        @apply text-xl sm:text-3xl font-semibold md:mt-10 text-main-blue;
-    }
-    .sub-chapter-title {
-        @apply text-xl font-semibold text-main-blue mt-6 mb-3;
-    }
-    strong {
-        @apply font-bold text-main-blue;
-    }
+  .heading-title {
+    @apply text-left text-3xl lg:text-4xl font-semibold text-main-blue;
+  }
+  .chapterh3 {
+    @apply text-xl lg:text-2xl font-semibold text-main-blue pt-5 my-5;
+  }
 
-    /* ---------- Article Content Styling -----------*/
-    .article-content {
-        @apply bg-main-white p-5 rounded-lg m-5 text-main-blue shadow-xl border border-blue-100/50;
-    }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md rounded-3xl border border-white/40 shadow-xl shadow-indigo-200/20;
+  }
 
-    .heading-title {
-        @apply text-left text-2xl font-semibold text-main-blue ;
-    }
-    
-    .glass-card {
-        @apply bg-white/80 backdrop-blur-md rounded-3xl border border-white/40 shadow-xl shadow-indigo-200/20;
-    }
+  .glass-card p {
+    @apply m-0;
+  }
 
-    .glass-card p {
-        @apply m-0;
-    }
+  .glass-card article {
+    @apply space-y-4;
+  }
 
-    .glass-card article {
-        @apply space-y-4;
-    }
-    
-    .chapter-image{
-        @apply max-w-full h-auto rounded-xl shadow-md border border-gray-100;
-    }
+  .chapter-image {
+    @apply max-w-full h-auto rounded-xl shadow-md border border-gray-100;
+  }
 
-    /* ---------- Sidebar Styling -----------*/
+  /* ---------- Sidebar Styling -----------*/
 
-    .sidebar {
-        @apply bg-white/75 backdrop-blur-sm rounded-2xl border border-white/50 shadow-lg shadow-indigo-200/10;
-    }
+  .sidebar {
+    @apply bg-white/75 backdrop-blur-sm rounded-2xl border border-white/50 shadow-lg shadow-indigo-200/10;
+  }
 
-    .sidebar-title {
-        @apply text-lg md:text-xl font-bold text-indigo-800 mb-6 border-gray-200 pb-4;
-    }
+  .sidebar-title {
+    @apply text-lg md:text-xl font-bold text-main-blue mb-6 border-gray-200 pb-4;
+  }
 
-    .sidebar p {
-        @apply m-0;
-    }
+  .sidebar p {
+    @apply m-0;
+  }
 
-    .sidebar-description {
-        @apply text-xs text-neutral-gray/70 leading-tight;   
-   }
+  .sidebar-description {
+    @apply text-xs text-neutral-gray/70 leading-tight;
+  }
 
-    .nav-link-item {
-        @apply block pl-5 mb-5 relative border-l-2 border-transparent hover:border-indigo-400 transition-all;
-    }
+  .nav-link-item {
+    @apply block pl-5 mb-5 relative border-l-2 border-transparent hover:border-main-blue transition-all;
+  }
 
-    /* Iverene's styles */
+  /* Iverene's styles */
 
-    /* General and Text Styles */
-    section {
-        @apply xl:pt-0;
-    }
+  /* General and Text Styles */
+  section {
+    @apply xl:pt-0;
+  }
 
-    .content {
-        @apply mt-8 xl:mt-10 pt-13 md:pt-14 xl:pt-16;
-    }
+  .content {
+    @apply mt-8 xl:mt-10 pt-13 md:pt-14 xl:pt-2;
+  }
 
-    .sub-content {
-        @apply pt-16 md:pt-18 lg:pt-20 xl:pt-25;
-    }
+  .sub-content {
+    @apply pt-16 md:pt-18 lg:pt-20 xl:pt-5;
+  }
 
-    h1 {
-        @apply text-left text-2xl md:text-3xl lg:text-4xl font-extrabold text-main-blue
-    }
-    h2 {
-        @apply text-2xl font-bold text-main-blue mb-6;
-    }
-    h3 {
-        @apply text-xl font-semibold text-main-blue mb-4;
-    }
+  h1 {
+    @apply text-left text-2xl md:text-3xl lg:text-4xl font-extrabold text-main-blue;
+  }
+  h2 {
+    @apply text-2xl font-bold text-main-blue mb-6;
+  }
+  h3 {
+    @apply text-xl font-semibold text-main-blue mb-4;
+  }
 
-    p {
-        @apply text-base leading-8 md:leading-9 text-neutral-gray my-3 py-2;
-    }
+  p {
+    @apply text-base leading-8 md:leading-9 text-neutral-gray my-3 py-2;
+  }
 
-    .text-bold {
-        @apply font-bold text-main-blue;
-    }
+  .text-bold {
+    @apply font-bold text-main-blue;
+  }
 
-    hr {
-        @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
-    }
+  hr {
+    @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
+  }
 
-    ul, ol {
-        @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
-    }
+  ul,
+  ol {
+    @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+  }
 
-    ol {
-        @apply list-decimal list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
-    }
+  ol {
+    @apply list-decimal list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
+  }
 
-    .border-title {
-        @apply border-b-2 pb-2;
-    }
+  .border-title {
+    @apply border-b-2 pb-2;
+  }
 
+  /* Table */
+  .table-container {
+    @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
+  }
 
-    /* Table */
-    .table-container {
-        @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
-    }
+  .table-container th,
+  .table-container td {
+    @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
+  }
 
-    .table-container th, .table-container td {
-        @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
-    }
+  .table-footer td {
+    @apply py-2 border-b-1 xl:border-none;
+  }
 
-    .table-footer td {
-            @apply py-2 border-b-1 xl:border-none;
-        }
+  .box-container {
+    @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
+  }
 
-    .box-container {
-        @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
-    }
+  /* Table of Contents */
+  .table-of-contents {
+    @apply list-none space-y-2;
+  }
 
-    
-     /* Table of Contents */
-    .table-of-contents {
-        @apply list-none space-y-2;
-    }
+  .table-of-contents li {
+    @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue lg:text-base;
+  }
 
-    .table-of-contents li {
-        @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue lg:text-base;
-    }
+  .toc-item {
+    @apply relative;
+  }
 
-    .toc-item {
-        @apply relative;
-    }
+  .toc-link {
+    @apply block w-full p-1 transition-all duration-200;
+  }
 
-    .toc-link {
-        @apply block w-full p-1 transition-all duration-200;
-    }
+  .toc-submenu {
+    @apply max-h-0 overflow-hidden transition-all duration-500 border-l-2 border-gray-200 hover:border-main-blue;
+  }
 
-    .toc-submenu {
-        @apply max-h-0 overflow-hidden transition-all duration-500 border-l-2 border-gray-200 hover:border-main-blue;
-    }
+  .toc-item:hover .toc-submenu {
+    @apply max-h-96;
+  }
 
-    .toc-item:hover .toc-submenu {
-        @apply max-h-96; 
-    }
+  .toc-subitem {
+    @apply text-gray-500 list-none;
+  }
 
-    .toc-subitem {
-        @apply text-gray-500 list-none;
-    }
+  .toc-sublink {
+    @apply block px-4 py-2 text-sm transition-all duration-200;
+  }
 
-    .toc-sublink {
-        @apply block px-4 py-2 text-sm transition-all duration-200;
-    }
+  .toc-details {
+    @apply [&_summary::-webkit-details-marker]:hidden;
+  }
 
-    .toc-details {
-      @apply [&_summary::-webkit-details-marker]:hidden;
-    }
+  .toc-summary {
+    @apply flex items-center justify-between cursor-pointer py-1 list-none;
+  }
 
-    .toc-summary {
-      @apply flex items-center justify-between cursor-pointer py-1 list-none;
-    }
+  .toc-summary a {
+    @apply text-neutral-gray hover:text-main-blue;
+  }
 
-    .toc-summary a {
-      @apply text-neutral-gray hover:text-main-blue;
-    }
+  .toc-icon {
+    @apply transition-transform duration-300 mr-1;
+  }
 
-    .toc-icon {
-      @apply transition-transform duration-300 mr-1;
-    }
+  details[open] .toc-icon {
+    transform: rotate(90deg);
+  }
 
-    details[open] .toc-icon {
-      transform: rotate(90deg);
-    }
+  /* Flip Cards */
+  .cards-container {
+    @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
+  }
 
-    /* Flip Cards */
-    .cards-container {
-        @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
-    }
+  /* Footer */
+  .footer-chapter {
+    @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
+  }
 
-    /* Footer */
-    .footer-chapter {
-            @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
-        }
-
-    /* End of Iverene's styles */
-
-
+  /* End of Iverene's styles */
 }
 
 @layer utilities {
-    @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
     }
-
-    @keyframes blink {
-    50% { border-color: transparent; }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
     }
+  }
 
-    .typing {
+  .focus-in-expand {
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
+      both;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  .typing {
     @apply inline-block align-middle overflow-hidden border-r-2 border-main-blue whitespace-nowrap;
-    width: 0; 
+    width: 0;
     animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
-    }
+  }
 
   @keyframes fade-in {
     0% {
@@ -479,7 +500,7 @@ body {
     animation: slide-in-fwd-tl 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-    @keyframes slide-in-fwd-right {
+  @keyframes slide-in-fwd-right {
     0% {
       transform: translateZ(-1400px) translateX(1000px);
       opacity: 0;
@@ -504,11 +525,13 @@ body {
     }
   }
   .animate-slide-in-fwd-bottom {
-    animation: slide-in-fwd-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-fwd-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
   }
 
   @keyframes float-scale {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) scale(1);
     }
     50% {
@@ -519,8 +542,4 @@ body {
   .animate-float-scale {
     animation: float-scale 7s ease-in-out infinite;
   }
-
-
 }
-
-
