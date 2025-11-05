@@ -2037,28 +2037,18 @@
     }
   }
   .content {
-    margin-top: calc(var(--spacing) * 8);
-    padding-top: calc(var(--spacing) * 13);
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 14);
-    }
+    margin-top: calc(var(--spacing) * 5);
     @media (width >= 80rem) {
       margin-top: calc(var(--spacing) * 10);
     }
-    @media (width >= 80rem) {
-      padding-top: calc(var(--spacing) * 2);
-    }
   }
   .sub-content {
-    padding-top: calc(var(--spacing) * 16);
+    margin-top: calc(var(--spacing) * 8);
     @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 18);
-    }
-    @media (width >= 64rem) {
-      padding-top: calc(var(--spacing) * 20);
+      padding-top: calc(var(--spacing) * 10);
     }
     @media (width >= 80rem) {
-      padding-top: calc(var(--spacing) * 5);
+      padding-top: calc(var(--spacing) * 12);
     }
   }
   h1 {
@@ -2354,11 +2344,17 @@
     animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1 both;
   }
   @keyframes typing {
-    from {
+    0% {
       width: 0;
     }
-    to {
+    40% {
       width: 100%;
+    }
+    60% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
     }
   }
   @keyframes blink {
@@ -2374,8 +2370,7 @@
     border-color: var(--color-main-blue);
     vertical-align: middle;
     white-space: nowrap;
-    width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    animation: typing 8s steps(30, end) infinite, blink 0.7s step-end infinite;
   }
   @keyframes fade-in {
     0% {
