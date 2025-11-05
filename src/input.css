@@ -22,8 +22,7 @@
   }
 
   body {
-    @apply scroll-smooth;
-    font-family: var(--font-family-poppins);
+    @apply scroll-smooth font-poppins;
   }
 
   /* ---------- Header and Navigation ---------- */
