@@ -20,7 +20,7 @@
             <nav class="nav-menu">
                 <a href="" class="nav-link">Projects</a>
                 <a href="" class="nav-link">Blog</a>
-                <a href="#about" class="nav-link">About</a>
+                <a href="" class="nav-link">About</a>
                 <a href="" class="nav-link">Contact</a>
             </nav>
 
@@ -33,89 +33,237 @@
     <!-- Main Content -->
     <main class="main-content">
 
-        <section id="Intro">
-            <article class="intro-article">
-                <h1 class="page-title">Software Engineering</h1>
-                <p class="intro-description">Master the principles and practices of modern software development</p>
-                <div class="mt-8 text-center">
-                    <a href="Chapter-1.html" class="intro-btn">
-                        Start the Chapter &darr;
-                    </a>
-                </div>
-            </article>
-        </section>
+        <!-- Hero Section -->
+        <section class="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-5 xl:py-18 gap-10">
+
+        <article class="flex-1 text-center lg:text-left space-y-6">
+            <h1 class="text-2xl xl:text-5xl font-bold text-neutral-700 text-center xl:text-left leading-tight animate-fade-in">
+            Master the principles and practices of <span class="text-main-blue typing">modern software development</span>
+            </h1>
+            <p class="text-neutral-gray text-lg max-w-xl mx-auto lg:mx-0 animate-fade-in">
+            <span class="text-main-blue font-semibold">Systematic.dev</span> is an interactive online learning platform designed to help you build a strong foundation in modern software development practices.
+            </p>
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-8 animate-fade-in">
+            <a href="/Chapter-1.html"
+                class="px-8 py-3 bg-main-blue text-white font-medium rounded-full shadow hover:bg-[#1d7a9d] transition-all">
+                Start Learning
+            </a>
+            <a href="#chapters"
+                class="px-8 py-3 border-2 border-main-blue text-main-blue font-medium rounded-full hover:bg-main-blue hover:text-white transition-all">
+                Browse Chapters
+            </a>
+            </div>
+        </article>
+
         
+        <!-- Images Container -->
+        <div class="flex-1 relative w-full h-[300px] sm:h-[350px] lg:h-[430px]">
+            <!-- Background gradient (only visible on larger screens) -->
+            <div class="hidden lg:block absolute z-0 w-[400px] xl:w-[500px] h-[400px] xl:h-[500px] bg-gradient-to-br from-blue-100 to-blue-50 rounded-full blur-3xl left-1/2 -translate-x-1/2 top-10 opacity-70 animate-float-scale"></div>
+
+            <div class="relative w-full h-full">
+                <!-- Mobile layout -->
+                <div class="lg:hidden flex justify-center items-end h-full space-x-1">
+                    <img src="assets/hero1.jpg" class="w-36 rounded-xl shadow-lg rotate-[-5deg] z-10 animate-slide-in-fwd-tl">
+                    <img src="assets/hero2.jpg" class="w-40 rounded-xl shadow-lg rotate-[4deg] z-10 animate-slide-in-fwd-right">
+                    <img src="assets/hero3.jpg" class="w-38 rounded-xl shadow-lg rotate-[2deg] z-10 animate-slide-in-fwd-bottom">
+                </div>
+                
+                <!-- Desktop layout  -->
+                <div class="hidden lg:block relative w-full h-full">
+                    <img src="assets/hero1.jpg" class="absolute top-0 left-0 w-44 xl:w-55 rounded-2xl shadow-lg rotate-[-5deg] z-10 animate-slide-in-fwd-tl">
+                    <img src="assets/hero2.jpg" class="absolute top-10 right-0 w-48 xl:w-60 rounded-2xl shadow-lg rotate-[4deg] z-10 animate-slide-in-fwd-right">
+                    <img src="assets/hero3.jpg" class="absolute bottom-10 left-1/2 -translate-x-1/2 w-52 xl:w-68 rounded-2xl shadow-lg rotate-[2deg] z-10 animate-slide-in-fwd-bottom">
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+        
+        <!-- Chapter Section -->
+        <section id="chapters" class="max-w-7xl mx-auto px-6 my-20">
+
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-3xl xl:text-4xl text-center font-bold text-neutral-700 mb-4">
+            Learning <span class="text-main-blue">Chapters</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our comprehensive curriculum designed to take you from fundamentals 
+            to advanced software development concepts.
+            </p>
+        </div>
+
         <!-- Chapter Grid -->
         <div class="chapter-grid">
+            
             <!-- Chapter 1 -->
             <div class="chapter-card">
+            <div class="chapter-head">
+                <i class="fa-solid fa-lightbulb text-main-blue text-2xl"></i>
                 <h2 class="chapter-title">Introduction</h2>
-                <span class="chapter-number">Chapter 1</span>
-                <p class="chapter-description">Fundamentals of software engineering, including key concepts, methodologies, and the software development lifecycle.</p>
-                <button class="view-btn" onclick="location.href='Chapter-1.html'">View More</button>
+            </div>
+            <span class="chapter-number">Chapter 1</span>
+            <p class="chapter-description">
+                Fundamentals of software engineering, including key concepts, methodologies, 
+                and the software development lifecycle.
+            </p>
+            <button class="view-btn" onclick="location.href='Chapter-1.html'">Start Chapter</button>
             </div>
 
             <!-- Chapter 2 -->
             <div class="chapter-card">
+            <div class="chapter-head">
+                <i class="fa-solid fa-diagram-project text-main-blue text-2xl"></i>
                 <h2 class="chapter-title">Software Processes</h2>
-                <span class="chapter-number">Chapter 2</span>
-                <p class="chapter-description">Understanding various software development processes, from traditional waterfall to modern iterative approaches.</p>
-                <button class="view-btn" onclick="location.href='Chapter-2.html'">View More</button>
+            </div>
+            <span class="chapter-number">Chapter 2</span>
+            <p class="chapter-description">
+                Understanding various software development processes, from traditional waterfall 
+                to modern iterative approaches.
+            </p>
+            <button class="view-btn" onclick="location.href='Chapter-2.html'">Start Chapter</button>
             </div>
 
             <!-- Chapter 3 -->
             <div class="chapter-card">
+            <div class="chapter-head">
+                <i class="fa-solid fa-sitemap text-main-blue text-2xl"></i>
                 <h2 class="chapter-title">Agile Software Development</h2>
-                <span class="chapter-number">Chapter 3</span>
-                <p class="chapter-description">Explore agile methodologies, including Scrum, Kanban, and the principles of adaptive software development.</p>
-                <button class="view-btn" onclick="location.href='Chapter-3.html'">View More</button>
+            </div>
+            <span class="chapter-number">Chapter 3</span>
+            <p class="chapter-description">
+                Explore agile methodologies, including Scrum, Kanban, and the principles of 
+                adaptive software development.
+            </p>
+            <button class="view-btn" onclick="location.href='Chapter-3.html'">Start Chapter</button>
             </div>
 
             <!-- Chapter 4 -->
             <div class="chapter-card">
+            <div class="chapter-head">
+                <i class="fa-solid fa-clipboard-list text-main-blue text-2xl"></i>
                 <h2 class="chapter-title">Requirements Engineering</h2>
-                <span class="chapter-number">Chapter 4</span>
-                <p class="chapter-description">Learn how to gather, analyze, and document software requirements effectively for successful project delivery.</p>
-                <button class="view-btn" onclick="location.href='Chapter-4.html'">View More</button>
+            </div>
+            <span class="chapter-number">Chapter 4</span>
+            <p class="chapter-description">
+                Learn how to gather, analyze, and document software requirements effectively 
+                for successful project delivery.
+            </p>
+            <button class="view-btn" onclick="location.href='Chapter-4.html'">Start Chapter</button>
             </div>
 
             <!-- Chapter 5 -->
             <div class="chapter-card">
+            <div class="chapter-head">
+                <i class="fa-solid fa-cubes text-main-blue text-2xl"></i>
                 <h2 class="chapter-title">System Modeling</h2>
-                <span class="chapter-number">Chapter 5</span>
-                <p class="chapter-description">Master UML diagrams and modeling techniques to design and document software system architecture.</p>
-                <button class="view-btn" onclick="location.href='Chapter-5.html'">View More</button>
             </div>
+            <span class="chapter-number">Chapter 5</span>
+            <p class="chapter-description">
+                Master UML diagrams and modeling techniques to design and document 
+                software system architecture.
+            </p>
+            <button class="view-btn" onclick="location.href='Chapter-5.html'">Start Chapter</button>
+            </div>
+
         </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <h1 class="text-3xl xl:text-4xl text-center font-bold text-neutral-700 mb-6 xl:mb-13">Meet Our <span class="text-main-blue">Team</span>
+            </h1>
+
+            <!-- Members Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 items-start">
+                
+                <!-- Team Member -->
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Bagunas.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">John Rey V. Bagunas</h3>
+                        <p class="position">Leader</p> 
+                        <a href="https://github.com/BagunasJohnrey" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                    
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Causapin.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Iverene Grace M. Causapin</h3>
+                        <p class="position">Frontend and Backend Developer</p> 
+                        <a href="https://github.com/iverene" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/De-Castro.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Jeric De Castro</h3>
+                        <p class="position">Backend Developer</p> 
+                        <a href="https://github.com/decastrojeric" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Manimtim.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Hazel Ann Manimtim</h3>
+                        <p class="position">Frontend Developer</p> 
+                        <a href="https://github.com/Hazelannmanimtim02" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="team-card hover:border-light-blue">
+                    <img src="assets/Pagkaliwagan.png" class="team-image">
+
+                    <div class="name-container">
+                        <h3 class="name">Noilee Ann Pagkaliwagan</h3>
+                        <p class="position">Frontend Developer</p> 
+                        <a href="https://github.com/NoileeAnnPagkaliwagan" class="profile-button">
+                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                
+            </div>
+        </section>
+ 
     </main>
 
-<footer class="site-footer">
-    <div class="footer-grid">
+<footer class="site-footer w-full">
+    <div class="footer-grid max-w-7xl mx-auto px-6">
         
         <!-- Brand Section -->
-        <section class="footer-brand">
+        <div class="footer-brand">
             <img src="assets/logo.png" alt="Systematic.dev Logo" class="footer-logo">
             <a href="index.html" class="footer-brand-name">Systematic.dev</a>
             <p class="footer-address">
                 <i class="fa-solid fa-location-dot"></i> 
                 123 Innovation Street, Tech City, 45678
             </p>
-        </section>
-
-        <!-- Group Section -->
-        <section class="footer-group">
-            <h1 class="footer-group-title">Group 5</h1>
-            <p class="text-sm font-medium text-main-blue mb-3">Leader: Bagunas Johnrey V.</p>
-            <ul class="footer-group-list">
-                <li>Causapin, Iverene Grace</li>
-                <li>De Castro, Jeric</li>
-                <li>Manimtim, Hazel</li>
-                <li>Pagkaliwangan, Noilee</li>
-            </ul>
-        </section>
+        </div>
 
         <!-- Social Section -->
-        <section class="footer-social">
+        <div class="footer-social">
             <p class="footer-social-title">CONNECT WITH US</p> 
             <div class="footer-social-icons">
                 <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fa-brands fa-facebook"></i></a> 
@@ -125,7 +273,7 @@
             </div>
             <p class="footer-credits">Project by: Group 5</p>
             <p class="footer-credits">© Systematic.dev. All rights reserved</p>
-        </section>
+        </div>
 
     </div>
 </footer>
