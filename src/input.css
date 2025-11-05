@@ -168,31 +168,49 @@
   }
 
   /* Team Card Styles */
-  .team-card {
-    @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-md
-         hover:-translate-y-2 hover:shadow-[0px_10px_15px_0px_rgba(37,_150,_190,_1)]
+.team-card {
+  @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-lg
+         hover:-translate-y-2 hover:shadow-xl
          transition-all duration-300 ease-out flex flex-col h-full;
-  }
+}
 
-  .team-image {
-    @apply w-full h-80 object-cover rounded-sm;
-  }
+.image-container {
+  @apply relative w-full h-80 overflow-hidden rounded-sm;
+}
 
-  .name-container {
-    @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col flex-grow items-center justify-center;
-  }
+.team-image {
+  @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out;
+}
 
-  .name {
-    @apply text-base text-main-blue m-0 text-center;
-  }
+.back-image {
+  opacity: 0;
+}
 
-  .position {
-    @apply text-sm text-gray-500 m-0 text-center leading-snug;
-  }
+.team-card:hover .back-image {
+  opacity: 1;
+}
 
-  .profile-button {
-    @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border;
-  }
+.team-card:hover .front-image {
+  opacity: 0;
+}
+
+.name-container {
+  @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col flex-grow items-center justify-center;
+}
+
+.name {
+  @apply text-base text-main-blue m-0 text-center;
+}
+
+.position {
+  @apply text-sm text-gray-500 m-0 text-center leading-snug;
+}
+
+.profile-button {
+  @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border;
+}
+
+
 
   /* ---------- Images ---------- */
   .content-image {
