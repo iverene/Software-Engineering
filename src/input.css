@@ -68,7 +68,7 @@ body {
     }
 
     .footer-grid {
-        @apply md:grid md:grid-cols-3 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
+        @apply grid md:grid-cols-2 md:gap-12 max-w-7xl mx-auto border-t border-main-blue pt-8;
     }
 
     /* Logo & Address */
@@ -123,7 +123,7 @@ body {
     }
 
     .footer-credits {
-        @apply text-xs text-gray-500;
+        @apply text-sm text-gray-500;
     }
 
     /* ---------- Index Background ---------- */
@@ -131,47 +131,67 @@ body {
         @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5;
     }
     
-    /* ---------- Intro Section ---------- */
-
-    .intro-article {
-        @apply flex flex-col justify-center items-center text-center bg-main-blue py-24 md:py-32 px-6 shadow-2xl rounded-xl md:rounded-lg;
-    }
-    .page-title {
-        @apply text-center text-5xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-main-white mb-6 hover:drop-shadow-lg transition-all duration-100;
-    }
-
-    .intro-description {
-        @apply text-center text-lg sm:text-xl md:text-2xl font-light text-main-white/90 max-w-3xl mx-auto mb-10;
-    }
-
-    .intro-btn {
-        @apply inline-block text-center bg-light-blue text-main-blue font-semibold text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-main-white hover:text-main-blue ring-4 ring-light-blue/50 no-underline;
-    }
 
     /* ---------- Chapter Grid Styles---------- */
-    .chapter-grid {
-        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 my-15;
-    }
-    
-    .chapter-card {
-        @apply lg:col-span-3 bg-content-bg p-7 rounded-lg text-main-blue shadow-md hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 text-justify;
-    }
-    
-    .chapter-title {
-        @apply text-2xl mb-2.5 text-main-blue font-bold;
-    }
-    
-    .chapter-number {
-        @apply font-bold text-main-blue mb-4 block text-sm;
-    }
-    
-    .chapter-description {
-        @apply my-4 leading-relaxed text-sm;
-    }
-    
-    .view-btn {
-        @apply bg-main-blue text-main-white px-5 py-2.5 border-none rounded-md font-semibold cursor-pointer transition-all duration-300 no-underline inline-block mt-2.5 hover:bg-main-white hover:text-main-blue hover:ring-2 hover:ring-main-blue;
-    }
+.chapter-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16 px-4;
+}
+
+.chapter-card {
+  @apply bg-white p-8 rounded-2xl shadow-md border border-neutral-100
+  hover:-translate-y-2 hover:shadow-xl hover:border-main-blue/30
+  transition-all duration-300 ease-out flex flex-col justify-between text-center;
+}
+
+.chapter-head {
+    @apply flex flex-col items-center gap-3 mb-3;
+}
+
+.chapter-number {
+  @apply text-sm font-semibold text-main-blue uppercase tracking-wider mb-2;
+}
+
+.chapter-title {
+  @apply text-xl md:text-2xl font-bold text-neutral-gray mb-3;
+}
+
+.chapter-description {
+  @apply text-neutral-gray text-sm md:text-base leading-relaxed mb-6;
+}
+
+.view-btn {
+  @apply bg-main-blue text-white px-6 py-2.5 rounded-full font-medium
+  transition-all duration-300 hover:bg-white hover:text-main-blue hover:ring-2 hover:ring-main-blue mx-auto;
+}
+
+/* Team Card Styles */
+.team-card {
+  @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-md
+         hover:-translate-y-2 hover:shadow-xl 
+         transition-all duration-300 ease-out;
+}
+
+.team-image {
+  @apply w-full h-80 object-cover;
+}
+
+.name-container {
+  @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col items-center justify-center;
+}
+
+.name {
+  @apply text-sm text-main-blue m-0 text-left;
+}
+
+.position {
+  @apply text-sm text-gray-500 m-0 text-left;
+}
+
+.profile-button {
+    @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border ;
+}
+
+
 
     /* ---------- Images ---------- */
     .content-image {
@@ -413,5 +433,94 @@ body {
 
     /* End of Iverene's styles */
 
+
 }
+
+@layer utilities {
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+    }
+
+    @keyframes blink {
+    50% { border-color: transparent; }
+    }
+
+    .typing {
+    @apply inline-block align-middle overflow-hidden border-r-2 border-main-blue whitespace-nowrap;
+    width: 0; 
+    animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 2s ease both;
+  }
+
+  @keyframes slide-in-fwd-tl {
+    0% {
+      transform: translateZ(-1400px) translateY(-800px) translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0) translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-fwd-tl {
+    animation: slide-in-fwd-tl 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+    @keyframes slide-in-fwd-right {
+    0% {
+      transform: translateZ(-1400px) translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  .animate-slide-in-fwd-right {
+    animation: slide-in-fwd-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes slide-in-fwd-bottom {
+    0% {
+      transform: translateZ(-1400px) translateY(800px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-slide-in-fwd-bottom {
+    animation: slide-in-fwd-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes float-scale {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-25px) scale(1.08);
+    }
+  }
+
+  .animate-float-scale {
+    animation: float-scale 7s ease-in-out infinite;
+  }
+
+
+}
+
 
