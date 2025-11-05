@@ -122,48 +122,146 @@
 
         </div>
     </header>
-    
+
     <!-- Main Content Area -->
     <div class="min-h-screen px-6 lg:px-12 py-10">
         <div class="lg:grid lg:grid-cols-12 lg:gap-10">
 
             <!-- Sidebar -->
-            <aside class="hidden lg:block lg:col-span-3 focus-in">
+            <aside class="hidden lg:block lg:col-span-3 focus-in z-20">
                 <div class="sticky top-8 xl:top-20 p-6 sidebar">
                     <h3 class="sidebar-title">Chapter Progress 📚</h3>
                     <nav class="text-sm relative" aria-label="Chapter Table of Contents">
 
                         <div class="absolute left-9px top-0 h-full w-0.5 bg-neutral-gray/20"></div>
 
-                        <a href="#intro" class="nav-link-item active">
-                            <p class="sidebar-header">Chapter Overview</p>
-                            <h4 class="sidebar-description">Introduction and Objectives</h4>
-                        </a>
+                        <div class="relative">
+                            <a href="#intro"
+                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                tabindex="0">
+                                <p class="sidebar-header font-bold">Chapter Overview</p>
 
-                        <a href="#Chapter5-1" class="nav-link-item">
-                            <p class="sidebar-header">5.1 Context Models</p>
-                            <h4 class="sidebar-description">System Boundaries and Activity Diagrams</h4>
-                        </a>
+                                <h4
+                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    Introduction and Objectives
+                                    <div class="pointer-events-none absolute -top-4 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
+                                        <p class="text-xs text-neutral-gray">Lays the groundwork for the chapter,
+                                            highlighting the main learning goals and concepts to be covered in the
+                                            following sections.</p>
+                                        <div
+                                            class="absolute top-7 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                        </div>
+                                    </div>
+                                </h4>
 
-                        <a href="#Chapter5-2" class="nav-link-item">
-                            <p class="sidebar-header">5.2 Interaction Models</p>
-                            <h4 class="sidebar-description">Use Case and Sequence</h4>
-                        </a>
+                            </a>
+                        </div>
 
-                        <a href="#Chapter5-3" class="nav-link-item">
-                            <p class="sidebar-header">5.3 Structural Models</p>
-                            <h4 class="sidebar-description">Class Diagrams</h4>
-                        </a>
+                        <div class="relative">
+                            <a href="#Chapter5-1"
+                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                tabindex="0">
+                                <p class="sidebar-header font-bold">5.1 Context Models</p>
 
-                        <a href="#Chapter5-4" class="nav-link-item">
-                            <p class="sidebar-header">5.4 Behavioral Models</p>
-                            <h4 class="sidebar-description">State and Communication</h4>
-                        </a>
+                                <h4
+                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    System Boundaries and Activity Diagrams
+                                    <div class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
+                                        <p class="text-xs text-neutral-gray">Focuses on the context view of the scope, boundaries, and high-level activity workflow of the system being modeled.</p>
+                                        <div
+                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                        </div>
+                                    </div>
+                                </h4>
 
-                        <a href="#Chapter5-5" class="nav-link-item">
-                            <p class="sidebar-header">5.5 Model-driven Engineering</p>
-                            <h4 class="sidebar-description">Component and Node</h4>
-                        </a>
+                            </a>
+                        </div>
+
+                        <div class="relative">
+                            <a href="#Chapter5-2"
+                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                tabindex="0">
+                                <p class="sidebar-header font-bold">5.2 Interaction Models</p>
+
+                                <h4
+                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    Use Case and Sequence
+                                    <div class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
+                                        <p class="text-xs text-neutral-gray">Describes how users interact with the system. Uses Use Case diagrams for high-level tasks and Sequence diagrams for object interactions.</p>
+                                        <div
+                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                        </div>
+                                    </div>
+                                </h4>
+
+                            </a>
+                        </div>
+
+                        <div class="relative">
+                            <a href="#Chapter5-3"
+                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                tabindex="0">
+                                <p class="sidebar-header font-bold">5.3 Structural Models</p>
+
+                                <h4
+                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    Class Diagrams
+                                    <div class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
+                                        <p class="text-xs text-neutral-gray">Shows the static structure of the system using Class diagrams to define attributes, operations, and relationships between system classes.</p>
+                                        <div
+                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                        </div>
+                                    </div>
+                                </h4>
+
+                            </a>
+                        </div>
+
+                        <div class="relative">
+                            <a href="#Chapter5-4"
+                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                tabindex="0">
+                                <p class="sidebar-header font-bold">5.4 Behavioral Models</p>
+
+                                <h4
+                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    State and Communication
+                                    <div class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
+                                        <p class="text-xs text-neutral-gray">Illustrates dynamic behavior. Uses State diagrams for object lifecycles and Communication diagrams for interactions between objects.</p>
+                                        <div
+                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                        </div>
+                                    </div>
+                                </h4>
+
+                            </a>
+                        </div>
+
+                        <div class="relative">
+                            <a href="#Chapter5-5"
+                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                tabindex="0">
+                                <p class="sidebar-header font-bold">5.5 Model-driven Engineering</p>
+
+                                <h4
+                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    Component and Node
+                                    <div class="pointer-events-none absolute top-1/2 -translate-y-[calc(50%+30px)] left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
+                                        <p class="text-xs text-neutral-gray">Covers the deployment view. Component diagrams show software pieces, and Node diagrams show hardware distribution.</p>
+                                        <div
+                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                        </div>
+                                    </div>
+                                </h4>
+
+                            </a>
+                        </div>
 
                     </nav>
                 </div>
@@ -302,7 +400,7 @@
                         <!-- Figure -->
                         <figure>
                             <img src="assets/jarey-image1.png" alt="System modeling summary illustration"
-                            class="w-full max-w-3xl rounded-2xl border border-neutral-gray/10 shadow-md">
+                                class="w-full max-w-3xl rounded-2xl border border-neutral-gray/10 shadow-md">
                         </figure>
                         <figcaption><strong>Figure 5.0: </strong>The Unified Modeling Language</figcaption>
 
@@ -499,9 +597,11 @@
                             features:</p>
 
                         <div class="grid grid-cols-1 gap-3 sm:gap-4">
-                            <div class="p-4 bg-content-bg/20 rounded-xl border border-neutral-gray/10 font-semibold">Direct
+                            <div class="p-4 bg-content-bg/20 rounded-xl border border-neutral-gray/10 font-semibold">
+                                Direct
                                 actor-to-actor communication, and</div>
-                            <div class="p-4 bg-content-bg/20 rounded-xl border border-neutral-gray/10 font-semibold">Dynamic
+                            <div class="p-4 bg-content-bg/20 rounded-xl border border-neutral-gray/10 font-semibold">
+                                Dynamic
                                 object creation during an operation sequence.</div>
                         </div>
 
@@ -1005,8 +1105,7 @@
                         <p>The Model-Driven Architecture (MDA) method recommends producing three types of system models
                             to guide the design and implementation process:</p>
 
-                        <table
-                            class="min-w-full border border-neutral-gray/10 bg-white text-neutral-gray shadow-sm">
+                        <table class="min-w-full border border-neutral-gray/10 bg-white text-neutral-gray shadow-sm">
                             <thead class="bg-content-bg/40 text-neutral-gray font-semibold">
                             </thead>
                             <tbody class="divide-y divide-neutral-gray/10">
@@ -1207,4 +1306,5 @@
         </section>
     </footer>
 </body>
+
 </html>
