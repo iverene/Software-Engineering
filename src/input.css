@@ -22,8 +22,7 @@
   }
 
   body {
-    @apply scroll-smooth;
-    font-family: var(--font-family-poppins);
+    @apply scroll-smooth font-poppins;
   }
 
   /* ---------- Header and Navigation ---------- */
@@ -137,7 +136,7 @@
 
   /* ---------- Chapter Grid Styles---------- */
   .chapter-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16 px-4;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16;
   }
 
   .chapter-card {
@@ -168,31 +167,49 @@
   }
 
   /* Team Card Styles */
-  .team-card {
-    @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-md
-         hover:-translate-y-2 hover:shadow-xl 
-         transition-all duration-300 ease-out;
-  }
+.team-card {
+  @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-lg
+         hover:-translate-y-2 hover:shadow-xl
+         transition-all duration-300 ease-out flex flex-col h-full;
+}
 
-  .team-image {
-    @apply w-full h-80 object-cover;
-  }
+.image-container {
+  @apply relative w-full h-80 overflow-hidden rounded-sm;
+}
 
-  .name-container {
-    @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col items-center justify-center;
-  }
+.team-image {
+  @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out;
+}
 
-  .name {
-    @apply text-sm text-main-blue m-0 text-left;
-  }
+.back-image {
+  opacity: 0;
+}
 
-  .position {
-    @apply text-sm text-gray-500 m-0 text-left;
-  }
+.team-card:hover .back-image {
+  opacity: 1;
+}
 
-  .profile-button {
-    @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border;
-  }
+.team-card:hover .front-image {
+  opacity: 0;
+}
+
+.name-container {
+  @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col flex-grow items-center justify-center;
+}
+
+.name {
+  @apply text-base text-main-blue m-0 text-center;
+}
+
+.position {
+  @apply text-sm text-gray-500 m-0 text-center leading-snug;
+}
+
+.profile-button {
+  @apply bg-main-blue text-white py-2 px-3 text-sm rounded-full hover:text-main-blue hover:bg-white hover:border;
+}
+
+
 
   /* ---------- Images ---------- */
   .content-image {
@@ -335,11 +352,11 @@
   }
 
   .content {
-    @apply mt-8 xl:mt-10 pt-13 md:pt-14 xl:pt-2;
+    @apply mt-5 xl:mt-10;
   }
 
   .sub-content {
-    @apply pt-16 md:pt-18 lg:pt-20 xl:pt-5;
+    @apply mt-8 md:pt-10 xl:pt-12;
   }
 
   h1 {
@@ -479,26 +496,32 @@
       both;
   }
 
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-
-  .typing {
-    @apply inline-block align-middle overflow-hidden border-r-2 border-main-blue whitespace-nowrap;
+@keyframes typing {
+  0% {
     width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
   }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typing {
+  @apply inline-block align-middle overflow-hidden border-r-2 border-main-blue whitespace-nowrap;
+  animation: typing 8s steps(30, end) infinite, blink 0.7s step-end infinite;
+}
+
 
   @keyframes fade-in {
     0% {

@@ -59,15 +59,15 @@
         
         <!-- Images Container -->
         <div class="flex-1 relative w-full h-[300px] sm:h-[350px] lg:h-[430px]">
-            <!-- Background gradient (only visible on larger screens) -->
+            <!-- Background gradient -->
             <div class="hidden lg:block absolute z-0 w-[400px] xl:w-[500px] h-[400px] xl:h-[500px] bg-gradient-to-br from-blue-100 to-blue-50 rounded-full blur-3xl left-1/2 -translate-x-1/2 top-10 opacity-70 animate-float-scale"></div>
 
-            <div class="relative w-full h-full">
+            <div class="relative w-full h-full overflow-hidden">
                 <!-- Mobile layout -->
                 <div class="lg:hidden flex justify-center items-end h-full space-x-1">
-                    <img src="assets/hero1.jpg" class="w-36 rounded-xl shadow-lg rotate-[-5deg] z-10 animate-slide-in-fwd-tl">
-                    <img src="assets/hero2.jpg" class="w-40 rounded-xl shadow-lg rotate-[4deg] z-10 animate-slide-in-fwd-right">
-                    <img src="assets/hero3.jpg" class="w-38 rounded-xl shadow-lg rotate-[2deg] z-10 animate-slide-in-fwd-bottom">
+                    <img src="assets/hero1.jpg" class="w-33 rounded-xl shadow-lg rotate-[-5deg] z-10 animate-slide-in-fwd-tl">
+                    <img src="assets/hero2.jpg" class="w-37 rounded-xl shadow-lg rotate-[4deg] z-10 animate-slide-in-fwd-right">
+                    <img src="assets/hero3.jpg" class="w-35 rounded-xl shadow-lg rotate-[2deg] z-10 animate-slide-in-fwd-bottom">
                 </div>
                 
                 <!-- Desktop layout  -->
@@ -180,68 +180,93 @@
 
             <!-- Members Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 items-start">
-                
+
                 <!-- Team Member -->
+                 <!-- John Rey -->
                 <article class="team-card hover:border-light-blue">
-                    <img src="assets/Bagunas.png" class="team-image">
+                <div class="image-container">
+                    <img src="assets/Bagunas.png" class="team-image front-image">
+                    <img src="assets/Bagunas2.jpg" class="team-image back-image">
+                </div>
 
-                    <div class="name-container">
-                        <h3 class="name">John Rey V. Bagunas</h3>
-                        <p class="position">Leader</p> 
-                        <a href="https://github.com/BagunasJohnrey" class="profile-button">
-                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
-                        </a>
+                <div class="name-container">
+                    <div>
+                    <h3 class="name">John Rey V. Bagunas</h3>
+                    <p class="position">CEO / Team Lead / Project Manager / Scrum Master / Database Manager / Full-Stack Developer</p>
                     </div>
-                    
+
+                    <a href="https://github.com/BagunasJohnrey" class="profile-button">
+                    View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
                 </article>
 
+                <!-- Iverene -->
                 <article class="team-card hover:border-light-blue">
-                    <img src="assets/Causapin.png" class="team-image">
+                <div class="image-container">
+                    <img src="assets/Causapin.png" class="team-image front-image">
+                    <img src="assets/Causapin2.jpg" class="team-image back-image">
+                </div>
 
-                    <div class="name-container">
-                        <h3 class="name">Iverene Grace M. Causapin</h3>
-                        <p class="position">Frontend and Backend Developer</p> 
-                        <a href="https://github.com/iverene" class="profile-button">
-                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
-                        </a>
+                <div class="name-container">
+                    <div>
+                    <h3 class="name">Iverene Grace M. Causapin</h3>
+                    <p class="position">UI/UX Designer / Creative Developer / Full-Stack Developer</p>
                     </div>
+                    <a href="https://github.com/iverene" class="profile-button">
+                    View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
                 </article>
 
+                <!-- Jeric -->
                 <article class="team-card hover:border-light-blue">
-                    <img src="assets/De-Castro.png" class="team-image">
+                <div class="image-container">
+                    <img src="assets/De-Castro.png" class="team-image front-image">
+                    <img src="assets/De-Castro2.png" class="team-image back-image">
+                </div>
 
-                    <div class="name-container">
-                        <h3 class="name">Jeric De Castro</h3>
-                        <p class="position">Backend Developer</p> 
-                        <a href="https://github.com/decastrojeric" class="profile-button">
-                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
-                        </a>
-                    </div>
+                <div class="name-container">
+                    <h3 class="name">Jeric De Castro</h3>
+                    <p class="position">Backend Developer</p>
+                    <a href="https://github.com/decastrojeric" class="profile-button">
+                    View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
                 </article>
 
+                <!-- Hazel -->
                 <article class="team-card hover:border-light-blue">
-                    <img src="assets/Manimtim.png" class="team-image">
+                <div class="image-container">
+                    <img src="assets/Manimtim.png" class="team-image front-image">
+                    <img src="assets/Manimtim2.png" class="team-image back-image">
+                </div>
 
-                    <div class="name-container">
-                        <h3 class="name">Hazel Ann Manimtim</h3>
-                        <p class="position">Frontend Developer</p> 
-                        <a href="https://github.com/Hazelannmanimtim02" class="profile-button">
-                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
-                        </a>
-                    </div>
+                <div class="name-container">
+                    <h3 class="name">Hazel Ann Manimtim</h3>
+                    <p class="position">Frontend Developer</p>
+                    <a href="https://github.com/Hazelannmanimtim02" class="profile-button">
+                    View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
                 </article>
 
+                <!-- Noilee -->
                 <article class="team-card hover:border-light-blue">
-                    <img src="assets/Pagkaliwagan.png" class="team-image">
+                <div class="image-container">
+                    <img src="assets/Pagkaliwagan.png" class="team-image front-image">
+                    <img src="assets/Pagkaliwagan2.jpg" class="team-image back-image">
+                </div>
 
-                    <div class="name-container">
-                        <h3 class="name">Noilee Ann Pagkaliwagan</h3>
-                        <p class="position">Frontend Developer</p> 
-                        <a href="https://github.com/NoileeAnnPagkaliwagan" class="profile-button">
-                            View Github Profile <i class="fa-brands fa-github text-lg"></i>
-                        </a>
-                    </div>
+                <div class="name-container">
+                    <h3 class="name">Noilee Ann Pagkaliwagan</h3>
+                    <p class="position">Frontend Developer</p>
+                    <a href="https://github.com/NoileeAnnPagkaliwagan" class="profile-button">
+                    View Github Profile <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
                 </article>
+
 
                 
             </div>
