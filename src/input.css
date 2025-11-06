@@ -480,6 +480,32 @@
     @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
   }
 
+  /* Exercise */
+  .exercise-card {
+    @apply p-5 mt-8 bg-main-blue/60 text-white border border-sky-100 rounded-lg flex flex-col items-center;
+  }
+
+  .exercise {
+    @apply text-2xl font-semibold text-center text-white;
+  }
+
+  .question {
+    @apply text-center text-white font-semibold;
+  }
+
+  .choice-box {
+    @apply space-y-2 px-5 py-3 lg:px-10;
+  }
+
+  .choice {
+    @apply flex items-center gap-2 bg-main-blue/70 hover:bg-main-blue rounded-md p-2;
+  }
+
+
+  .answer-button {
+    @apply mt-4 text-main-blue bg-white px-4 py-2 rounded hover:bg-main-blue border border-main-blue hover:text-white;
+  }
+
   /* Footer */
   .footer-chapter {
     @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
