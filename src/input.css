@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
 
 @theme {
   --color-main-white: #f9fafc;
@@ -345,6 +345,7 @@
     @apply mt-8 md:pt-10 xl:pt-12;
   }
 
+
   h1 {
     @apply text-left text-3xl md:text-4xl lg:text-5xl font-extrabold text-main-blue;
   }
@@ -367,8 +368,7 @@
     @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
   }
 
-  ul,
-  ol {
+  ul, ol {
     @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
   }
 
@@ -378,6 +378,33 @@
 
   .border-title {
     @apply border-b-2 pb-2;
+  }
+
+  /* Section */
+
+  .content-section {
+    @apply hidden;
+  }
+
+
+  .content-section:target {
+      @apply block;
+  }
+
+
+
+
+ #introduction {
+      @apply block;
+  } 
+
+
+  .nav-buttons {
+    @apply flex justify-between mt-5;
+  }
+
+  .nav-buttons a {
+      @apply no-underline px-4 py-2 bg-main-blue text-white rounded hover:bg-white hover:border hover:border-main-blue hover:text-main-blue transition;
   }
 
   /* Table */
@@ -404,7 +431,7 @@
   }
 
   .table-of-contents li {
-    @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue lg:text-base;
+    @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue text-sm lg:text-base;
   }
 
   .toc-item {
@@ -428,7 +455,7 @@
   }
 
   .toc-sublink {
-    @apply block px-4 py-2 text-sm transition-all duration-200;
+    @apply block px-4 py-2 text-xs lg:text-sm transition-all duration-200;
   }
 
   .toc-details {
@@ -460,6 +487,8 @@
   .footer-chapter {
     @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
   }
+
+
 
   /* End of Iverene's styles */
 }
