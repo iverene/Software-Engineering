@@ -2412,12 +2412,12 @@
     }
   }
   .sub-content {
-    padding: calc(var(--spacing) * 5);
+    margin-top: calc(var(--spacing) * 8);
     @media (width >= 48rem) {
-      padding: calc(var(--spacing) * 8);
+      padding-top: calc(var(--spacing) * 10);
     }
     @media (width >= 80rem) {
-      padding: calc(var(--spacing) * 10);
+      padding-top: calc(var(--spacing) * 12);
     }
   }
   h1 {

@@ -342,7 +342,7 @@
   }
 
   .sub-content {
-    @apply p-5 md:p-8 xl:p-10;
+    @apply mt-8 md:pt-10 xl:pt-12;;
   }
 
 
