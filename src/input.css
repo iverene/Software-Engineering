@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -15,15 +17,19 @@
    This section styles the main Software Engineering page.
    ========================================================== */
 
-@layer components {
+@layer base {
   html {
-    /* Adjust this value to match your navbar's height */
     @apply scroll-pt-[80px];
   }
 
   body {
-    @apply scroll-smooth font-poppins;
+    @apply scroll-smooth font-family-poppins;
   }
+}
+
+
+@layer components {
+
 
   /* ---------- Header and Navigation ---------- */
   .site-header {
