@@ -101,19 +101,6 @@
     @apply mr-2 mt-1 text-light-blue;
   }
 
-  /* Group Info */
-  .footer-group {
-    @apply mb-8 md:mb-0 text-center md:text-left;
-  }
-
-  .footer-group-title {
-    @apply text-lg font-bold text-main-blue mb-4 border-b border-main-blue inline-block pb-1;
-  }
-
-  .footer-group-list {
-    @apply text-sm space-y-2 text-main-blue;
-  }
-
   /* Social Links */
   .footer-social {
     @apply flex flex-col items-center md:items-end;
@@ -176,7 +163,7 @@
 .team-card {
   @apply bg-white border border-neutral-100 w-full max-w-xs mx-auto p-3 rounded-xl shadow-lg
          hover:-translate-y-2 hover:shadow-xl
-         transition-all duration-300 ease-out flex flex-col h-full;
+         transition-all duration-300 ease-out flex flex-col h-full group;
 }
 
 .image-container {
@@ -184,20 +171,13 @@
 }
 
 .team-image {
-  @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out;
+  @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0;
 }
 
 .back-image {
-  opacity: 0;
+  @apply absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100;
 }
 
-.team-card:hover .back-image {
-  opacity: 1;
-}
-
-.team-card:hover .front-image {
-  opacity: 0;
-}
 
 .name-container {
   @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col flex-grow items-center justify-center;

@@ -1664,39 +1664,6 @@
     margin-right: calc(var(--spacing) * 2);
     color: var(--color-light-blue);
   }
-  .footer-group {
-    margin-bottom: calc(var(--spacing) * 8);
-    text-align: center;
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 0);
-    }
-    @media (width >= 48rem) {
-      text-align: left;
-    }
-  }
-  .footer-group-title {
-    margin-bottom: calc(var(--spacing) * 4);
-    display: inline-block;
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-    border-color: var(--color-main-blue);
-    padding-bottom: calc(var(--spacing) * 1);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-main-blue);
-  }
-  .footer-group-list {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
-    }
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-    color: var(--color-main-blue);
-  }
   .footer-social {
     display: flex;
     flex-direction: column;
