@@ -342,7 +342,7 @@
   }
 
   .sub-content {
-    @apply mt-8 md:pt-10 xl:pt-12;
+    @apply p-5 md:p-8 xl:p-10;
   }
 
 
@@ -353,7 +353,7 @@
     @apply text-2xl font-bold text-main-blue mb-6;
   }
   h3 {
-    @apply text-xl font-semibold text-main-blue mb-4;
+    @apply text-xl font-bold text-main-blue mb-4;
   }
 
   p {
@@ -382,17 +382,14 @@
 
   /* Section */
 
-  .content-section {
+.content-section {
     @apply hidden;
   }
 
 
-  .content-section:target {
+.content-section:target {
       @apply block;
   }
-
-
-
 
  #introduction {
       @apply block;
@@ -451,11 +448,11 @@
   }
 
   .toc-subitem {
-    @apply text-gray-500 list-none;
+    @apply text-gray-500 list-none py-1 cursor-default;
   }
 
   .toc-sublink {
-    @apply block px-4 py-2 text-xs lg:text-sm transition-all duration-200;
+    @apply block px-4 py-2 text-xs lg:text-sm transition-all duration-200 cursor-default;
   }
 
   .toc-details {
