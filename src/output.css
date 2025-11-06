@@ -409,8 +409,8 @@
   .h-80 {
     height: calc(var(--spacing) * 80);
   }
-  .h-\[300px\] {
-    height: 300px;
+  .h-\[350px\] {
+    height: 350px;
   }
   .h-\[400px\] {
     height: 400px;
@@ -432,9 +432,6 @@
   }
   .w-30 {
     width: calc(var(--spacing) * 30);
-  }
-  .w-33 {
-    width: calc(var(--spacing) * 33);
   }
   .w-35 {
     width: calc(var(--spacing) * 35);
@@ -1111,11 +1108,6 @@
       margin-bottom: calc(var(--spacing) * 10);
     }
   }
-  .sm\:h-\[350px\] {
-    @media (width >= 40rem) {
-      height: 350px;
-    }
-  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1144,6 +1136,26 @@
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
+    }
+  }
+  .md\:h-\[450px\] {
+    @media (width >= 48rem) {
+      height: 450px;
+    }
+  }
+  .md\:w-35 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 35);
+    }
+  }
+  .md\:w-40 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:w-42 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 42);
     }
   }
   .md\:w-200 {
@@ -1238,11 +1250,6 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
-    }
-  }
-  .lg\:h-\[430px\] {
-    @media (width >= 64rem) {
-      height: 430px;
     }
   }
   .lg\:grid-cols-3 {
@@ -1708,12 +1715,10 @@
     color: var(--color-gray-500);
   }
   .main-content {
-    margin-inline: calc(var(--spacing) * 5);
     margin-block: calc(var(--spacing) * 5);
     flex: 1;
     border-radius: var(--radius-lg);
     background-color: var(--color-main-white);
-    padding: calc(var(--spacing) * 5);
   }
   .chapter-grid {
     margin-block: calc(var(--spacing) * 16);
@@ -1901,15 +1906,31 @@
     transition-duration: 500ms;
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 0%;
+      }
+    }
   }
   .back-image {
-    opacity: 0;
-  }
-  .team-card:hover .back-image {
-    opacity: 1;
-  }
-  .team-card:hover .front-image {
-    opacity: 0;
+    position: absolute;
+    inset: calc(var(--spacing) * 0);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 100%;
+      }
+    }
   }
   .name-container {
     display: flex;
