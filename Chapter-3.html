@@ -9,7 +9,8 @@
     <title>Chapter 3 - Agile Software Development</title>
     <link rel="icon" type="image/png" href="/assets/logo.png">
 </head>
-<body class="bg-gradient-to-br from-main-white via-content-bg to-purple-50 text-main-blue min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-main-white via-content-bg to-purple-50 text-main-blue min-h-screen flex flex-col scroll-smooth">
+
      <header class="site-header">
         <div class="header-container">
             <section class="brand-container">
@@ -81,19 +82,32 @@
                         <a href="" class="nav-link block">Projects</a>
                         <a href="" class="auth-btn block text-center">Log In</a>
 
-                        <!-- Mobile view of Table of Contents  -->
-            <aside class="block glass-card lg:hidden xl:hidden mt-10 p-1">
-                    <h2 class="border-b border-sky-100 pb-2 text-base">Table of Contents</h2>
-                    <ul class="table-of-contents">
-                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#introduction"> Introduction</a></li>
-                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-2"> The software requirements document</a></li>
-                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-4"> Requirements engineering processes</a></li>
-                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-6"> Requirements validation</a></li>
-                    </ul>
-                
-            </aside>
+                        <!-- Mobile view of Table of Contents -->
+<table class="border-collapse border-none text-main-blue xl:hidden">
+  <tbody>
+    <tr>
+      <td><a href="#sec-3-1" class="hover:text-light-blue">3.1 Agile Methods</a></td>
+      <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+    </tr>
+    <tr>
+      <td><a href="#sec-3-2" class="hover:text-light-blue">3.2 Plan-driven and Agile Development</a></td>
+      <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+    </tr>
+    <tr>
+      <td><a href="#sec-3-3" class="hover:text-light-blue">3.3 Extreme Programming</a></td>
+      <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+    </tr>
+    <tr>
+      <td><a href="#sec-3-4" class="hover:text-light-blue">3.4 Agile Project Management</a></td>
+      <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+    </tr>
+    <tr>
+      <td><a href="#sec-3-5" class="hover:text-light-blue">3.5 Scaling Agile Methods</a></td>
+      <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+    </tr>
+  </tbody>
+</table>
 
-            
 
                     </div>
                 </div>
@@ -188,7 +202,7 @@
                 <section id="intro" class="glass-card p-8">
                     <h3 class=" text-center chapter-header">Agile Software Development</h3><br>
                     <div class="flex justify-center items-center mb-10"> 
-                        <img src="/sds/3.6.png" class="rounded-xl shadow-lg max-w-full h-auto" alt="Agile Development">
+                        <img src="sds/3.6.png" class="rounded-xl shadow-lg max-w-full h-auto" alt="Agile Development">
                     </div>
                 
             
@@ -288,12 +302,17 @@
 
 
 
-                    <figure class="my-8">
-                        <img src="sds/3.1..PNG" alt="Agile Principles" class="mx-auto rounded-lg shadow-md max-w-full">
-                        <figcaption class="text-center text-sm text-neutral-gray mt-3 italic">
-                            <strong>Figure 3.1:</strong> The Principles of Agile Methods
-                        </figcaption>
-                    </figure>
+                    <figure class="my-8 flex justify-center px-2">
+  <div class="w-[110%] sm:w-[95%] md:w-full max-w-2xl">
+    <img src="sds/3.1..PNG"
+         alt="Figure 3.1 Agile Principles"
+         class="rounded-lg shadow-md w-full h-auto object-contain">
+  </div>
+  <figcaption class="text-center text-sm text-neutral-gray mt-3 italic px-3">
+    <strong>Figure 3.1:</strong> The Principles of Agile Methods
+  </figcaption>
+</figure>
+
 
 
 
@@ -716,5 +735,3 @@
     </footer>
 </body>
 </html>
-
-
