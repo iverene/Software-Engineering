@@ -729,6 +729,9 @@
   animation: float-side 7s ease-in-out infinite;
 }
 
+.h1Noilee {
+  @apply text-2xl md:text-3xl font-bold text-center;
+}
 }
 
 /* Hazel's styles */
