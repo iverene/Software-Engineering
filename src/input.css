@@ -430,7 +430,7 @@
 
   .box-container {
     @apply border border-neutral-gray
-         bg-gradient-to-b from-light-blue to-white text-neutral-gray shadow-md rounded-2xl p-6 m-3 max-w-3xl mx-auto;
+         bg-gradient-to-t from-light-blue to-white text-neutral-gray shadow-md rounded-2xl p-6 m-3 max-w-3xl mx-auto;
   }
 
   /* Table of Contents */
@@ -516,7 +516,8 @@
   }
 
   .choice {
-    @apply flex items-center gap-2 bg-white/40 hover:bg-light-blue rounded-md p-2;
+    @apply flex items-center gap-2 bg-white/40 hover:bg-light-blue50/50 border border-neutral-gray rounded-md p-2
+            has-checked:bg-gradient-to-b has-checked:from-light-blue has-checked:to-white ;
   }
 
 
