@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
 
 @theme {
   --color-main-white: #f9fafc;
@@ -15,15 +17,19 @@
    This section styles the main Software Engineering page.
    ========================================================== */
 
-@layer components {
+@layer base {
   html {
-    /* Adjust this value to match your navbar's height */
     @apply scroll-pt-[80px];
   }
 
   body {
-    @apply scroll-smooth font-poppins;
+    @apply scroll-smooth font-[Poppins,sans-serif];
   }
+}
+
+
+@layer components {
+
 
   /* ---------- Header and Navigation ---------- */
   .site-header {
@@ -51,7 +57,7 @@
   }
 
   .nav-menu {
-    @apply hidden md:flex-1 md:flex justify-center items-center gap-6;
+    @apply hidden lg:flex-1 lg:flex justify-center items-center gap-6;
   }
 
   .nav-link {
@@ -95,19 +101,6 @@
     @apply mr-2 mt-1 text-light-blue;
   }
 
-  /* Group Info */
-  .footer-group {
-    @apply mb-8 md:mb-0 text-center md:text-left;
-  }
-
-  .footer-group-title {
-    @apply text-lg font-bold text-main-blue mb-4 border-b border-main-blue inline-block pb-1;
-  }
-
-  .footer-group-list {
-    @apply text-sm space-y-2 text-main-blue;
-  }
-
   /* Social Links */
   .footer-social {
     @apply flex flex-col items-center md:items-end;
@@ -131,7 +124,7 @@
 
   /* ---------- Index Background ---------- */
   .main-content {
-    @apply flex-1 bg-main-white p-5 rounded-lg mx-5 my-5;
+    @apply flex-1 bg-main-white rounded-lg my-5;
   }
 
   /* ---------- Chapter Grid Styles---------- */
@@ -178,20 +171,13 @@
 }
 
 .team-image {
-  @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out;
+  @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0;
 }
 
 .back-image {
-  opacity: 0;
+  @apply absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100;
 }
 
-.team-card:hover .back-image {
-  opacity: 1;
-}
-
-.team-card:hover .front-image {
-  opacity: 0;
-}
 
 .name-container {
   @apply w-full bg-light-blue/0 px-5 pt-2 rounded-md flex flex-col flex-grow items-center justify-center;
@@ -278,7 +264,7 @@
   /* ---------- Font and Article Content Styling ---------- */
 
   .chapter-header {
-    @apply text-5xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-neutral-gray mb-3;
+    @apply text-5xl md:text-6xl xl:text-7xl font-bold text-neutral-gray mb-3;
   }
   .chapter-subheader {
     @apply text-2xl md:text-3xl lg:text-4xl  font-semibold mb-0 lg:mb-3 text-main-blue;
@@ -356,17 +342,18 @@
   }
 
   .sub-content {
-    @apply mt-8 md:pt-10 xl:pt-12;
+    @apply mt-8 md:pt-10 xl:pt-12;;
   }
 
+
   h1 {
-    @apply text-left text-2xl md:text-3xl lg:text-4xl font-extrabold text-main-blue;
+    @apply text-left text-3xl md:text-4xl lg:text-5xl font-extrabold text-main-blue;
   }
   h2 {
     @apply text-2xl font-bold text-main-blue mb-6;
   }
   h3 {
-    @apply text-xl font-semibold text-main-blue mb-4;
+    @apply text-xl font-bold text-main-blue mb-4;
   }
 
   p {
@@ -381,8 +368,7 @@
     @apply mb-0 xl:mb-3 border-t-2 border-light-blue;
   }
 
-  ul,
-  ol {
+  ul, ol {
     @apply list-disc list-inside mb-4 text-base leading-8 md:leading-9 text-neutral-gray;
   }
 
@@ -392,6 +378,30 @@
 
   .border-title {
     @apply border-b-2 pb-2;
+  }
+
+  /* Section */
+
+.content-section {
+    @apply hidden;
+  }
+
+
+.content-section:target {
+      @apply block;
+  }
+
+ #introduction {
+      @apply block;
+  } 
+
+
+  .nav-buttons {
+    @apply flex justify-between mt-5;
+  }
+
+  .nav-buttons a {
+      @apply no-underline px-4 py-2 bg-main-blue text-white rounded hover:bg-white hover:border hover:border-main-blue hover:text-main-blue transition;
   }
 
   /* Table */
@@ -418,7 +428,7 @@
   }
 
   .table-of-contents li {
-    @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue lg:text-base;
+    @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue text-sm lg:text-base;
   }
 
   .toc-item {
@@ -438,11 +448,11 @@
   }
 
   .toc-subitem {
-    @apply text-gray-500 list-none;
+    @apply text-gray-500 list-none py-1 cursor-default;
   }
 
   .toc-sublink {
-    @apply block px-4 py-2 text-sm transition-all duration-200;
+    @apply block px-4 py-2 text-xs lg:text-sm transition-all duration-200 cursor-default;
   }
 
   .toc-details {
@@ -470,10 +480,41 @@
     @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
   }
 
+  /* Exercise */
+  .exercise-card {
+    @apply p-5 mt-8 border border-main-blue 
+         bg-gradient-to-b from-main-blue to-white text-white 
+         rounded-lg flex flex-col items-center ;
+  }
+
+  .exercise {
+    @apply text-2xl font-semibold text-center text-white;
+  }
+
+  .question {
+    @apply text-center text-white font-semibold;
+  }
+
+  .choice-box {
+    @apply space-y-2 px-5 py-3 lg:px-10;
+  }
+
+  .choice {
+    @apply flex items-center gap-2 bg-main-blue/70 hover:bg-main-blue rounded-md p-2;
+  }
+
+
+  .answer-button {
+    @apply mt-4 bg-main-blue text-white px-4 py-2 rounded hover:border hover:border-main-blue 
+         hover:bg-gradient-to-b from-main-blue to-white hover:text-white ;
+  }
+
   /* Footer */
   .footer-chapter {
     @apply flex justify-between items-center bg-main-blue text-white rounded-lg px-4 py-2 hover:bg-light-blue transition;
   }
+
+
 
   /* End of Iverene's styles */
 }
