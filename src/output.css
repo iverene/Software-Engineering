@@ -3016,6 +3016,43 @@
     border-color: var(--color-gray-200);
     background-color: var(--color-white);
   }
+  .page-buttons {
+    margin-top: calc(var(--spacing) * 5);
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-buttons a {
+    border-radius: 0.25rem;
+    background-color: var(--color-main-blue);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
+    color: var(--color-white);
+    text-decoration-line: none;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-main-blue);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-main-blue);
+      }
+    }
+  }
   section {
     @media (width >= 80rem) {
       padding-top: calc(var(--spacing) * 0);
