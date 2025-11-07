@@ -10,7 +10,19 @@
     <link rel="icon" type="image/png" href="/assets/logo.png">
 </head>
 <body class="bg-gradient-to-br from-main-white via-content-bg to-purple-50 text-main-blue min-h-screen flex flex-col">
-                   <i class="fas fa-bars text-xl"></i>
+     <header class="site-header">
+        <div class="header-container">
+            <section class="brand-container">
+                <img src="assets\logo.png" class="logo">
+                <a href="index.html" class="brand-logo">Systematic.dev</a>
+            </section>
+
+            <!-- Hidden checkbox for hamburger menu -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <!-- Hamburger button -->
+            <label for="menu-toggle" class="md:hidden lg:hidden xl:hidden text-main-blue cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
             </label>
 
             <!-- Navigation  -->
@@ -18,7 +30,7 @@
                 <div class="dropdown-container">
                         <button class="dropdown-button">Chapters <i class="fa-solid fa-chevron-down"></i></button>
                         <div class="dropdown-content">
-                            <a href="Chapter-1.html" class="dropdown-link">Chapter 1</a>
+                            <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
                             <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
                             <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
                             <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
@@ -78,6 +90,7 @@
                         <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-4"> Requirements engineering processes</a></li>
                         <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-6"> Requirements validation</a></li>
                     </ul>
+                
             </aside>
 
             
@@ -94,6 +107,7 @@
         </div>
          
     </header>
+
 
 
 
@@ -702,5 +716,6 @@
     </footer>
 </body>
 </html>
+
 
 
