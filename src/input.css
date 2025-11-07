@@ -505,6 +505,36 @@
     @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
   }
 
+  .flip-card {
+    @apply relative w-full h-full transition-transform duration-700 transform-3d group-hover:[transform:rotateY(180deg)];
+  }
+
+  .front-side {
+  @apply absolute inset-0 border border-neutral-gray  bg-gradient-to-t from-light-blue to-white text-neutral-gray rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden;
+}
+
+.front-side img {
+  @apply w-30 h-30 mb-4;
+}
+
+.front-side h2 {
+  @apply text-neutral-gray text-lg md:text-base font-semibold;
+}
+
+.front-side p {
+  @apply text-sm text-neutral-gray mt-1;
+}
+
+.back-side {
+  @apply absolute inset-0 border border-neutral-gray  bg-gradient-to-t from-main-blue to-white text-neutral-gray rounded-xl shadow-md flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden;
+}
+
+.back-side p {
+  @apply text-neutral-gray md:text-sm/6 text-center p-10 font-semibold; 
+}
+
+
+
   /* Exercise */
   .exercise-card {
     @apply p-5 mt-8 border border-neutral-gray 
