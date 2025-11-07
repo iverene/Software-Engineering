@@ -379,6 +379,7 @@
   .border-title {
     @apply border-b-2 pb-2;
   }
+  
 
   /* Section */
 
@@ -401,7 +402,9 @@
   }
 
   .nav-buttons a {
-      @apply no-underline px-4 py-2 bg-main-blue text-white rounded hover:bg-white hover:border hover:border-main-blue hover:text-main-blue transition;
+      @apply no-underline px-4 py-2 text-xl border border-neutral-gray
+         bg-gradient-to-b from-light-blue to-white text-neutral-gray shadow-md rounded-full 
+         hover:from-main-blue transition-colors;
   }
 
   /* Table */

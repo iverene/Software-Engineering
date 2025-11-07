@@ -1900,6 +1900,11 @@
       padding: calc(var(--spacing) * 10);
     }
   }
+  .xl\:px-6 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
   .xl\:px-10 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 10);
@@ -2999,34 +3004,30 @@
     justify-content: space-between;
   }
   .nav-buttons a {
-    border-radius: 0.25rem;
-    background-color: var(--color-main-blue);
+    border-radius: calc(infinity * 1px);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-neutral-gray);
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: var(--color-light-blue);
+    --tw-gradient-to: var(--color-white);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
-    color: var(--color-white);
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+    color: var(--color-neutral-gray);
     text-decoration-line: none;
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &:hover {
       @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-main-blue);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-white);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-main-blue);
+        --tw-gradient-from: var(--color-main-blue);
+        --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
       }
     }
   }
