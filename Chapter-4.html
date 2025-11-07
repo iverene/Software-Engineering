@@ -21,7 +21,7 @@
             <input type="checkbox" id="menu-toggle" class="hidden peer">
 
             <!-- Hamburger button -->
-            <label for="menu-toggle" class="md:hidden lg:hidden xl:hidden text-main-blue cursor-pointer">
+            <label for="menu-toggle" class="lg:hidden xl:hidden text-main-blue cursor-pointer">
                 <i class="fas fa-bars text-xl"></i>
             </label>
 
@@ -148,13 +148,11 @@
     </header>
 
 
-    <main class="grid gap-10 mx-auto px-5 py-8 md:px-8 lg:px-10 xl:pl-20 xl:pr-10
-             grid-cols-1 
-             lg:grid-cols-[320px_minmax(0,1fr)] 
-             lg:items-start">
+    <main class="min-h-screen px-6 lg:px-8 py-8 xl:px-13">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-0 xl:gap-10">
         
         <!-- Desktop view of Table of Contents  -->
-        <aside class="hidden lg:block w-[350px] sticky top-20 py-3 self-start md:p-5 lg:pl-5 glass-card xl:p-6">
+        <aside class="hidden lg:block lg:col-span-3 sticky top-20 py-3 self-start md:p-5 lg:pl-4 glass-card xl:p-6">
                     <h2 class="font-semibold text-2xl mb-4 border-b border-sky-100 pb-2">Table of Contents</h2>
                     <ul class="table-of-contents">
                         <li class="toc-item"><a href="#introduction" class="toc-link">Introduction</a></li>
@@ -196,7 +194,7 @@
         </aside>
 
         <!-- Main Contents  -->
-        <div class="flex flex-col md:w-[640px] xl:w-[1000px] lg:px-10 gap-5 md:gap-5 xl:gap-10">
+        <div class="flex flex-col lg:col-span-9 space-y-10 lg:px-10 gap-5 md:gap-3 xl:gap-8">
 
             <!-- Introduction -->
             <section class="content-section glass-card mt-0 p-3 md:p-8 xl:p-10" id="introduction">
@@ -767,6 +765,7 @@
                 </div>
             </section>
             
+        </div>
         </div>
 
     </main>

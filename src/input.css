@@ -482,7 +482,9 @@
 
   /* Exercise */
   .exercise-card {
-    @apply p-5 mt-8 bg-main-blue/60 text-white border border-sky-100 rounded-lg flex flex-col items-center;
+    @apply p-5 mt-8 border border-main-blue 
+         bg-gradient-to-b from-main-blue to-white text-white 
+         rounded-lg flex flex-col items-center ;
   }
 
   .exercise {
@@ -503,7 +505,8 @@
 
 
   .answer-button {
-    @apply mt-4 text-main-blue bg-white px-4 py-2 rounded hover:bg-main-blue border border-main-blue hover:text-white;
+    @apply mt-4 bg-main-blue text-white px-4 py-2 rounded hover:border hover:border-main-blue 
+         hover:bg-gradient-to-b from-main-blue to-white hover:text-white ;
   }
 
   /* Footer */
@@ -631,3 +634,7 @@
     animation: float-scale 7s ease-in-out infinite;
   }
 }
+
+
+
+
