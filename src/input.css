@@ -350,7 +350,7 @@
     @apply text-left text-3xl md:text-4xl lg:text-5xl font-extrabold text-main-blue;
   }
   h2 {
-    @apply text-2xl font-bold text-main-blue mb-6;
+    @apply text-2xl font-bold text-neutral-gray mb-6;
   }
   h3 {
     @apply text-xl font-bold text-main-blue mb-4;
@@ -361,7 +361,7 @@
   }
 
   .text-bold {
-    @apply font-bold text-main-blue;
+    @apply font-bold text-neutral-gray;
   }
 
   hr {
@@ -418,8 +418,11 @@
     @apply py-2 border-b-1 xl:border-none;
   }
 
+  /* Box */
+
   .box-container {
-    @apply bg-white shadow-md rounded-2xl p-6 m-3 border border-gray-100 max-w-3xl mx-auto;
+    @apply border border-neutral-gray
+         bg-gradient-to-b from-light-blue to-white text-neutral-gray shadow-md rounded-2xl p-6 m-3 max-w-3xl mx-auto;
   }
 
   /* Table of Contents */
@@ -428,7 +431,8 @@
   }
 
   .table-of-contents li {
-    @apply text-neutral-gray pl-5 no-underline rounded-sm hover:text-main-blue text-sm lg:text-base;
+    @apply text-neutral-gray pl-5 no-underline rounded-xl hover:border hover:border-neutral-gray 
+         hover:bg-gradient-to-b hover:from-light-blue hover:to-white hover:font-semibold text-sm lg:text-base;
   }
 
   .toc-item {
@@ -448,7 +452,7 @@
   }
 
   .toc-subitem {
-    @apply text-gray-500 list-none py-1 cursor-default;
+    @apply text-gray-500 list-none py-1 mx-2 cursor-default;
   }
 
   .toc-sublink {
@@ -482,17 +486,17 @@
 
   /* Exercise */
   .exercise-card {
-    @apply p-5 mt-8 border border-main-blue 
-         bg-gradient-to-b from-main-blue to-white text-white 
+    @apply p-5 mt-8 border border-neutral-gray 
+         bg-gradient-to-b from-light-blue to-white text-neutral-gray
          rounded-lg flex flex-col items-center ;
   }
 
   .exercise {
-    @apply text-2xl font-semibold text-center text-white;
+    @apply text-2xl font-semibold text-center text-neutral-gray;
   }
 
   .question {
-    @apply text-center text-white font-semibold;
+    @apply text-center text-neutral-gray font-semibold;
   }
 
   .choice-box {
@@ -500,13 +504,14 @@
   }
 
   .choice {
-    @apply flex items-center gap-2 bg-main-blue/70 hover:bg-main-blue rounded-md p-2;
+    @apply flex items-center gap-2 bg-white/40 hover:bg-light-blue rounded-md p-2;
   }
 
 
   .answer-button {
-    @apply mt-4 bg-main-blue text-white px-4 py-2 rounded hover:border hover:border-main-blue 
-         hover:bg-gradient-to-b from-main-blue to-white hover:text-white ;
+    @apply mt-4 border border-neutral-gray 
+         bg-gradient-to-b from-light-blue to-white text-neutral-gray px-4 py-2 rounded 
+         hover:from-main-blue;
   }
 
   /* Footer */
