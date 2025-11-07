@@ -5,805 +5,497 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 1 Introduction</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="src/output.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
-
 </head>
 
-<body class="md:bg-gradient-to-br xl:bg-gradient-to-br from-main-white via-content-bg to-purple-50 min-h-screen">
-     <header class="site-header">
+<body class="bodyhazel">
+    <!-- Header -->
+    <header class="site-header">
         <div class="header-container">
             <section class="brand-container">
                 <img src="assets\logo.png" class="logo">
                 <a href="index.html" class="brand-logo">Systematic.dev</a>
             </section>
 
-            <button class="md:hidden xl:hidden lg:hidden text-main-blue">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
+            <!-- Hidden checkbox for hamburger menu -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-            <!-- Navigation  -->
+            <!-- Hamburger button -->
+            <label for="menu-toggle" class="md:hidden lg:hidden xl:hidden text-main-blue cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </label>
+
+            <!-- Desktop Navigation -->
             <nav class="nav-menu">
                 <div class="dropdown-container">
-                        <button class="dropdown-button">Chapters <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
-                            <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
-                            <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
-                            <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
-                            <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
-                        </div>
+                    <button class="dropdown-button">Chapters <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
+                        <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
+                        <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
+                        <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
+                        <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
                     </div>
+                </div>
                 <a href="" class="nav-link">Tutorials <i class="fa-solid fa-chevron-down"></i></a>
                 <a href="" class="nav-link">Projects</a>
             </nav>
 
-            <div class="auth-container">
+            <div class="auth-container hidden md:flex lg:flex xl:flex">
                 <a href="" class="auth-btn">Log In</a>
             </div>
+
+            <!-- Mobile Sidebar Navigation -->
+            <div
+                class="mobile-sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out z-50 md:hidden lg:hidden xl:hidden">
+                <div class="p-4">
+
+                    <div class="flex justify-between items-center mb-4">
+                        <section class="brand-container">
+                            <img src="assets\logo.png" class="logo">
+                            <a href="index.html" class="brand-logo">Systematic.dev</a>
+                        </section>
+                    </div>
+
+                    <div class="space-y-4">
+
+                        <!-- Mobile-specific dropdown for Chapters -->
+                       <div class="mobile-dropdown-container">
+
+                            <input type="checkbox" id="mobile-chapters-toggle" class="hidden">
+                            <label for="mobile-chapters-toggle" class="mobile-dropdown-button">
+                                Chapters <i class="fa-solid fa-chevron-down transition-transform duration-300"
+                                    id="chevron-icon"></i>
+                            </label>
+                            <div class="mobile-dropdown-content ">
+                                <a href="Chapter1.html" class="mobile-dropdown-link">Chapter 1</a>
+                                <a href="Chapter-2.html" class="mobile-dropdown-link">Chapter 2</a>
+                                <a href="Chapter-3.html" class="mobile-dropdown-link">Chapter 3</a>
+                                <a href="Chapter-4.html" class="mobile-dropdown-link">Chapter 4</a>
+                                <a href="Chapter-5.html" class="mobile-dropdown-link">Chapter 5</a>
+                            </div>
+
+                        </div>
+
+                        <a href="" class="nav-link block">Tutorials</a>
+                        <a href="" class="nav-link block">Projects</a>
+                        <a href="" class="auth-btn block text-center">Log In</a>
+
+                        <!-- New section for Chapter Progress -->
+                        <div class="chapter-progress-section mt-6">
+                            <h3 class="sidebar-title text-lg font-bold mb-4">Table of Contents</h3>
+                            <nav class="text-sm relative" aria-label="Chapter Table of Contents">
+                                <div class="absolute left-2 top-0 h-full w-0.5 bg-neutral-gray/20"></div>
+                                <a href="#Section1" class="nav-link-item-mobile left-2">
+                                    <p class="sidebar-header">Chapter 1 Introduction</p>
+                                </a>
+                                <a href="#Section2" class="nav-link-item-mobile left-2">
+                                    <p class="sidebar-header">1.1 Professional Software Development</p>
+                                </a>
+                                <a href="#Section3" class="nav-link-item-mobile left-2">
+                                    <p class="sidebar-header">1.1.1 Software Engineering</p>
+                                </a>
+                                <a href="#Section4" class="nav-link-item-mobile left-2">
+                                    <p class="sidebar-header">1.2 Software Engineering Ethics</p>
+                                </a>
+                                <a href="#Section5" class="nav-link-item-mobile left-2">
+                                    <p class="sidebar-header">1.3 Case Studies</p>
+                                </a>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay for mobile sidebar  -->
+            <label for="menu-toggle"
+                class="mobile-overlay fixed top-16 left-0 right-0 bottom-0 opacity-0 pointer-events-none peer-checked:pointer-events-auto z-40 md:hidden lg:hidden xl:hidden"
+                aria-label="Close menu"></label>
+
         </div>
-         
     </header>
-    <main class="grid gap-6 mx-auto px-5 py-8 md:px-8 lg:px-10 xl:pl-37 xl:pr-45
-             grid-cols-1 
-             lg:grid-cols-[250px_minmax(0,1fr)] 
-             lg:items-start">
 
-        <!-- Desktop view of Table of Contents  -->
-        <aside class="hidden lg:block w-[350px] sticky top-20 py-3 self-start md:p-5 lg:pl-5 glass-card xl:p-6">
-                    <h2 class="font-semibold text-2xl mb-4 border-b border-sky-100 pb-2">Table of Contents</h2>
-                    <ul class="table-of-contents">
-                        <li class="toc-item">
-                            <a href="#sec-4-1" class="toc-link">Functional and non-functional requirements</a>
-                            <ul class="toc-submenu">
-                                    <li class="toc-subitem"><a href="#sec-4-1-1" class="toc-sublink">Functional requirements</a></li>
-                                    <li class="toc-subitem"><a href="#sec-4-1-2" class="toc-sublink">Non-functional requirements</a></li>   
-                            </ul>
-                        </li>
-                        <li class="toc-item"><a href="#sec-4-2" class="toc-link">The software requirements document</a></li>
-                        <li class="toc-item">
-                            <a href="#sec-4-3" class="toc-link">Requirements specification</a>
-                            <ul class="toc-submenu">
-                                    <li class="toc-subitem"><a href="#sec-4-3-1" class="toc-sublink">Natural language specification</a></li>
-                                    <li class="toc-subitem"><a href="#sec-4-3-2" class="toc-sublink">Structured specifications</a></li>   
-                            </ul>
-                        </li>
-                        <li class="toc-item"><a href="#sec-4-4" class="toc-link">Requirements engineering processes</a></li>
-                        <li class="toc-item">
-                            <a href="#sec-4-5" class="toc-link">Requirements elicitation and analysis</a>
-                            <ul class="toc-submenu">
-                                    <li class="toc-subitem"><a href="#sec-4-5-1" class="toc-sublink">Requirements discovery</a></li>
-                                    <li class="toc-subitem"><a href="#sec-4-5-2" class="toc-sublink">Interviewing</a></li>   
-                                    <li class="toc-subitem"><a href="#sec-4-5-3" class="toc-sublink">Scenarios</a></li> 
-                                    <li class="toc-subitem"><a href="#sec-4-5-4" class="toc-sublink">Use cases</a></li>   
-                                    <li class="toc-subitem"><a href="#sec-4-5-5" class="toc-sublink">Ethnography</a></li>   
-                            </ul>
-                        </li>
-                        <li class="toc-item"><a href="#sec-4-6" class="toc-link">Requirements validation</a></li>
-                        <li class="toc-item">
-                            <a href="#sec-4-7" class="toc-link">Requirements management</a>
-                            <ul class="toc-submenu">
-                                    <li class="toc-subitem"><a href="#sec-4-3-1" class="toc-sublink">Natural language specification</a></li>
-                                    <li class="toc-subitem"><a href="#sec-4-3-2" class="toc-sublink">Structured specifications</a></li>   
-                            </ul>
-                        </li>
+    <!-- MAIN CONTENT - RESTRUCTURED -->
+    <main class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 lg:gap-8">
+            
+            <!-- SIDEBAR - Table of Contents -->
+            <aside class="hidden lg:block">
+                <div class="sticky top-24 glass-card p-6 rounded-xl ">
+
+                   <div class="divhazel">
+    
+                    <h2 class="h-hazel ;">Table of Contents</h2>
+                    <ul class="table-of-contents space-y-2">
+                        <li class="toc-item"><a href="#Section1" class="toc-link">Chapter 1 Introduction</a></li>
+                        <li class="toc-item"><a href="#Section2" class="toc-link">1.1 Professional Software Development</a></li>
+                        <li class="toc-item"><a href="#Section3" class="toc-link">1.1.1 Software Engineering</a></li>
+                        <li class="toc-item"><a href="#Section4" class="toc-link">1.2 Software Engineering Ethics</a></li>
+                        <li class="toc-item"><a href="#Section5" class="toc-link">1.3 Case Studies</a></li>
                     </ul>
-        </aside>
+                </div>
+                </div>
+                 
+            </aside>
 
-   
-        <div class="flex flex-col md:w-[640px] xl:w-[1000px] lg:px-10 gap-5 md:gap-5 xl:gap-10">
 
-                <section class="main-style bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl">
-                    <h2 class="text-center ">OBJECTIVES</h2>
-                    <p>
+            <!-- CONTENT AREA -->
+            <div class="w-full max-w-full space-y-5 lg:space-y-6">
+
+                <!-- OBJECTIVES SECTION -->
+                <section class="c-hazel">
+                    <h2 class="text-center text-main-white text-3xl sm:text-5xl lg:6xl font-bold uppercase ">Chapter 1 Introduction</h2>
+                    <h2 class="text-left text-main-white text-xl sm:text-3xl font-semibold mb-4 pt-5">Objectives</h2>
+                    <p class="text-main-white mb-4 text-sm sm:text-base leading-relaxed">
                         The objectives of this chapter are to introduce software engineering and to provide a framework
                         for understanding the rest of the book. When you have read this chapter you will:
                     </p>
-                    <ul>
+                    <ul class="ulhazel">
                         <li>understand what software engineering is and why it is important;</li>
                         <li>understand that the development of different types of software systems may require different
                             software engineering techniques;</li>
-                        <li> understand some ethical and professional issues that are important for software engineers;
-                        </li>
+                        <li>understand some ethical and professional issues that are important for software engineers;</li>
                         <li>have been introduced to three systems, of different types, that will be used as examples
                             throughout the book.</li>
                     </ul>
                 </section>
 
-                    <article class="bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl  ">
+                <!-- CONTENTS SECTION -->
+                <article class="c-hazel">
+                    <h2 class="h2-hazel">CONTENTS</h2>
+                    <div class="div2hazel">
+                        <p class="text-main-white"><b>1.1</b> Professional software development</p>
+                        <p class="text-main-white"><b>1.2</b> Software engineering ethics</p>
+                        <p class="text-main-white"><b>1.3</b> Case studies</p>
+                    </div>
+                </article>
 
-                        <h1 class="title text-center">
-                            Contents</h1>
-                        <p><b>1.1</b> Professional software development</p>
-                        <p><b>1.2</b> Software engineering ethics</p>
-                        <p><b>1.3</b> Case studies</p>
-                    </article>
+                <!-- SECTION 1: INTRODUCTION -->
+                <section id="Section1" class="sectionhazel">
+                    <h2 class="hazelh2">
+                        CHAPTER 1 INTRODUCTION
+                    </h2>
+                    <div class="dhazel">
+                        <p class="text-main-white">We can't run the modern world without software. National infrastructures and utilities are
+                            controlled by computer-based systems and most electrical products include a computer and controlling software. Industrial manufacturing and distribution is completely
+                            computerized, as is the financial system. Entertainment, including the music industry, computer games, and film and television, is software intensive. Therefore,
+                            software engineering is essential for the functioning of national and international societies.</p>
 
+                        <p class="text-main-white">Software systems are abstract and intangible. They are not constrained by the properties of
+                            materials, governed by physical laws, or by manufacturing processes. This simplifies software
+                            engineering, as there are no natural limits to the potential of software. However, because of
+                            the lack of physical constraints, software systems can quickly become extremely complex, difficult to understand, and expensive to change.</p>
 
-                <section class=" bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl  ">
-                    <h2 class=" text-center ">
-                        Chapter 1 INTRODUCTION</h2>
-                    <p> We can’t run the modern world without software. National infrastructures and utilities are
-                        controlled by computer-based systems and most electrical products include a
-                        computer and controlling software. Industrial manufacturing and distribution is completely
-                        computerized, as is the financial system. Entertainment, including the
-                        music industry, computer games, and film and television, is software intensive.Therefore,
-                        software engineering is essential for the functioning of national and inter national societies.
-                    </p>
-                    <p> Software systems are abstract and intangible. They are not constrained by the properties of
-                        materials, governed by physical laws, or by manufacturing processes. This simplifies software
-                        engineering, as there are no natural limits to the potential of software. However, because of
-                        the lack of physical constraints, software systems can
-                        quickly become extremely complex, difficult to understand, and expensive to change.</p>
-                    <p>1.<i> Increasing demands</i> As new software engineering techniques help us to build larger, more
-                        complex systems, the demands change.
-                        Systems have to be built and delivered more quickly; larger, even more complex systems are
-                        required;
-                        systems have to have new capabilities that were previously thought to be impossible. Existing
-                        software engineering methods cannot cope and new software
-                        engineering techniques have to be developed to meet new these new demands.</p>
-                    <p>2.<i> Low expectations</i> It is relatively easy to write computer programs without using
-                        software engineering methods and techniques. Many companies have drifted
-                        into software development as their products and services have evolved. They do
-                        not use software engineering methods in their everyday work. Consequently,
-                        their software is often more expensive and less reliable than it should be. We
-                        need better software engineering education and training to address this problem.</p>
-                    <p>Software engineers can be rightly proud of their achievements. Of course we still
-                        have problems developing complex software but, without software engineering, we
-                        would not have explored space, would not have the Internet or modern telecommunications.
-                        All forms of travel would be more dangerous and expensive. Software engineering has contributed
-                        a great deal and I am convinced that its contributions in the
-                        21st century will be even greater</p>
-                
+                        <p class="text-main-white"><b>1. Increasing demands</b> As new software engineering techniques help us to build larger, more
+                            complex systems, the demands change. Systems have to be built and delivered more quickly; larger, even more complex systems are required; systems have to have new capabilities that were previously thought to be impossible. Existing software engineering methods cannot cope and new software engineering techniques have to be developed to meet these new demands.</p>
 
+                        <p class="text-main-white"><b>2. Low expectations</b> It is relatively easy to write computer programs without using
+                            software engineering methods and techniques. Many companies have drifted into software development as their products and services have evolved. They do not use software engineering methods in their everyday work. Consequently, their software is often more expensive and less reliable than it should be. We need better software engineering education and training to address this problem.</p>
 
-                        <div style="text-align: center;">
-                        <img src="assets/hazelimage1.png " style="display:block; margin:auto;" width="800">
+                        <p class="text-main-white">Software engineers can be rightly proud of their achievements. Of course we still
+                            have problems developing complex software but, without software engineering, we would not have explored space, would not have the Internet or modern telecommunications.
+                            All forms of travel would be more dangerous and expensive. Software engineering has contributed
+                            a great deal and I am convinced that its contributions in the 21st century will be even greater.</p>
+
+                        <div class="mt-6 flex justify-center">
+                            <img src="assets/hazelimage1.png" class="max-w-full w-full sm:w-[90%] lg:w-[700px] h-auto rounded-lg" alt="Software Engineering Overview">
+                        </div>
                     </div>
                 </section>
 
+                <!-- SECTION 2: PROFESSIONAL SOFTWARE DEVELOPMENT -->
+                <section id="Section2" class="sectionhazel">
+                    <h2 class="hazel-2">
+                        1.1 PROFESSIONAL SOFTWARE DEVELOPMENT
+                    </h2>
+                    <div class="text-main-white space-y-4 text-sm sm:text-base leading-relaxed">
+                        <p class="text-main-white">Lots of people write programs. People in business write spreadsheet programs to
+                            simplify their jobs, scientists and engineers write programs to process their experimental data, and hobbyists write programs for their own interest and enjoyment.
+                            However, the vast majority of software development is a professional activity where
+                            software is developed for specific business purposes, for inclusion in other devices,
+                            or as software products such as information systems, CAD systems, etc. Professional
+                            software, intended for use by someone apart from its developer, is usually developed
+                            by teams rather than individuals. It is maintained and changed throughout its life.</p>
 
+                        <div class="mt-6 flex justify-center">
+                            <img src="assets/hazelimage2.png" class="max-w-full w-full sm:w-[90%] lg:w-[650px] h-auto rounded-lg" alt="FAQ about software">
+                        </div>
+                        <p class="text-center font-semibold text-main-white"><b>Figure 1.1</b> Frequently asked questions about software</p>
 
-                <section class="bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl">
-                    <h1 class="title" style="text-align: center;" id="1.1 Professional software development">
-                        1.1 PROFESSIONAL SOFTWARE DEVELOPMENT</h1>
-                    <p> Lots of people write programs. People in business write spreadsheet programs to
-                        simplify their jobs, scientists and engineers write programs to process their experi
-                        mental data, and hobbyists write programs for their own interest and enjoyment.
-                        However, the vast majority of software development is a professional activity where
-                        software is developed for specific business purposes, for inclusion in other devices,
-                        or as software products such as information systems, CAD systems, etc. Professional
-                        software, intended for use by someone apart from its developer, is usually developed
-                        by teams rather than individuals. It is maintained and changed throughout its life.</p>
+                        <p class="text-main-white"><b>1. Generic products</b> These are stand-alone systems that are produced by a development
+                            organization and sold on the open market to any customer who is able to buy them. Examples of this type of product include software for PCs such as databases, word
+                            processors, drawing packages, and project-management tools. It also includes so-called vertical applications designed for some specific purpose such as
+                            library information systems, accounting systems, or systems for maintaining dental records.</p>
 
+                        <p class="text-main-white"><b>2. Customized (or bespoke) products</b> These are systems that are commissioned by
+                            a particular customer. A software contractor develops the software especially for that customer. Examples of this type of software include control systems for
+                            electronic devices, systems written to support a particular business process, and air traffic control systems.</p>
 
-                    <div style="text-align: center;">
-                        <img src="assets/hazelimage2.png" style="display:block; margin:auto;" width="700">
+                        <p class="text-main-white">An important difference between these types of software is that, in generic products, the
+                            organization that develops the software controls the software specification. For custom products, the specification is usually developed and controlled by the organization
+                            that is buying the software. The software developers must work to that specification.</p>
+
+                        <p class="text-main-white">However, the distinction between these system product types is becoming increasingly blurred. More and more systems are now being built with a generic
+                            product as a base, which is then adapted to suit the requirements of a customer. Enterprise Resource Planning (ERP) systems, such as the SAP system, are the best
+                            examples of this approach. Here, a large and complex system is adapted for a company by incorporating information about business rules and processes, reports required, and so on.</p>
                     </div>
-                    <p><b> Figure 1.1</b> Frequently asked questions about software</p>
-
-                    <p>1.<i>Generic products</i>These are stand-alone systems that are produced by a development
-                        organization and sold on the open market to any customer who is able to
-                        buy them. Examples of this type of product include software for PCs such as databases, word
-                        processors, drawing packages, and project-management tools.
-                        It also includes so-called vertical applications designed for some specific purpose such as
-                        library information systems, accounting systems, or systems for maintaining dental records.</p>
-
-                    <p>2<i> Customized (or bespoke) products</i> These are systems that are commissioned by
-                        a particular customer. A software contractor develops the software especially
-                        for that customer. Examples of this type of software include control systems for
-                        electronic devices, systems written to support a particular business process, and
-                        air traffic control systems</p>
-                    <p> An important difference between these types of software is that, in generic products, the
-                        organization that develops the software controls the software specification.
-                        For custom products, the specification is usually developed and controlled by the organization
-                        that is buying the software. The software developers must work to that specification.</p>
-                    <p> However, the distinction between these system product types is becoming
-                        increasingly blurred. More and more systems are now being built with a generic
-                        product as a base, which is then adapted to suit the requirements of a customer.
-                        Enterprise Resource Planning (ERP) systems, such as the SAP system, are the best
-                        examples of this approach. Here, a large and complex system is adapted for a company by
-                        incorporating information about business rules and processes, reports
-                        required, and so on.</p>
                 </section>
 
+                <!-- SECTION 3: SOFTWARE ENGINEERING -->
+                <section id="Section3" class="sectionhazel">
+                    <h2 class="hazel-2">
+                        1.1.1 Software Engineering
+                    </h2>
+                    <div class="text-main-white space-y-4 text-sm sm:text-base leading-relaxed">
+                        <p class="text-main-white">Software engineering is an engineering discipline that is concerned with all aspects of
+                            software production from the early stages of system specification through to maintaining the
+                            system after it has gone into use. In this definition, there are two key phrases:</p>
 
-                <section class="bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl">
-                    <h3 class="title" style="text-align: center; ">
-                        1.1.1 Software engineering</h3>
-                    <p>Software engineering is an engineering discipline that is concerned with all aspects of
-                        software production from the early stages of system specification through to maintaining the
-                        system after it has gone into use. In this definition, there are two key phrases:</p>
-                    <p>1.<i>Engineering discipline </i> Engineers make things work. They apply theories, methods, and
-                        tools where these are appropriate. However, they use them selectively
-                        and always try to discover solutions to problems even when there are no applicable theories and
-                        methods. Engineers also recognize that they must work to
-                        organizational and financial constraints so they look for solutions within these constraints.
-                    </p>
+                        <p class="text-main-white"><b>1. Engineering discipline</b> Engineers make things work. They apply theories, methods, and
+                            tools where these are appropriate. However, they use them selectively and always try to discover solutions to problems even when there are no applicable theories and
+                            methods. Engineers also recognize that they must work to organizational and financial constraints so they look for solutions within these constraints.</p>
 
-                <div style="text-align: center;">
-                        <img src="assets/hazelimage3.png" style="display:block; margin:auto;" width="700">
+                        <div class="mt-6 flex justify-center">
+                            <img src="assets/hazelimage3.png" class="max-w-full w-full sm:w-[90%] lg:w-[650px] h-auto rounded-lg" alt="Essential attributes">
+                        </div>
+                        <p class="text-center font-semibold text-main-white"><b>Figure 1.2</b> Essential attributes of good software
+
+                           <p class="text-main-white"> 2. All aspects of software production</b> Software engineering is not just concerned
+                            with the technical processes of software development. It also includes activities such as software project management and the development of tools, methods, and theories to
+                            support software production.
+
+                            Engineering is about getting results of the required quality within the schedule and budget.
+                            This often involves making compromises—engineers cannot be perfectionists. People writing programs for themselves, however, can spend as much time as they wish on the program development.
+
+                            In general, software engineers adopt a systematic and organized approach to their work, as this is often the most effective way to produce high-quality software.
+                            However, engineering is all about selecting the most appropriate method for a set of circumstances so a more creative, less formal approach to development may be
+                            effective in some circumstances. Less formal development is particularly appropriate for the development of web-based systems, which requires a blend of software and graphical design skills.
+                            </p>
+
+                        <div class="mt-6 space-y-2">
+                            <p class="font-semibold text-main-white">Software engineering is important for two reasons:
+                                1. More and more, individuals and society rely on advanced software systems. We need to be able
+                                to produce reliable and trustworthy systems economically and quickly.
+                                2. It is usually cheaper, in the long run, to use software engineering methods and techniques
+                                for software systems rather than just write the programs as if it was a personal programming project. For most types of systems, the majority of costs are the costs of
+                                changing the software after it has gone into use.</p>
+                        </div>
+
+                        <div class="mt-6 space-y-2">
+                            <p class="text-main-white">The systematic approach that is used in software engineering is sometimes called a software
+                                process. A software process is a sequence of activities that leads to the production of a software product. There are four fundamental activities that are common to all
+                                software processes. These activities are:
+                                1. Software specification, where customers and engineers define the software that is to be
+                                produced and the constraints on its operation.
+                                2. Software development, where the software is designed and programmed.
+                                3. Software validation, where the software is checked to ensure that it is what the customer requires.
+                                4. Software evolution, where the software is modified to reflect changing customer and market requirements.
+                                </p>
+                        </div>
+
+                        <p class="text-main-white">Different types of systems need different development processes. For example, real-time software in an aircraft has to be completely specified before development
+                            begins. In e-commerce systems, the specification and the program are usually developed together. Consequently, these generic activities may be organized in different
+                            ways and described at different levels of detail depending on the type of software being developed. I describe software processes in more detail in Chapter 2.</p>
+
+                        <div class="mt-6 space-y-4">
+                            <p class="text-center text-main-white"><b>1.1.2 Software engineering diversity</b></p>
+                            <p class="text-main-white">Software engineering is a systematic approach to the production of software that takes into
+                                account practical cost, schedule, and dependability issues, as well as the needs of software customers and producers. How this systematic approach is actually implemented
+                                varies dramatically depending on the organization developing the software, the type of software, and the people involved in the development process.</p>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <p class="font-semibold text-main-white">There are many different types of application including:</p>
+                            <p class="text-main-white"><b>1. Stand-alone applications</b> These are application systems that run on a local computer,
+                                such as a PC. They include all necessary functionality and do not need to be connected to a network.</p>
+                            <p class="text-main-white"><b>2. Interactive transaction-based applications</b> These are applications that execute on a
+                                remote computer and that are accessed by users from their own PCs or terminals.</p>
+                            <p class="text-main-white"><b>3. Embedded control systems</b> These are software control systems that control and manage hardware devices.</p>
+                            <p class="text-main-white"><b>4. Batch processing systems</b> These are business systems that are designed to process data in large batches.</p>
+                            <p class="text-main-white"><b>5. Entertainment systems</b> These are systems that are primarily for personal use and which are intended to entertain the user.</p>
+                            <p class="text-main-white"><b>6. Systems for modeling and simulation</b> These are systems that are developed by scientists and engineers to model physical processes or situations.</p>
+                            <p class="text-main-white"><b>7. Data collection systems</b> These are systems that collect data from their environment using a set of sensors.</p>
+                            <p class="text-main-white"><b>8. Systems of systems</b> These are systems that are composed of a number of other software systems.</p>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <p class="font-semibold text-main-white">1.1.3 Software engineering and the Web</p>
+                            <p class="text-main-white">The development of the World Wide Web has had a profound effect on all of our lives. Initially, the Web was primarily a universally accessible information store and
+                                it had little effect on software systems. These systems ran on local computers and were only accessible from within an organization. Around 2000, the Web started to
+                                evolve and more and more functionality was added to browsers. This meant that web-based systems could be developed where, instead of a special-purpose user interface, these systems could be accessed using a web browser.</p>
+                        </div>
                     </div>
-                    
-                    
+                </section>
 
-                    
-                    <p><b>figure 1.2</b> Essential attributes of good software</p>
-                    <p>2.<i>All aspects of software production</i> Software engineering is not just concerned
-                        with the technical processes of software development. It also includes activities
-                        such as software project management and the development of tools, methods, and theories to
-                        support software production.</p>
-                    <p> Engineering is about getting results of the required quality within the schedule and budget.
-                        This often involves making compromises—engineers cannot be perfectionists. People writing
-                        programs for themselves, however, can spend as much time
-                        as they wish on the program development.</p>
-                    <p> In general, software engineers adopt a systematic and organized approach to their
-                        work, as this is often the most effective way to produce high-quality software.
-                        However, engineering is all about selecting the most appropriate method for a set of
-                        circumstances so a more creative, less formal approach to development may be
-                        effective in some circumstances. Less formal development is particularly appropriate for the
-                        development of web-based systems, which requires a blend of software
-                        and graphical design skills.</p>
+                <!-- SECTION 4: SOFTWARE ENGINEERING ETHICS -->
+                <section id="Section4" class="sectionhazel">
+                    <h2 class="hazel-2">
+                        1.2 SOFTWARE ENGINEERING ETHICS
+                    </h2>
+                    <div class="text-main-white space-y-4 text-sm sm:text-base leading-relaxed">
+                        <p class="text-main-white">Like other engineering disciplines, software engineering is carried out within a social and legal
+                            framework that limits the freedom of people working in that area. As a software engineer, you must accept that your job involves wider responsibilities than simply
+                            the application of technical skills. You must also behave in an ethical and morally responsible way if you are to be respected as a professional engineer.</p>
 
-                    <br>
-                    <p>Software engineering is important for two reasons:</p>
-                    <p> 1. More and more, individuals and society rely on advanced software systems. We need to be able
-                        to produce reliable and trustworthy systems economically and quickly.</p>
-                    <p> 2. It is usually cheaper, in the long run, to use software engineering methods and techniques
-                        for software systems rather than just write the programs as if it was a
-                        personal programming project. For most types of systems, the majority of costs are the costs of
-                        changing the software after it has gone into use.</p>
-                    <br>
-                    <p> The systematic approach that is used in software engineering is sometimes called a software
-                        process. A software process is a sequence of activities that leads to the
-                        production of a software product. There are four fundamental activities that are common to all
-                        software processes. These activities are:</p>
-                    <p> 1.Software specification, where customers and engineers define the software that is to be
-                        produced and the constraints on its operation.</p>
-                    <p>2.Software development, where the software is designed and programmed.</p>
-                    <p>3. Software validation, where the software is checked to ensure that it is what the customer
-                        requires.</p>
-                    <p>4. Software evolution, where the software is modified to reflect changing customer and market
-                        requirements.</p>
-                    <br>
-                    <p>Different types of systems need different development processes. For example,
-                        real-time software in an aircraft has to be completely specified before development
-                        begins. In e-commerce systems, the specification and the program are usually developed together.
-                        Consequently, these generic activities may be organized in different
-                        ways and described at different levels of detail depending on the type of software being
-                        developed. I describe software processes in more detail in Chapter 2.</p>
-                    <br>
-                    <p> 1. Computer science is concerned with the theories and methods that underlie computers and
-                        software systems, whereas software engineering is concerned with the
-                        practical problems of producing software. Some knowledge of computer science is essential for
-                        software engineers in the same way that some knowledge of
-                        physics is essential for electrical engineers. Computer science theory, however, is often most
-                        applicable to relatively small programs. Elegant theories of computer
-                        science cannot always be applied to large, complex problems that require a software solution.
-                    </p>
-                    <p> 2. System engineering is concerned with all aspects of the development and evolution of complex
-                        systems where software plays a major role.
-                        System engineering is therefore concerned with hardware development, policy and process
-                        design and system deployment, as well as software engineering. System engineers are involved in
-                        specifying the system, defining its overall architecture,
-                        and then integrating the different parts to create the finished system. They are less concerned
-                        with the engineering of the system components (hardware,software, etc.).</p>
-               
-                
-               
-                    <p>As I discuss in the next section, there are many different types of software. There is no
-                        universal software engineering method or technique that is applicable for all of these. However,
-                        there are three general issues that affect many different types of software:</p>
-                    <p>1.<i>Heterogeneity </i> Increasingly, systems are required to operate as distributed systems
-                        across networks that include different types of computer and mobile devices. As
-                        well as running on general-purpose computers, software may also have to execute on mobile
-                        phones. You often have to integrate new software with older legacy
-                        systems written in different programming languages. The challenge here is to develop
-                        techniques for building dependable software that is flexible enough to cope with this
-                        heterogeneity</p>
-                    <p>2.<i>Business and social change </i> Business and society are changing incredibly quickly as
-                        emerging economies develop and new technologies become available. They
-                        need to be able to change their existing software and to rapidly develop new software. Many
-                        traditional software engineering techniques are time consuming and
-                        delivery of new systems often takes longer than planned. They need to evolve so that the time
-                        required for software to deliver value to its customers is reduced.</p>
-                    <p>3.<i>Security and trust</i>As software is intertwined with all aspects of our lives, it is
-                        essential that we can trust that software. This is especially true for remote software systems
-                        accessed through a web page or web service interface. We have to
-                        make sure that malicious users cannot attack our software and that information security is
-                        maintained.</p>
-                    <br>
-                    <p>Of course, these are not independent issues. For example, it may be necessary to make rapid
-                        changes to a legacy system to provide it with a web service interface. To
-                        address these challenges we will need new tools and techniques as well as innovative ways of
-                        combining and using existing software engineering methods.</p>
-                
+                        <p class="text-main-white"><b>1. Confidentiality</b> You should normally respect the confidentiality of your employers or
+                            clients irrespective of whether or not a formal confidentiality agreement has been signed.</p>
+                        <p class="text-main-white"><b>2. Competence</b> You should not misrepresent your level of competence. You should not
+                            knowingly accept work that is outside your competence.</p>
+                        <p class="text-main-white"><b>3. Intellectual property rights</b> You should be aware of local laws governing the use of
+                            intellectual property such as patents and copyright. You should be careful to ensure that the intellectual property of employers and clients is protected.</p>
+                        <p class="text-main-white"><b>4. Computer misuse</b> You should not use your technical skills to misuse other people's
+                            computers. Computer misuse ranges from relatively trivial (game playing on an employer's machine, say) to extremely serious (dissemination of viruses or other malware).</p>
 
+                        <hr class="border-main-white/30 my-6">
 
-                
-                    <p><b>
-                            1.1.2 Software engineering diversity</b></p>
-                    <p>Software engineering is a systematic approach to the production of software that takes into
-                        account practical cost, schedule, and dependability issues, as well as the
-                        needs of software customers and producers. How this systematic approach is actually implemented
-                        varies dramatically depending on the organization developing the
-                        software, the type of software, and the people involved in the development process.</p>
-                    <p> There are many different types of application including:</p>
-                    <p>1.<i>Stand-alone applications </i>These are application systems that run on a local computer,
-                        such as a PC. They include all necessary functionality and do not need to be connected to a
-                        network.
-                        Examples of such applications are office applications on a PC, CAD programs, photo manipulation
-                        software, etc.</p>
-                    <p>2.<i>Interactive transaction-based applications</i>These are applications that execute on a
-                        remote computer and that are accessed by users from their own PCs or
-                        terminals. Obviously, these include web applications such as e-commerce applications where you
-                        can interact with a remote system to buy goods and services.</p>
-                    <p>3.<i>Embedded control systems</i> These are software control systems that control and manage
-                        hardware devices. Numerically, there are probably more embedded
-                        systems than any other type of system. Examples of embedded systems include the software in a
-                        mobile (cell) phone, software that controls anti-lock braking in a
-                        car, and software in a microwave oven to control the cooking process.</p>
-                    <p>4.<i>Batch processing systems </i> These are business systems that are designed to process data
-                        in large batches. They process large numbers of individual inputs to
-                        create corresponding outputs. Examples of batch systems include periodic billing systems, such
-                        as phone billing systems, and salary payment systems.</p>
-                    <p>5.<i>Entertainment systems</i> These are systems that are primarily for personal use and which
-                        are intended to entertain the user. Most of these systems are games of one
-                        kind or another. The quality of the user interaction offered is the most important
-                        distinguishing characteristic of entertainment systems.</p>
-                    <p>6.<i>Systems for modeling and simulation</i> These are systems that are developed by scientists
-                        and engineers to model physical processes or situations, which
-                        include many, separate, interacting objects. These are often computationally intensive and
-                        require high-performance parallel systems for execution.</p>
-                    <p>7.<i> Data collection systems</i>These are systems that collect data from their environment using
-                        a set of sensors and send that data to other systems for processing.
-                        The software has to interact with sensors and often is installed in a hostile environment such
-                        as inside an engine or in a remote location.</p>
-                    <p>8.<i> Systems of systems</i>These are systems that are composed of a number of other software
-                        systems. Some of these may be generic software products, such as a
-                        spreadsheet program. Other systems in the assembly may be specially written for that environment
-                    </p>
-                    <p> Of course, the boundaries between these system types are blurred. If you develop a game for a
-                        mobile (cell) phone, you have to take into account the same constraints
-                        (power, hardware interaction) as the developers of the phone software. Batch processing systems
-                        are often used in conjunction with web-based systems. For example, in a company, travel expense
-                        claims may be submitted through a web application but
-                        processed in a batch application for monthly payment.</p>
-                    <p>Nevertheless, there are software engineering fundamentals that apply to all types of software
-                        system:</p>
-                    <p> 1. They should be developed using a managed and understood development process. The organization
-                        developing the software should plan the development
-                        process and have clear ideas of what will be produced and when it will be completed. Of course,
-                        different processes are used for different types of software.</p>
-                    <p> 2. Dependability and performance are important for all types of systems. Software should behave
-                        as expected, without failures and should be available for use
-                        when it is required. It should be safe in its operation and, as far as possible,
-                        should be secure against external attack. The system should perform efficiently and should not
-                        waste resources.</p>
-                    <p>3. Understanding and managing the software specification and requirements (what the software
-                        should do) are important. You have to know what different customers
-                        and users of the system expect from it and you have to manage their expectations so that a
-                        useful system can be delivered within budget and to schedule.</p>
-                    <p> 4. You should make as effective use as possible of existing resources. This means
-                        that, where appropriate, you should reuse software that has already been developed rather than
-                        write new software.</p>
-                    <p>These fundamental notions of process, dependability, requirements, management,
-                        and reuse are important themes of this book. Different methods reflect them in different ways
-                        but they underlie all professional software development.</p>
-                
+                        <div class="mt-6 flex justify-center">
+                            <img src="assets/hazelimage4.png" class="max-w-full w-full sm:w-[90%] lg:w-[650px] h-auto rounded-lg" alt="ACM/IEEE Code">
+                        </div>
+                        <p class="text-center font-semibold text-main-white"><b>Figure 1.3</b> The ACM/IEEE Code of Ethics (© IEEE/ACM1999)</p>
 
-                        
-                            <h3 class="title" style="text-align: center;">
-                        1.1.3 Software engineering and the Web</h3>
-                    <p>The development of the World Wide Web has had a profound effect on all of our lives. Initially,
-                        the Web was primarily a universally accessible information store and
-                        it had little effect on software systems. These systems ran on local computers and were only
-                        accessible from within an organization. Around 2000, the Web started to
-                        evolve and more and more functionality was added to browsers. This meant that web-based systems
-                        could be developed where, instead of a special-purpose user
-                        interface, these systems could be accessed using a web browser. This led to the development of a
-                        vast range of new system products that delivered innovative services, accessed over the Web.
-                        These are often funded by adverts that are displayed on the user’s screen and do not involve
-                        direct payment from users.</p>
-                    <p>This radical change in software organization has, obviously, led to changes in the ways that
-                        web-based systems are engineered. For example:</p>
-                    <p> 1. Software reuse has become the dominant approach for constructing web-based systems. When
-                        building these systems, you think about how you can assemble
-                        them from pre-existing software components and systems.</p>
-                    <p> 2. It is now generally recognized that it is impractical to specify all the requirements for
-                        such systems in advance. Web-based systems should be developed
-                        and delivered incrementally.</p>
-                    <p> 3. User interfaces are constrained by the capabilities of web browsers. Although technologies
-                        such as AJAX (Holdener, 2008) mean that rich interfaces can be
-                        created within a web browser, these technologies are still difficult to use. Webforms with local
-                        scripting are more commonly used. Application interfaces on
-                        web-based systems are often poorer than the specially designed user interfaces on PC system
-                        products.</p>
-                    <p> The fundamental ideas of software engineering, discussed in the previous section,apply to
-                        web-based software in the same way that they apply to other types of soft
-                        ware system. Experience gained with large system development in the 20th century is still
-                        relevant to web-based software.</p>
+                        <p class="text-main-white">Professional societies and institutions have an important role to play in setting ethical
+                            standards. Organizations such as the ACM, the IEEE (Institute of Electrical and Electronic Engineers), and the British Computer Society publish a code of professional
+                            conduct or code of ethics. Members of these organizations undertake to follow that code when they sign up for membership. These codes of conduct are generally
+                            concerned with fundamental ethical behavior.</p>
 
-                      
-                    </section>
-                       
-
-                        <hr>
-
-
-                    <section class="bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl">
-
-                    <h1  class="title" style="text-align: center;">
-                        1.2  SOFTWARE ENGINEERING ETHICS</h1>
-                    <p>Like other engineering disciplines, software engineering is carried out within a social and legal
-                        framework that limits the freedom of people working in that area. As
-                        a software engineer, you must accept that your job involves wider responsibilities than simply
-                        the application of technical skills. You must also behave in an ethical
-                        and morally responsible way if you are to be respected as a professional engineer.</p>
-                    <p>1.<i>Confidentiality</i>You should normally respect the confidentiality of your employers or
-                        clients irrespective of whether or not a formal confidentiality agreement has been signed.</p>
-                    <p>2.<i> Competence</i> You should not misrepresent your level of competence. You should not
-                        knowingly accept work that is outside your competence.</p>
-                    <p>3.<i>Intellectual property rights </i>You should be aware of local laws governing the use of
-                        intellectual property such as patents and copyright. You should be careful to
-                        ensure that the intellectual property of employers and clients is protected.</p>
-                    <p>4.<i> Computer misuse</i>You should not use your technical skills to misuse other people’s
-                        computers. Computer misuse ranges from relatively trivial (game playing
-                        on an employer’s machine, say) to extremely serious (dissemination of viruses or other malware)
-                    </p>
-            
-
-                <hr>
-
-                    
-                
-                    <div style="text-align: center;">
-                        <img src="assets/hazelimage4.png" style="display:block; margin:auto;" width="700">
+                        <p class="italic text-main-white">The Code contains eight Principles related to the behaviour of and decisions made by
+                            professional software engineers, including practitioners, educators, managers, supervisors and policy makers, as well as trainees and students of the profession. The Principles identify the ethically responsible relationships in which individuals, groups, and organizations participate and the primary obligations within these relationships.</p>
                     </div>
-                    <p><b> Figure 1.3</b> The ACM/IEEE Code of Ethics (© IEEE/ACM1999)</p>
-                    <p> Professional societies and institutions have an important role to play in setting ethical
-                        standards. Organizations such as the ACM, the IEEE (Institute of Electrical
-                        and Electronic Engineers), and the British Computer Society publish a code of professional
-                        conduct or code of ethics. Members of these organizations undertake to
-                        follow that code when they sign up for membership. These codes of conduct are generally
-                        concerned with fundamental ethical behavior.</p>
-                    <p><i>The Code contains eight Principles related to the behaviour of and decisions made by
-                            professional software engineers, including practitioners, educators, managers, supervisors
-                            and policy makers, as well as trainees and students of
-                            the profession. The Principles identify the ethically responsible relationships in which
-                            individuals, groups, and organizations participate and the primary
-                            obligations within these relationships. The Clauses of each Principle are illustrations of
-                            some of the obligations included in these relationships. These obligations are founded in
-                            the software engineer’s humanity, in special care owed
-                            to people affected by the work of software engineers, and the unique elements of the
-                            practice of software engineering. The Code prescribes these as obligations of anyone
-                            claiming to be or aspiring to be a software engineer.</i></p>
+                </section>
 
-                  </section>
-
-
-
-
-                <section class="bg-linear-65 from-blue-400 to-sky-300 m-0 p-10 md:m-30 md:rounded-2xl w-4xl">
-                <h1 class="title" style="text-align: center;">
-                        1.3 CASE STUDIES</h1>
-                    <p> To illustrate software engineering concepts, I use examples from three different types of
-                        systems throughout the book. The reason why I have not used a single case
-                        study is that one of the key messages in this book is that software engineering practice depends
-                        on the type of systems being produced. I therefore choose an appropri
-                        ate example when discussing concepts such as safety and dependability, system modeling, reuse,
-                        etc.</p>
-                    <p>The three types of systems that I use as case studies are:</p>
-                    <p>1.<i>An embedded system </i>This is a system where the software con trols a hardware device and
-                        is embedded in that device. Issues in embedded systems typically
-                        include physical size, responsiveness, power management, etc. The example of an embedded system
-                        that I use is a software system to control a medical device.</p>
-                    <p>2.<i> An information system </i>This is a system whose primary purpose is to manage and provide
-                        access to a database of information. Issues in information systems
-                        include security, usability, privacy, and maintaining data integrity. The example of an
-                        information system that I use is a medical records system.</p>
-                    <p><i></i></p>
-                    <p>
-                        3. <i> A sensor-based data collection system</i> This is a system whose primary purpose is to
-                        collect data from a set of sensors and process that data in some way. The
-                        <br>key requirements of such systems are reliability, even in hostile environmental conditions,
-                        and maintainability. The example of a data collection system that
-                        <br>I use is a wilderness weather station
-                    </p>
-                    <p>
-                        I introduce each of these systems in this chapter, with more information about each of them
-                        available on the Web.
-                    </p>
-                    <hr>
-                    <h2 style="text-align: center;"
-                        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="title">
-                        1.3.1 An insulin pump control system
+                <!-- SECTION 5: CASE STUDIES -->
+                <section id="Section5" class="sectionhazel">
+                    <h2 class="hazel-2">
+                        1.3 CASE STUDIES
                     </h2>
-                    <p>
-                        An insulin pump is a medical system designed to mimic the pancreas by automatically delivering
-                        insulin to diabetic patients. Traditional treatment requires manual
-                        <br>measurement of blood sugar and insulin injections, which can lead to risks of dangerously
-                        low or high glucose levels. Low glucose can cause brain malfunction,
-                        <br>unconsciousness, or death, while prolonged high glucose can damage organs. Advances in
-                        miniaturized sensors now allow automated systems that continuously monitor
-                        <br>blood sugar and deliver precise insulin doses. These embedded software-controlled systems
-                        use microsensors to detect blood sugar, compute insulin needs, and activate
-                        <br>a pump that delivers insulin through a permanently attached needle.
-                    </p>
+                    <div class="text-main-white space-y-4 text-sm sm:text-base leading-relaxed">
+                        <p class="text-main-white">To illustrate software engineering concepts, I use examples from three different types of
+                            systems throughout the book. The reason why I have not used a single case study is that one of the key messages in this book is that software engineering practice depends
+                            on the type of systems being produced. I therefore choose an appropriate example when discussing concepts such as safety and dependability, system modeling, reuse, etc.</p>
 
-                    <p>
-                        <b> Figure 1.4 </b> Insulin pump hardware
-                    </p>
+                        <div class="space-y-3 mt-6">
+                            <p class="font-semibold text-main-white">The three types of systems that I use as case studies are:</p>
+                            <p class="text-main-white"><b>1. An embedded system</b> This is a system where the software controls a hardware device and
+                                is embedded in that device. Issues in embedded systems typically include physical size, responsiveness, power management, etc. The example of an embedded system
+                                that I use is a software system to control a medical device.</p>
+                            <p class="text-main-white" ><b>2. An information system</b> This is a system whose primary purpose is to manage and provide
+                                access to a database of information. Issues in information systems include security, usability, privacy, and maintaining data integrity. The example of an
+                                information system that I use is a medical records system.</p>
+                            <p class="text-main-white"><b>3. A sensor-based data collection system</b> This is a system whose primary purpose is to
+                                collect data from a set of sensors and process that data in some way. The key requirements of such systems are reliability, even in hostile environmental conditions,
+                                and maintainability. The example of a data collection system that I use is a wilderness weather station.</p>
+                            <p class="text-main-white">I introduce each of these systems in this chapter, with more information about each of them available on the Web.</p>
+                        </div>
 
-                    <p>
-                        <b> Figure 1.5</b> Activity model of the insulin pump
-                    </p>
-                    <p>
-                        Figure 1.4 shows the hardware components and organization of the insulin pump. To understand the
-                        examples in this book, all you need to know is that the
-                        <br>blood sensor measures the electrical conductivity of the blood under different conditions
-                        and that these values can be related to the blood sugar level. The
-                        <br>insulin pump delivers one unit of insulin in response to a single pulse from a controller.
-                        Therefore, to deliver 10 units of insulin, the controller sends 10 pulses to
-                        <br>the pump. Figure 1.5 is a UML activity model that illustrates how the software transforms an
-                        input blood sugar level to a sequence of commands that drive the insulin pump.
-                    </p>
-                    <p>
-                        Clearly, this is a safety-critical system. If the pump fails to operate or does not operate
-                        correctly, then the user’s health may be damaged or they may fall into a
-                        <br>coma because their blood sugar levels are too high or too low.
-                    </p>
-                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                        There are, therefore, two essential high-level requirements that this system must meet:
-                    </p>
-                    <p>
-                        1. The system shall be available to deliver insulin when required.
-                    </p>
-                    <p>
-                        2. The system shall perform reliably and deliver the correct amount of insulin to counteract the
-                        current level of blood sugar.
-                    </p>
+                        <hr class="border-main-white/30 my-6">
 
-                    <p>
-                        <b>Figure 1.6</b> The organization of the MHC-PMS
-                    </p>
-                    <p>
-                        The system must therefore be designed and implemented to ensure that the system always meets
-                        these requirements. More detailed
-                        <br>requirements and discussions of how to ensure that the system is safe are discussed in later
-                        chapters.
-                    </p>
-                    <hr>
-                    <h2 style="text-align: center;"
-                        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="title">
-                        1.3.2 A patient information system for mental health care
-                    </h2>
-                    <p>
-                        A patient information system to support mental health care is a medical information system that
-                        maintains information about patients suffering from mental
-                        <br>health problems and the treatments that they have received. Most mental health patients do
-                        not require dedicated hospital treatment but need to attend specialist
-                        <br>clinics regularly where they can meet a doctor who has detailed knowledge of their problems.
-                        To make it easier for patients to attend, these clinics are not just
-                        <br>run in hospitals. They may also be held in local medical practices or community centers.
-                    </p>
-                    <p style="font-family: Arial, Helvetica, sans-serif;">
-                        The MHC-PMS (Mental Health Care-Patient Management System) is an information system that is
-                        intended for use in clinics. It makes use of a centralized database of
-                        <br>patient information but has also been designed to run on a PC, so that it may be accessed
-                        and used from sites that do not have secure network connectivity. When the local
-                        <br>systems have secure network access, they use patient information in the database but they
-                        can download and use local copies of patient records when they are disconnected. The
-                        <br>system is not a complete medical records system so does not maintain information about other
-                        medical conditions. However, it may interact and exchange data with other
-                        <br>clinical information systems. Figure 1.6 illustrates the organization of the MHC-PMS
-                    </p>
-                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                        The MHC-PMS has two overall goals:
-                    </p>
-                    <p>
-                        1. To generate management information that allows health service managers to assess performance
-                        against local and government targets.
-                    </p>
-                    <p>
-                        2. To provide medical staff with timely information to support the treatment of patients
-                    </p>
-                    <p>
-                        Mental health patients often face challenges such as missed appointments, lost prescriptions,
-                        forgetfulness, unreasonable demands, frequent address changes, or homelessness. In
-                        <br>some cases, they may pose risks to themselves or others, requiring secure hospitalization.
-                        The system supporting their care is used by medical staff (doctors, nurses, health
-                        <br>visitors) and nonmedical staff (receptionists, records staff, administrators). It stores
-                        patient details, consultations, conditions, and treatments, while generating reports:
-                        <br>detailed ones for medical staff and anonymized management reports for health authorities.
-                    </p>
-                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                        The key features of the system are:
-                    </p>
-                    <p>
-                        1. <i> Individual care management</i> Clinicians can create records for patients, edit the
-                        information in the system, view patient history, etc. The system supports data
-                        <br>summaries so that doctors who have not previously met a patient can quickly learn about the
-                        key problems and treatments that have been prescribed.
-                    </p>
-                    <p>
-                        2.<i> Patient monitoring</i> The system regularly monitors the records of patients that are
-                        involved in treatment and issues warnings if possible problems are detected.
-                        <br>Therefore, if a patient has not seen a doctor for some time, a warning may be issued. One of
-                        the most important elements of the monitoring system is to keep
-                        <br>track of patients who have been sectioned and to ensure that the legally required checks are
-                        carried out at the right time.
-                    </p>
-                    <p>
-                        3. <i> Administrative reporting</i> The system generates monthly management reports showing the
-                        number of patients treated at each clinic, the number of patients
-                        <br>who have entered and left the care system, number of patients sectioned, the drugs
-                        prescribed and their costs, etc.
-                    </p>
-                    <p>
-                        &nbsp; &nbsp; Two different laws affect the system. These are laws on data protection that
-                        govern the confidentiality of personal information and mental health laws that govern the com
-                        <br>pulsory detention of patients deemed to be a danger to themselves or others. Mental health
-                        is unique in this respect as it is the only medical speciality that can recommend
-                        <br>the detention of patients against their will. This is subject to very strict legislative
-                        safe guards. One of the aims of the MHC-PMS is to ensure that staff always act in accor
-                        <br>dance with the law and that their decisions are recorded for judicial review if necessary.
-                    </p>
-                    <p>
-                        &nbsp; &nbsp; As in all medical systems, privacy is a critical system requirement. It is
-                        essential that patient information is confidential and is never disclosed to anyone apart from
-                        <br>authorized medical staff and the patient themselves. The MHC-PMS is also a safety-critical
-                        system. Some mental illnesses cause patients to become suicidal or a danger to other
-                        <br>people. Wherever possible, the system should warn medical staff about potentially suicidal
-                        or dangerous patients.
-                    </p>
+                        <!-- Case Study 1 -->
+                        <div class="mt-8 space-y-3">
+                            <h2 class="text-lg sm:text-xl font-semibold text-center text-main-white">
+                                1.3.1 An insulin pump control system</h2>
+                            <p class="text-main-white">An insulin pump is a medical system designed to mimic the pancreas by automatically delivering
+                                insulin to diabetic patients. Traditional treatment requires manual measurement of blood sugar and insulin injections, which can lead to risks of dangerously
+                                low or high glucose levels. Low glucose can cause brain malfunction, unconsciousness, or death, while prolonged high glucose can damage organs. Advances in
+                                miniaturized sensors now allow automated systems that continuously monitor blood sugar and deliver precise insulin doses.</p>
+                                Clearly, this is a safety-critical system. If the pump fails to operate or does not operate correctly, then the user's health may be damaged or they may fall into a coma because their blood sugar levels are too high or too low.</p>
+                            <p class="font-semibold text-main-white">There are, therefore, two essential high-level requirements that this system must meet:
+                            1. The system shall be available to deliver insulin when required.
+                            2. The system shall perform reliably and deliver the correct amount of insulin to counteract the current level of blood sugar.
+                            </p>
+                        </div>
 
-                    <p>
-                        <b> Figure 1.7 </b> The weather station’s environment
-                    </p>
-                    <p>
-                        &nbsp;The overall design of the system has to take into account privacy and safety requirements.
-                        The system must be available when needed otherwise safety may be
-                        <br>compromised and it may be impossible to prescribe the correct medication to patients.There
-                        is a potential conflict here—privacy is easiest to maintain when there is only a
-                        <br>single copy of the system data. However, to ensure availability in the event of server
-                        failure or when disconnected from a network, multiple copies of the data should be
-                        <br>maintained. I discuss the trade-offs between these requirements in later chapters.
-                    </p>
-                    <hr>
-                    <h2 style="text-align: center;"
-                        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="title">
-                        1.3.3 A wilderness weather station
-                    </h2>
-                    <p>
-                        To help monitor climate change and to improve the accuracy of weather forecasts in remote areas,
-                        the government of a country with large areas of wilderness decides to
-                        <br>deploy several hundred weather stations in remote areas. These weather stations collect data
-                        from a set of instruments that measure temperature and pressure, sunshine,
-                        <br>rainfall, wind speed, and wind direction.
-                    </p>
-                    <p>
-                        Wilderness weather stations are part of a larger system (Figure 1.7), which is a weather
-                        information system that collects data from weather stations and makes it
-                        <br>available to other systems for processing.
-                    </p>
-                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                        The systems in Figure 1.7 are:
-                    </p>
-                    <p>
-                        1. <i>The weather station system</i> This is responsible for collecting weather data, carrying
-                        out some initial data processing, and transmitting it to the data management system.
-                    </p>
-                    <p>
-                        2.<i>The data management and archiving system</i> This system collects the data from all of the
-                        wilderness weather stations, carries out data processing and analysis,
-                        <br>and archives the data in a form that can be retrieved by other systems, such as weather
-                        forecasting systems.
-                    </p>
-                    <p>
-                        3.<i>The station maintenance system</i> This system can communicate by satellite with all
-                        wilderness weather stations to monitor the health of these systems and
-                        <br>provide reports of problems. It can update the embedded software in these systems. In the
-                        event of system problems, this system can also be used to
-                        <br>remotely control a wilderness weather system.
-                    </p>
-                    <p>
-                        A weather station system is composed of multiple instruments that measure parameters like wind,
-                        temperature, pressure, and rainfall. Each instrument is managed by software that
-                        <br>records data at frequent intervals. Since satellite bandwidth is limited, the system
-                        performs local processing and aggregation before transmitting data when requested. If
-                        <br>communication fails, data is stored locally until a connection is restored. Weather stations
-                        are self-contained, battery-powered units that rely on solar or wind charging,
-                        <br>and must withstand harsh environmental conditions and potential damage from wildlife.
-                    </p>
-                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                        The station software is therefore not just concerned with data collection. It must also:
-                    </p>
-                    <p>
-                        1. Monitor the instruments, power, and communication hardware and report faults to the
-                        management system.
-                    </p>
-                    <p>
-                        2. Manage the system power, ensuring that batteries are charged whenever the environmental
-                        conditions permit but also that generators are shut down in
-                        <br>potentially damaging weather conditions, such as high wind
-                    </p>
-                    <p>
-                        3. Allow for dynamic reconfiguration where parts of the software are replaced with new versions
-                        and where backup instruments are switched into the system
-                        <br>in the event of system failure.
-                    </p>
-                    <p>
-                        Because weather stations have to be self-contained and unattended, this means that the software
-                        installed is complex, even though the data collection functionality is fairly simple.
-                    </p>
- 
-            </section> 
+                        <hr class="border-main-white/30 my-6">
+
+                        <!-- Case Study 2 -->
+                        <div class="mt-8 space-y-3">
+                            <h2 class="text-lg sm:text-xl font-semibold text-center text-main-white">
+                                1.3.2 A patient information system for mental health care</h2>
+                            <p class="text-main-white">A patient information system to support mental health care is a medical information system that
+                                maintains information about patients suffering from mental health problems and the treatments that they have received. Most mental health patients do not require dedicated hospital treatment but need to attend specialist clinics regularly where they can meet a doctor who has detailed knowledge of their problems.
+                                The MHC-PMS (Mental Health Care-Patient Management System) is an information system that is intended for use in clinics. It makes use of a centralized database of patient information but has also been designed to run on a PC, so that it may be accessed and used from sites that do not have secure network connectivity.</p>
+                            <p class="font-semibold text-main-white">The MHC-PMS has two overall goals:</p>
+                            1. To generate management information that allows health service managers to assess performance against local and government targets.
+                            2. To provide medical staff with timely information to support the treatment of patients.
+                            </p>
+                        </div>
+
+                        <hr class="border-main-white/30 my-6">
+
+                        <!-- Case Study 3 -->
+                        <div class="mt-8 space-y-3">
+                            <h2 class="text-lg sm:text-xl font-semibold text-center text-main-white">
+                                1.3.3 A wilderness weather station</h2>
+                            <p class="text-main-white">To help monitor climate change and to improve the accuracy of weather forecasts in remote areas,
+                                the government of a country with large areas of wilderness decides to deploy several hundred weather stations in remote areas. These weather stations collect data
+                                from a set of instruments that measure temperature and pressure, sunshine, rainfall, wind speed, and wind direction.</p>
+                            <p class="text-main-white">Wilderness weather stations are part of a larger system, which is a weather information system that collects data from weather stations and makes it available to other systems for processing.</p>
+                            <p class="font-semibold text-main-white">The systems include:</p>
+                            <p class="text-main-white"><b>1. The weather station system</b> This is responsible for collecting weather data, carrying out some initial data processing, and transmitting it to the data management system.</p>
+                            <p class="text-main-white"><b>2. The data management and archiving system</b> This system collects the data from all of the wilderness weather stations, carries out data processing and analysis.</p>
+                            <p class="text-main-white"><b>3. The station maintenance system</b> This system can communicate by satellite with all wilderness weather stations to monitor the health of these systems.</p>
+                        </div>
+                    </div>
+                </section>
 
             </div>
+        </div>
+    </main>
 
-            </main>
-             <!-- Footer -->
-
+    <!-- Footer -->
     <footer class="bg-white py-4 px-6 xl:py-0 grid grid-row-2 gap-3">
-
         <!-- Mobile view of Chapters -->
         <table class="border-collapse border border-none text-main-blue xl:hidden">
-        <tbody class="table-footer py-2 xl:pt-0">
-            <tr>
-            <td><a href="chapter-1.html" class="hover:text-light-blue">Introduction</a></td>
-            <td class="xl:hidden"><i class="fa-solid fa-plus "></i></td>
-            </tr>
-            <tr>
-            <td><a href="chapter-2.html" class="hover:text-light-blue">Software Processes</a></td>
-            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
-            </tr>
-            <tr>
-            <td><a href="chapter-3.html" class="hover:text-light-blue">Agile Software Development</a></td>
-            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
-            </tr>
-            <tr>
-            <td><a href="chapter-4.html" class="hover:text-light-blue">Requirements Engineering</a></td>
-            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
-            </tr>
-            <tr>
-            <td><a href="chapter-5.html" class="hover:text-light-blue">System Modeling</a></td>
-            <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
-            </tr>
-        </tbody>
+            <tbody class="table-footer py-2 xl:pt-0">
+                <tr>
+                    <td><a href="chapter-1.html" class="hover:text-light-blue">Introduction</a></td>
+                    <td class="xl:hidden"><i class="fa-solid fa-plus "></i></td>
+                </tr>
+                <tr>
+                    <td><a href="chapter-2.html" class="hover:text-light-blue">Software Processes</a></td>
+                    <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="chapter-3.html" class="hover:text-light-blue">Agile Software Development</a></td>
+                    <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="chapter-4.html" class="hover:text-light-blue">Requirements Engineering</a></td>
+                    <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="chapter-5.html" class="hover:text-light-blue">System Modeling</a></td>
+                    <td class="xl:hidden"><i class="fa-solid fa-plus"></i></td>
+                </tr>
+            </tbody>
         </table>
 
         <!-- Desktop view of Chapters -->
         <section class="hidden xl:grid xl:grid-cols-5 gap-3 mx-30 text-sm pt-5">
-                <div class="footer-chapter">
-                    <a href="chapter-1.html" class="font-medium">Introduction</a>
-                    <i class="fa-solid fa-plus xl:hidden"></i>
-                </div>
+            <div class="footer-chapter">
+                <a href="chapter-1.html" class="font-medium">Introduction</a>
+                <i class="fa-solid fa-plus xl:hidden"></i>
+            </div>
+            <div class="footer-chapter">
+                <a href="chapter-2.html" class="font-medium">Software Processes</a>
+                <i class="fa-solid fa-plus xl:hidden"></i>
+            </div>
+            <div class="footer-chapter">
+                <a href="chapter-3.html" class="font-medium">Agile Software Development</a>
+                <i class="fa-solid fa-plus xl:hidden"></i>
+            </div>
+            <div class="footer-chapter">
+                <a href="chapter-4.html" class="font-medium">Requirements Engineering</a>
+                <i class="fa-solid fa-plus xl:hidden"></i>
+            </div>
+            <div class="footer-chapter">
+                <a href="chapter-5.html" class="font-medium">System Modeling</a>
+                <i class="fa-solid fa-plus xl:hidden"></i>
+            </div>
+        </section>
 
-                <div class="footer-chapter">
-                    <a href="chapter-2.html" class="font-medium">Software Processes</a>
-                    <i class="fa-solid fa-plus xl:hidden"></i>
-                </div>
-
-                <div class="footer-chapter">
-                    <a href="chapter-3.html" class="font-medium">Agile Software Development</a>
-                    <i class="fa-solid fa-plus xl:hidden"></i>
-                </div>
-
-                <div class="footer-chapter">
-                    <a href="chapter-4.html" class="font-medium">Requirements Engineering</a>
-                    <i class="fa-solid fa-plus xl:hidden"></i>
-                </div>
-
-                <div class="footer-chapter">
-                    <a href="chapter-5.html" class="font-medium">System Modeling</a>
-                    <i class="fa-solid fa-plus xl:hidden"></i>
-                </div>
-            </section>
-    
         <!-- Brand & Address -->
         <section class="flex flex-col justify-center items-center xl:flex-row xl:justify-around xl:pt-0">
             <section class="flex flex-col justify-center items-center xl:flex-row xl:gap-30 xl:pt-0">
@@ -812,29 +504,28 @@
                     <a href="index.html" class="brand-logo">Systematic.dev</a>
                 </section>
                 <p class="flex items-start gap-2 text-sm">
-                <i class="fa-solid fa-location-dot text-xl text-main-blue"></i>
-                123 Innovation Street, Tech City, 45678
+                    <i class="fa-solid fa-location-dot text-xl text-main-blue"></i>
+                    123 Innovation Street, Tech City, 45678
                 </p>
             </section>
 
             <!-- Social Media -->
             <section class="flex flex-col items-center text-main-blue py-4 xl:hidden">
                 <div class="flex gap-4">
-                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-facebook text-xl"></i></a>
-                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-twitter text-xl"></i></a>
-                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-instagram text-xl"></i></a>
-                <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-light-blue"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 </div>
             </section>
-            
+        </section>
 
-    </section>
-            <!-- Footer Bottom -->
-            <section class="flex flex-col border-t border-main-blue/20 pt-2 text-center xl:flex-row xl:justify-around">
-                <p class="text-sm">© Systematic.dev. All rights reserved.</p>
-                <p class="font-semibold text-sm text-main-blue">Manimtim, Hazel Anne D.</p>
-            </section>
+        <!-- Footer Bottom -->
+        <section class="flex flex-col border-t border-main-blue/20 pt-2 text-center xl:flex-row xl:justify-around">
+            <p class="text-sm">© Systematic.dev. All rights reserved.</p>
+            <p class="font-semibold text-sm text-main-blue">Manimtim, Hazel Anne D.</p>
+        </section>
     </footer>
 </body>
 
-</html>
+</html> 
