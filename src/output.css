@@ -301,6 +301,9 @@
   .top-30 {
     top: calc(var(--spacing) * 30);
   }
+  .top-40 {
+    top: calc(var(--spacing) * 40);
+  }
   .top-50 {
     top: calc(var(--spacing) * 50);
   }
@@ -1901,11 +1904,6 @@
       top: calc(var(--spacing) * 20);
     }
   }
-  .xl\:right-10 {
-    @media (width >= 80rem) {
-      right: calc(var(--spacing) * 10);
-    }
-  }
   .xl\:mb-13 {
     @media (width >= 80rem) {
       margin-bottom: calc(var(--spacing) * 13);
@@ -1949,6 +1947,11 @@
   .xl\:w-55 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 55);
+    }
+  }
+  .xl\:w-60 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 60);
     }
   }
   .xl\:w-68 {
@@ -3208,7 +3211,7 @@
     border-collapse: collapse;
     border-style: var(--tw-border-style);
     border-width: 1px;
-    border-color: var(--color-light-blue);
+    border-color: var(--color-neutral-gray);
     background-color: var(--color-white);
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -3216,7 +3219,7 @@
   .table-container th, .table-container td {
     border-style: var(--tw-border-style);
     border-width: 1px;
-    border-color: var(--color-light-blue);
+    border-color: var(--color-neutral-gray);
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
     text-align: center;
@@ -3439,11 +3442,7 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--color-neutral-gray);
-    --tw-gradient-position: to top in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    --tw-gradient-from: var(--color-light-blue);
-    --tw-gradient-to: var(--color-white);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    background-color: var(--color-white);
     color: var(--color-neutral-gray);
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);

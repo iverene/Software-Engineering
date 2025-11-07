@@ -427,12 +427,12 @@
 
   /* Table */
   .table-container {
-    @apply border-collapse border border-light-blue w-full mb-6 mt-4 shadow-md bg-white;
+    @apply border-collapse border border-neutral-gray w-full mb-6 mt-4 shadow-md bg-white;
   }
 
   .table-container th,
   .table-container td {
-    @apply border border-light-blue px-4 py-2 text-center text-neutral-gray leading-relaxed;
+    @apply border border-neutral-gray px-4 py-2 text-center text-neutral-gray leading-relaxed;
   }
 
   .table-footer td {
@@ -514,7 +514,7 @@
   }
 
   .front-side {
-  @apply absolute inset-0 border border-neutral-gray  bg-gradient-to-t from-light-blue to-white text-neutral-gray rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden;
+  @apply absolute inset-0 border border-neutral-gray  bg-white text-neutral-gray rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden;
 }
 
 .front-side img {
