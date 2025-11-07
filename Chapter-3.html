@@ -11,8 +11,6 @@
 </head>
 <body class="bg-gradient-to-br from-main-white via-content-bg to-purple-50 text-main-blue min-h-screen flex flex-col">
      <header class="site-header">
-     <!-- Header -->
-    <header class="site-header">
         <div class="header-container">
             <section class="brand-container">
                 <img src="assets\logo.png" class="logo">
@@ -22,33 +20,90 @@
             <!-- Hidden checkbox for hamburger menu -->
             <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-
-            <button class="md:hidden xl:hidden lg:hidden text-main-blue">
+            <!-- Hamburger button -->
+            <label for="menu-toggle" class="md:hidden lg:hidden xl:hidden text-main-blue cursor-pointer">
                 <i class="fas fa-bars text-xl"></i>
             </label>
 
-
-
+            <!-- Navigation  -->
             <nav class="nav-menu">
-                <div class="relative">
-                    <button class="dropdown-button peer">Chapters <i class="fa-solid fa-chevron-down"></i></button>
-                    <div class="dropdown-content peer-hover:opacity-100 peer-hover:visible hover:opacity-100 hover:visible">
-                        <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
-                        <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
-                        <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
-                        <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
-                        <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
+                <div class="dropdown-container">
+                        <button class="dropdown-button">Chapters <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
+                            <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
+                            <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
+                            <a href="Chapter-4.html" class="dropdown-link">Chapter 4</a>
+                            <a href="Chapter-5.html" class="dropdown-link">Chapter 5</a>
+                        </div>
                     </div>
-                </div>
                 <a href="" class="nav-link">Tutorials <i class="fa-solid fa-chevron-down"></i></a>
                 <a href="" class="nav-link">Projects</a>
             </nav>
 
-
-
             <div class="auth-container">
                 <a href="" class="auth-btn">Log In</a>
             </div>
+
+            <!-- Mobile Sidebar Navigation -->
+            <div
+                class="mobile-sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out z-50 md:hidden lg:hidden xl:hidden overflow-y-auto scrollbar-hide">
+                <div class="p-4">
+
+                    <div class="flex justify-between items-center mb-4">
+                        <section class="brand-container">
+                            <img src="assets\logo.png" class="logo">
+                            <a href="index.html" class="brand-logo">Systematic.dev</a>
+                        </section>
+                    </div>
+
+                    <div class="space-y-4">
+
+                        <!-- Mobile-specific dropdown for Chapters -->
+                        <div class="mobile-dropdown-container">
+
+                            <input type="checkbox" id="mobile-chapters-toggle" class="hidden">
+                            <label for="mobile-chapters-toggle" class="mobile-dropdown-button">
+                                Chapters <i class="fa-solid fa-chevron-down transition-transform duration-300"
+                                    id="chevron-icon"></i>
+                            </label>
+                            <div class="mobile-dropdown-content">
+                                <a href="Chapter1.html" class="mobile-dropdown-link">Chapter 1</a>
+                                <a href="Chapter-2.html" class="mobile-dropdown-link">Chapter 2</a>
+                                <a href="Chapter-3.html" class="mobile-dropdown-link">Chapter 3</a>
+                                <a href="Chapter-4.html" class="mobile-dropdown-link">Chapter 4</a>
+                                <a href="Chapter-5.html" class="mobile-dropdown-link">Chapter 5</a>
+                            </div>
+
+                        </div>
+
+                        <a href="" class="nav-link block">Tutorials</a>
+                        <a href="" class="nav-link block">Projects</a>
+                        <a href="" class="auth-btn block text-center">Log In</a>
+
+                        <!-- Mobile view of Table of Contents  -->
+            <aside class="block glass-card lg:hidden xl:hidden mt-10 p-1">
+                    <h2 class="border-b border-sky-100 pb-2 text-base">Table of Contents</h2>
+                    <ul class="table-of-contents">
+                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#introduction"> Introduction</a></li>
+                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-2"> The software requirements document</a></li>
+                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-4"> Requirements engineering processes</a></li>
+                        <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#sec-4-6"> Requirements validation</a></li>
+                    </ul>
+                
+            </aside>
+
+            
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overlay for mobile sidebar  -->
+            <label for="menu-toggle"
+                class="mobile-overlay fixed top-16 left-0 right-0 bottom-0 opacity-0 pointer-events-none peer-checked:pointer-events-auto z-40 md:hidden lg:hidden xl:hidden"
+                aria-label="Close menu"></label>
+
         </div>
          
     </header>
@@ -133,7 +188,7 @@
                 <section id="intro" class="glass-card p-8">
                     <h3 class=" text-center chapter-header">Agile Software Development</h3><br>
                     <div class="flex justify-center items-center mb-10"> 
-                        <img src="sds/3.6.png" class="rounded-xl shadow-lg max-w-full h-auto" alt="Agile Development">
+                        <img src="/sds/3.6.png" class="rounded-xl shadow-lg max-w-full h-auto" alt="Agile Development">
                     </div>
                 
             
@@ -661,7 +716,5 @@
     </footer>
 </body>
 </html>
-
-
 
 
