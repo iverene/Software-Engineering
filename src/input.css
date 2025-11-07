@@ -635,4 +635,41 @@
   }
 }
 
+/* Hazel's styles */
+
+.divhazel{
+  @apply bg-white p-10 rounded-xl drop-shadow-[0_0_20px_rgba(59,130,246,0.5)];
+}
+.bodyhazel{
+  @apply md:bg-gradient-to-br xl:bg-gradient-to-br from-light-blue via-content-bg to-sky-300 min-h-screen ;
+}
+.h-hazel{
+  @apply font-semibold text-xl lg:text-2xl mb-4 border-b border-sky-300  ;
+}
+.c-hazel{
+  @apply   bg-linear-65 from-blue-400 to-sky-300 rounded-xl p-5 sm:p-6 lg:p-8    ;
+}
+.h2-hazel{
+  @apply text-center text-main-white text-xl sm:text-2xl font-semibold mb-4  ;
+}
+.div2hazel{
+  @apply text-main-white space-y-2 text-sm sm:text-base;
+}
+.ulhazel{
+  @apply list-disc list-inside text-main-white space-y-2 text-sm sm:text-base;
+}
+.sectionhazel{
+  @apply bg-linear-65 from-blue-400 to-sky-300 rounded-xl p-5 sm:p-6 lg:p-8  ;
+}
+.hazelh2{
+  @apply text-main-white text-center text-xl sm:text-2xl font-semibold mb-6;
+}
+.dhazel{
+  @apply text-main-white space-y-4 text-sm sm:text-base leading-relaxed;
+}
+.hazel-2{
+  @apply text-center text-main-white text-xl sm:text-2xl font-semibold mb-6;
+}
+
+/* Hazel's end styles */
 
