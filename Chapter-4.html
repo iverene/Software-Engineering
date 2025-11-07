@@ -83,7 +83,7 @@
 
                         <!-- Mobile view of Table of Contents  -->
             <aside class="block glass-card lg:hidden xl:hidden mt-10 p-1">
-                    <h2 class="border-b border-sky-100 pb-2 text-base">Table of Contents</h2>
+                    <h2 class="border-b border-sky-100 pb-2 text-base text-neutral-gray">Table of Contents</h2>
                     <ul class="table-of-contents">
                         <li class="toc-item"><i class="fa-solid fa-chevron-right toc-icon"></i><a href="#introduction"> Introduction</a></li>
                         <li class="toc-item">
@@ -154,7 +154,7 @@
         <!-- Desktop view of Table of Contents  -->
         <aside class="hidden lg:block lg:col-span-3 sticky top-20 py-3 self-start md:p-5 lg:pl-4 xl:px-6
                  glass-card border border-neutral-gray">
-                    <h2 class="font-semibold text-2xl mb-4 border-b border-neutral-gray pb-2">Table of Contents</h2>
+                    <h2 class="font-semibold text-neutral-gray text-2xl mb-4 border-b border-neutral-gray pb-2">Table of Contents</h2>
                     <ul class="table-of-contents">
                         <li class="toc-item"><a href="#introduction" class="toc-link group">Introduction <span class="emoji">✨</span></a></li>
                         <li class="toc-item">
@@ -199,7 +199,7 @@
 
             <!-- Introduction -->
             <section class="content-section main-card mt-0 p-3 md:p-8 xl:p-10" id="introduction">
-                <h1>Requirements Engineering</h1>
+                <h1 class="title">Requirements Engineering</h1>
                 <div class="flex justify-center items-center">
                     <img src="assets\requirements-engineering.jpg" class="mt-10 h-auto md:w-200 lg:300 xl:350 border border-neutral-gray rounded-lg">
                 </div>
@@ -215,7 +215,7 @@
                                 <!-- Front Side -->
                                 <div class="absolute inset-0 bg-white rounded-xl shadow-md flex flex-col items-center justify-center [backface-visibility:hidden]">
                                     <img src="assets/user-requirements-icon.png" alt="Front Image" class="w-30 h-30 mb-4">
-                                    <h2 class="text-lg md:text-base font-semibold text-main-blue">User Requirements</h2>
+                                    <h2 class="text-neutral-gray text-lg md:text-base font-semibold ">User Requirements</h2>
                                     <p class="text-sm text-gray-500 mt-1">Hover to see definition!</p>
                                 </div>
 
@@ -233,7 +233,7 @@
                                 <!-- Front Side -->
                                 <div class="absolute inset-0 bg-white rounded-xl shadow-md flex flex-col items-center justify-center [backface-visibility:hidden]">
                                     <img src="assets/system-requirements-icon.png" alt="Front Image" class="w-30 h-30 mb-4">
-                                    <h2 class="text-lg md:text-base font-semibold text-main-blue">System Requirements</h2>
+                                    <h2 class="text-neutral-gray text-lg md:text-base font-semibold">System Requirements</h2>
                                     <p class="text-sm text-gray-500 mt-1">Hover to see definition!</p>
                                 </div>
 
@@ -250,7 +250,7 @@
                 
                 <!-- Objectives  -->
                 <article class="box-container">
-                    <h2 class="border-title">Objectives</h2>
+                    <h2 class="border-title content-title">Objectives</h2>
                     <p>The objective of this chapter is to introduce software requirements and to discuss the processes involved in discovering and documenting these requirements. When you have read the chapter you will:</p>
                 <ul>
                     <li> understand the concepts of user and system requirements and why these requirements should be written in different ways;</li>
@@ -271,7 +271,7 @@
             <!--4.1-->
             <section id="sec-4-1" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content"> 
-                    <h2 class="border-title">4.1 Functional and non-functional requirements</h2>
+                    <h2 class="border-title content-title">4.1 Functional and non-functional requirements</h2>
                     <p><span class="text-bold">Software system requirements</span> are often classified as functional requirements or non-functional requirements:</p>
                     
                     <table class="table-container">
@@ -306,7 +306,7 @@
                 </article>
 
                 <article id="sec-4-1-1" class="sub-content">
-                    <h3>4.1.1 Functional requirements</h3>
+                    <h3 class="sub-content-title">4.1.1 Functional requirements</h3>
                     <p><span class="text-bold">Functional requirements</span> describe what a system should do, depending on the type of software, its users, and the organization’s approach to requirements. At the <span class="text-bold">user requirement level</span>, they are written in abstract, easy-to-understand terms, while at the <span class="text-bold">system requirement level</span>, they provide detailed descriptions of functions, inputs, outputs, and exceptions.</p> 
                     <p>These requirements can range from general expectations about the system’s behavior to very specific needs tied to local practices or existing systems. Ideally, functional requirements should be <span class="text-bold">complete</span> (covering all needed services) and <span class="text-bold">consistent</span> (free from contradictions).</p>
                     <p>In practice, achieving completeness and consistency in large systems is very difficult. Mistakes and omissions often occur due to system complexity, and multiple stakeholders bring differing or even conflicting needs. These inconsistencies may remain hidden during specification and only surface after deeper analysis or once the system is delivered.</p>
@@ -314,7 +314,7 @@
                 </article>
                         
                 <article id="sec-4-1-2" class="sub-content">
-                    <h3>4.1.2 Non-functional requirements</h3>
+                    <h3 class="sub-content-title">4.1.2 Non-functional requirements</h3>
                     <p><span class="text-bold">Non-functional requirements</span> define system properties and constraints that are not directly tied to specific services. They cover aspects like performance, reliability, security, and availability, or constraints such as hardware capabilities and data formats. These requirements usually apply to the system as a whole rather than individual functions.</p>
                     <p>They are often more critical than functional requirements because failure to meet them can render the entire system unusable, as seen with safety, reliability, or performance issues in mission-critical systems. Unlike functional requirements, non-functional requirements are harder to trace to specific components since their implementation is often spread across the system.</p>
                     <figure>
@@ -363,7 +363,7 @@
             <!--4.2-->
             <section id="sec-4-2" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content">
-                    <h2 class="border-title">4.2 The software requirements document</h2>
+                    <h2 class="border-title content-title">4.2 The software requirements document</h2>
                     <p><span class="text-bold">The software requirements document (SRS)</span> is an official statement of what developers must implement, containing both user requirements and detailed system requirements. These may be integrated into one document or split into separate sections depending on the number and complexity of requirements.</p>
                     <p>Requirements documents are especially important when software is developed by external contractors. However, agile methods argue against them, claiming requirements change too quickly and make documents obsolete. Instead, agile approaches like Extreme Programming use incremental user stories prioritized for each system release. Still, a short supporting document covering business and dependability requirements is recommended to avoid overlooking system-wide needs.</p>
                     <p>The requirements document serves a wide range of users—from senior management funding the project to engineers building the software—each relying on it for different purposes.</p>
@@ -412,7 +412,7 @@
             <!--4.3-->
             <section id="sec-4-3" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content">
-                    <h2 class="border-title">4.3 Requirements specification</h2>
+                    <h2 class="border-title content-title">4.3 Requirements specification</h2>
                     <p><span class="text-bold">Requirements specification</span> is the process of documenting both user and system requirements. While they should ideally be clear, complete, consistent, and easy to understand, this is difficult to achieve in practice because stakeholders often interpret requirements differently and conflicts or inconsistencies frequently arise.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div class="box-container">
@@ -427,7 +427,7 @@
                 </article>
 
                 <article id="sec-4-3-1" class="sub-content">
-                    <h3>4.3.1 Natural language specification</h3>
+                    <h3 class="sub-content-title">4.3.1 Natural language specification</h3>
                     <p><span class="text-bold">Natural language</span> has long been the main way of writing software requirements because it is expressive, intuitive, and widely understood. However, it can also be vague and ambiguous, leading to misunderstandings. Despite proposals for alternatives, natural language remains the most common approach.</p>
                     <div class="box-container">
                         <p>To reduce ambiguity, several guidelines are recommended:</p>
@@ -443,7 +443,7 @@
                 </article>
 
                 <article id="sec-4-3-2" class="sub-content">
-                    <h3>4.3.2 Structured specifications</h3>
+                    <h3 class="sub-content-title">4.3.2 Structured specifications</h3>
                     <p><span class="text-bold">Structured natural language</span> is a method of writing system requirements that limits writer freedom by enforcing a standard format. It keeps the clarity of natural language while adding uniformity through templates, sometimes using programming-like constructs and visual cues for emphasis.</p>
                     <div class="box-container">
                        <p>When specifying functional requirements in this form, the document should include:</p>
@@ -489,7 +489,7 @@
             <!--4.4-->
             <section id="sec-4-4" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content">
-                    <h2 class="border-title">4.4 Requirements engineering processes</h2>
+                    <h2 class="border-title content-title">4.4 Requirements engineering processes</h2>
                     <figure>
                         <img src="assets\4.5.png" class="chapter-image">
                     </figure>
@@ -527,7 +527,7 @@
             <!--4.5-->
             <section id="sec-4-5" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content">
-                    <h2 class="border-title">4.5 Requirements elicitation and analysis</h2>
+                    <h2 class="border-title content-title">4.5 Requirements elicitation and analysis</h2>
                     <p>After the feasibility study, the requirements elicitation and analysis stage begins, where software engineers collaborate with customers and end-users to understand the application domain, required services, performance expectations, and system constraints. This process involves multiple stakeholders—anyone directly or indirectly influencing requirements, such as end-users, managers, domain experts, engineers of related systems, and even trade union representatives.</p>
                     <div class="box-container">
                     <figure>
@@ -551,14 +551,14 @@
                 </article>
 
                 <article id="sec-4-5-1" class="sub-content">
-                    <h3>4.5.1 Requirements discovery</h3>
+                    <h3 class="sub-content-title">4.5.1 Requirements discovery</h3>
                     <p><span class="text-bold">Requirements discovery (or elicitation)</span> is the process of gathering information about the required system and existing systems, then extracting user and system requirements. Information sources include documentation, stakeholders, and similar system specifications. Interaction with stakeholders may involve interviews, observation, scenarios, or prototypes to clarify needs.</p>
                     <p>Stakeholders range from end-users to managers and external regulators. For example, in a healthcare system, stakeholders include patients, doctors, nurses, receptionists, IT staff, ethics managers, healthcare managers, and records staff. Beyond stakeholders, requirements can also arise from the application domain and interacting systems.</p>
                     <p>These sources can be organized into <span class="text-bold">system viewpoints</span>, each showing a subset of requirements. Viewpoints highlight different perspectives on the problem, often overlapping with shared requirements, and help structure both discovery and documentation.</p>
                 </article>
 
                 <article id="sec-4-5-2" class="sub-content">
-                    <h3>4.5.2 Interviewing</h3>
+                    <h3 class="sub-content-title">4.5.2 Interviewing</h3>
                     <p><span class="text-bold">Interviews</span> with stakeholders are a common requirements elicitation technique, where engineers ask questions about current systems and the new system to be developed. These can be <span class="text-bold">closed interviews</span> (structured, pre-defined questions) or <span class="text-bold">open interviews</span> (flexible, exploratory), though in practice most are a mix of both. Interviews help gain insight into stakeholder tasks, interactions with the system, and existing difficulties, but are less effective for uncovering domain or organizational knowledge.</p>
                     <p>Challenges include stakeholders’ use of <span class="text-bold">domain-specific jargon</span>, which can be misunderstood, and <span class="text-bold">implicit knowledge</span> that experts assume is obvious and therefore fail to mention. Interviews are also limited for organizational requirements, since power dynamics and political issues are often hidden or left unspoken.</p>
                     <p>Effective interviewers are <span class="text-bold">open-minded</span> and willing to adjust their views based on stakeholder input. They also use <span class="text-bold">springboard questions, proposals, or prototypes</span> to guide discussion, since vague prompts like “tell me what you want” rarely work.</p>
@@ -566,7 +566,7 @@
                 </article>
 
                 <article id="sec-4-5-3" class="sub-content">
-                    <h3>4.5.3 Scenarios</h3>
+                    <h3 class="sub-content-title">4.5.3 Scenarios</h3>
                     <p><span class="text-bold">Scenarios</span> help stakeholders better understand system requirements by presenting real-life examples of interactions rather than abstract descriptions. They are especially useful for expanding outline requirements into detailed ones, as each scenario illustrates one or a few possible interactions.</p>
                     <div class="box-container">
                         <p>Scenarios evolve from an initial outline to a detailed description during elicitation and can take different forms depending on the level of detail needed. At its most general, a scenario may include:</p>
@@ -581,7 +581,7 @@
                 </article>
                 
                 <article id="sec-4-5-4" class="sub-content">
-                    <h3>4.5.4 Use cases</h3>
+                    <h3 class="sub-content-title">4.5.4 Use cases</h3>
                     <p><span class="text-bold">Use cases</span> are a key requirements discovery technique introduced in the Objectory method and now central to UML. At their core, they identify the <span class="text-bold">actors</span> (users or systems) involved and the <span class="text-bold">type of interaction</span> with the system. Beyond this, use cases are expanded with <span class="text-bold">textual descriptions</span> or <span class="text-bold">graphical models</span> (e.g., UML sequence or state charts) to illustrate the details of how the interaction unfolds. This helps clarify system behavior and ensures stakeholders understand how the system will be used.</p>
                     <figure>
                         <img src="assets\4.7.png" class="chapter-image">
@@ -591,7 +591,7 @@
                 </article>
 
                 <article id="sec-4-5-5" class="sub-content">
-                    <h3>4.5.5 Ethnography</h3>
+                    <h3 class="sub-content-title">4.5.5 Ethnography</h3>
                     <p>Software systems do not operate in isolation; they are embedded within social and organizational contexts that strongly influence their success. If these contexts are ignored, a system may technically function but remain unused because it fails to align with real-world practices and constraints. Therefore, understanding and addressing social and organizational requirements is essential in requirements engineering.</p>
                     <p>One effective technique for uncovering such requirements is <span class="text-bold">ethnography</span>, where an analyst directly observes and immerses themselves in the working environment. By studying day-to-day tasks and interactions, ethnography reveals implicit requirements that may not surface in interviews or formal documentation. This helps capture how people actually work, rather than how organizations say they work.</p>
                     <figure>
@@ -632,7 +632,7 @@
             <!---4.6-->
             <section id="sec-4-6" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content">
-                    <h2 class="border-title">4.6 Requirements validation</h2>
+                    <h2 class="border-title content-title">4.6 Requirements validation</h2>
                     <p><span class="text-bold">Requirements validation</span> is the process of ensuring that the documented requirements truly reflect what the customer wants from the system. It overlaps with requirements analysis, as both focus on identifying problems or inconsistencies in the requirements. This step is crucial because undetected errors at this stage can lead to significant rework later in development or even after the system is deployed.</p>
                     <p>Fixing requirement-related issues is far more expensive than correcting design or coding errors. This is because changes in requirements often require revisiting system design, updating implementation, and conducting thorough re-testing. Therefore, validating requirements early helps reduce risks, saves costs, and ensures that the system aligns with customer expectations.</p>
                     <div class="box-container">
@@ -692,7 +692,7 @@
             <!--4.7-->
             <section id="sec-4-7" class="content-section main-card xl:pt-0 px-3 pb-3 md:px-8 xl:px-10 xl:pb-8">
                 <article class="content">
-                    <h2 class="border-title">4.7 Requirements management</h2>
+                    <h2 class="border-title content-title">4.7 Requirements management</h2>
                     <p>Requirements for large software systems are always changing because they are developed to solve <span class="text-bold">“wicked” problems</span>, which cannot be completely defined. Since the problem itself is unclear or evolving, the software requirements will inevitably be <span class="text-bold">incomplete and subject to change</span>.</p>
                     <p>After a system is installed and used, new requirements naturally emerge because users and customers cannot fully anticipate its impact on business processes. With real experience, new needs and priorities are discovered, making change inevitable. </p>
                     <div class="box-container">
@@ -708,7 +708,7 @@
                 </article>
 
                 <article id="sec-4-7-1" class="sub-content">
-                    <h3>4.7.1 Requirements management planning</h3>
+                    <h3 class="sub-content-title">4.7.1 Requirements management planning</h3>
                     <p><span class="text-bold">Planning</span> is an essential first stage in the requirements management process. The planning stage establishes the level of requirements management detail that is required. </p>
                     <div class="box-container">
                         <p>During the requirements management stage, you have to decide on:</p>
@@ -727,7 +727,7 @@
                 </article>
 
                 <article id="sec-4-7-2" class="sub-content">
-                    <h3>4.7.2 Requirements change management</h3>
+                    <h3 class="sub-content-title">4.7.2 Requirements change management</h3>
                     <p><span class="text-bold">Requirements change management</span> is applied after the requirements document is approved to evaluate proposed changes. It ensures that the benefits outweigh the costs and provides a formal, consistent process so all changes are controlled and documented properly.</p>
                     <div class="box-container">
                         <p>There are three principal stages to a change management process:</p>
