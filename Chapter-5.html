@@ -49,8 +49,7 @@
             </div>
 
             <!-- Mobile Sidebar Navigation -->
-            <div
-                class="mobile-sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out z-50 lg:hidden xl:hidden">
+            <div class="mobile-sidebar mobile-sidebar-layout">
                 <div class="p-4">
 
                     <div class="flex justify-between items-center mb-4">
@@ -116,7 +115,7 @@
 
             <!-- Overlay for mobile sidebar  -->
             <label for="menu-toggle"
-                class="mobile-overlay fixed top-16 left-0 right-0 bottom-0 opacity-0 pointer-events-none peer-checked:pointer-events-auto z-40 lg:hidden xl:hidden"
+                class="mobile-overlay mobile-overlay-design"
                 aria-label="Close menu"></label>
 
         </div>
@@ -136,21 +135,21 @@
 
                         <div class="relative">
                             <a href="#intro"
-                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                class="nav-link-item active pl-8"
                                 tabindex="0">
                                 <p class="sidebar-header font-bold">Chapter Overview</p>
 
                                 <h4
-                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    class="sidebar-description  group/desc">
                                     Introduction and Objectives
                                     <div
-                                        class="pointer-events-none absolute -top-4 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        class="quick-summary-div -top-4 left-full">
                                         <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
                                         <p class="text-xs text-neutral-gray">Lays the groundwork for the chapter,
                                             highlighting the main learning goals and concepts to be covered in the
                                             following sections.</p>
                                         <div
-                                            class="absolute top-7 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                            class="quick-summary-pointer bottom-20 -left-2">
                                         </div>
                                     </div>
                                 </h4>
@@ -160,21 +159,21 @@
 
                         <div class="relative">
                             <a href="#Chapter5-1"
-                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                class="nav-link-item active pl-8"
                                 tabindex="0">
                                 <p class="sidebar-header font-bold">5.1 Context Models</p>
 
                                 <h4
-                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    class="sidebar-description group/desc">
                                     System Boundaries and Activity Diagrams
                                     <div
-                                        class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        class="quick-summary-div">
                                         <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
                                         <p class="text-xs text-neutral-gray">Focuses on the context view of the scope,
                                             boundaries, and high-level activity workflow of the system being modeled.
                                         </p>
                                         <div
-                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                            class="quick-summary-pointer">
                                         </div>
                                     </div>
                                 </h4>
@@ -184,21 +183,21 @@
 
                         <div class="relative">
                             <a href="#Chapter5-2"
-                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                class="nav-link-item active pl-8"
                                 tabindex="0">
                                 <p class="sidebar-header font-bold">5.2 Interaction Models</p>
 
                                 <h4
-                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    class="sidebar-description group/desc">
                                     Use Case and Sequence
                                     <div
-                                        class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        class="quick-summary-div">
                                         <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
                                         <p class="text-xs text-neutral-gray">Describes how users interact with the
                                             system. Uses Use Case diagrams for high-level tasks and Sequence diagrams
                                             for object interactions.</p>
                                         <div
-                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                            class="quick-summary-pointer">
                                         </div>
                                     </div>
                                 </h4>
@@ -208,21 +207,21 @@
 
                         <div class="relative">
                             <a href="#Chapter5-3"
-                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                class="nav-link-item active pl-8"
                                 tabindex="0">
                                 <p class="sidebar-header font-bold">5.3 Structural Models</p>
 
                                 <h4
-                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    class="sidebar-description group/desc">
                                     Class Diagrams
                                     <div
-                                        class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        class="quick-summary-div">
                                         <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
                                         <p class="text-xs text-neutral-gray">Shows the static structure of the system
                                             using Class diagrams to define attributes, operations, and relationships
                                             between system classes.</p>
                                         <div
-                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                            class="quick-summary-pointer">
                                         </div>
                                     </div>
                                 </h4>
@@ -232,21 +231,21 @@
 
                         <div class="relative">
                             <a href="#Chapter5-4"
-                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                class="nav-link-item active pl-8"
                                 tabindex="0">
                                 <p class="sidebar-header font-bold">5.4 Behavioral Models</p>
 
                                 <h4
-                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    class="sidebar-description group/desc">
                                     State and Communication
                                     <div
-                                        class="pointer-events-none absolute top-1/2 -translate-y-1/2 left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        class="quick-summary-div">
                                         <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
                                         <p class="text-xs text-neutral-gray">Illustrates dynamic behavior. Uses State
                                             diagrams for object lifecycles and Communication diagrams for interactions
                                             between objects.</p>
                                         <div
-                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                            class="quick-summary-pointer">
                                         </div>
                                     </div>
                                 </h4>
@@ -256,21 +255,21 @@
 
                         <div class="relative">
                             <a href="#Chapter5-5"
-                                class="nav-link-item active block pl-8 transition-all duration-300 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                                class="nav-link-item active pl-8"
                                 tabindex="0">
                                 <p class="sidebar-header font-bold">5.5 Model-driven Engineering</p>
 
                                 <h4
-                                    class="sidebar-description group/desc relative inline-block cursor-help transition-colors duration-150">
+                                    class="sidebar-description group/desc">
                                     Component and Node
                                     <div
-                                        class="pointer-events-none absolute top-1/2 -translate-y-[calc(50%+30px)] left-full z-1 ml-4 w-64 origin-left scale-95 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover/desc:pointer-events-auto group-hover/desc:scale-100 group-hover/desc:opacity-100">
+                                        class="quick-summary-div top-1/2 -translate-y-[calc(50%+30px)] left-full">
                                         <p class="mb-1 text-md font-semibold text-main-blue">Quick Summary:</p>
                                         <p class="text-xs text-neutral-gray">Covers the deployment view. Component
                                             diagrams show software pieces, and Node diagrams show hardware distribution.
                                         </p>
                                         <div
-                                            class="absolute top-1/2 -translate-y-1/2 -left-2 -z-10 h-4 w-4 rotate-45 border-b border-l border-gray-200 bg-white">
+                                            class="quick-summary-pointer">
                                         </div>
                                     </div>
                                 </h4>
