@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="/assets/logo.png">
 </head>
 <body class="bg-gradient-to-br from-main-white via-content-bg to-purple-50 text-main-blue min-h-screen flex flex-col">
+     <header class="site-header">
      <!-- Header -->
     <header class="site-header">
         <div class="header-container">
@@ -21,16 +22,17 @@
             <!-- Hidden checkbox for hamburger menu -->
             <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-            <!-- Hamburger button -->
-            <label for="menu-toggle" class="lg:hidden xl:hidden text-main-blue cursor-pointer">
+
+            <button class="md:hidden xl:hidden lg:hidden text-main-blue">
                 <i class="fas fa-bars text-xl"></i>
             </label>
 
-            <!-- Desktop Navigation -->
+
+
             <nav class="nav-menu">
-                <div class="dropdown-container">
-                    <button class="dropdown-button">Chapters <i class="fa-solid fa-chevron-down"></i></button>
-                    <div class="dropdown-content">
+                <div class="relative">
+                    <button class="dropdown-button peer">Chapters <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content peer-hover:opacity-100 peer-hover:visible hover:opacity-100 hover:visible">
                         <a href="Chapter1.html" class="dropdown-link">Chapter 1</a>
                         <a href="Chapter-2.html" class="dropdown-link">Chapter 2</a>
                         <a href="Chapter-3.html" class="dropdown-link">Chapter 3</a>
@@ -42,83 +44,15 @@
                 <a href="" class="nav-link">Projects</a>
             </nav>
 
-            <div class="auth-container hidden lg:flex xl:flex">
+
+
+            <div class="auth-container">
                 <a href="" class="auth-btn">Log In</a>
             </div>
-
-            <!-- Mobile Sidebar Navigation -->
-            <div
-                class="mobile-sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out z-50 lg:hidden xl:hidden">
-                <div class="p-4">
-
-                    <div class="flex justify-between items-center mb-4">
-                        <section class="brand-container">
-                            <img src="assets\logo.png" class="logo">
-                            <a href="index.html" class="brand-logo">Systematic.dev</a>
-                        </section>
-                    </div>
-
-                    <div class="space-y-4">
-
-                        <!-- Mobile-specific dropdown for Chapters -->
-                        <div class="mobile-dropdown-container">
-
-                            <input type="checkbox" id="mobile-chapters-toggle" class="hidden">
-                            <label for="mobile-chapters-toggle" class="mobile-dropdown-button">
-                                Chapters <i class="fa-solid fa-chevron-down transition-transform duration-300"
-                                    id="chevron-icon"></i>
-                            </label>
-                            <div class="mobile-dropdown-content">
-                                <a href="Chapter1.html" class="mobile-dropdown-link">Chapter 1</a>
-                                <a href="Chapter-2.html" class="mobile-dropdown-link">Chapter 2</a>
-                                <a href="Chapter-3.html" class="mobile-dropdown-link">Chapter 3</a>
-                                <a href="Chapter-4.html" class="mobile-dropdown-link">Chapter 4</a>
-                                <a href="Chapter-5.html" class="mobile-dropdown-link">Chapter 5</a>
-                            </div>
-
-                        </div>
-
-                        <a href="" class="nav-link block">Tutorials</a>
-                        <a href="" class="nav-link block">Projects</a>
-                        <a href="" class="auth-btn block text-center">Log In</a>
-
-                        <!-- New section for Chapter Progress -->
-                        <div class="chapter-progress-section mt-6">
-                            <h3 class="sidebar-title text-lg font-bold mb-4">Chapter Progress 📚</h3>
-                            <nav class="text-sm relative" aria-label="Chapter Table of Contents">
-                                <div class="absolute left-2 top-0 h-full w-0.5 bg-neutral-gray/20"></div>
-                                <a href="#intro" class="nav-link-item-mobile left-2">
-                                    <p class="sidebar-header">Chapter Overview</p>
-                                </a>
-                                <a href="#Chapter5-1" class="nav-link-item-mobile left-2">
-                                    <p class="sidebar-header">5.1 Context Models</p>
-                                </a>
-                                <a href="#Chapter5-2" class="nav-link-item-mobile left-2">
-                                    <p class="sidebar-header">5.2 Interaction Models</p>
-                                </a>
-                                <a href="#Chapter5-3" class="nav-link-item-mobile left-2">
-                                    <p class="sidebar-header">5.3 Structural Models</p>
-                                </a>
-                                <a href="#Chapter5-4" class="nav-link-item-mobile left-2">
-                                    <p class="sidebar-header">5.4 Behavioral Models</p>
-                                </a>
-                                <a href="#Chapter5-5" class="nav-link-item-mobile left-2">
-                                    <p class="sidebar-header">5.5 Model-driven Engineering</p>
-                                </a>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Overlay for mobile sidebar  -->
-            <label for="menu-toggle"
-                class="mobile-overlay fixed top-16 left-0 right-0 bottom-0 opacity-0 pointer-events-none peer-checked:pointer-events-auto z-40 lg:hidden xl:hidden"
-                aria-label="Close menu"></label>
-
         </div>
+         
     </header>
+
 
 
 
@@ -727,4 +661,6 @@
     </footer>
 </body>
 </html>
+
+
 
