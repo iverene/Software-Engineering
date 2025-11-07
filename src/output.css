@@ -3374,8 +3374,10 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
-  details[open] .toc-icon {
-    transform: rotate(90deg);
+  .rotate-on-open {
+    &[open] .toc-icon {
+      rotate: 90deg;
+    }
   }
   .emoji {
     display: none;

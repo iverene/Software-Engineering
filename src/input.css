@@ -517,8 +517,8 @@
     @apply transition-transform duration-300 mr-1;
   }
 
-  details[open] .toc-icon {
-    transform: rotate(90deg);
+  .rotate-on-open {
+    @apply [&[open]_.toc-icon]:rotate-90;
   }
 
   .emoji {
