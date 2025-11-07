@@ -3137,6 +3137,7 @@
   }
   .toc-item {
     position: relative;
+    padding: calc(var(--spacing) * 1);
   }
   .toc-link {
     display: block;
@@ -3206,12 +3207,8 @@
     padding-block: calc(var(--spacing) * 1);
   }
   .toc-summary a {
+    padding: calc(var(--spacing) * 1);
     color: var(--color-neutral-gray);
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-main-blue);
-      }
-    }
   }
   .toc-icon {
     margin-right: calc(var(--spacing) * 1);

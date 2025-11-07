@@ -436,7 +436,7 @@
   }
 
   .toc-item {
-    @apply relative;
+    @apply relative p-1;
   }
 
   .toc-link {
@@ -468,7 +468,7 @@
   }
 
   .toc-summary a {
-    @apply text-neutral-gray hover:text-main-blue;
+    @apply text-neutral-gray p-1;
   }
 
   .toc-icon {
