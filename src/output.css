@@ -3222,6 +3222,14 @@
   details[open] .toc-icon {
     transform: rotate(90deg);
   }
+  .emoji {
+    display: none;
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        display: inline;
+      }
+    }
+  }
   .cards-container {
     margin: calc(var(--spacing) * 10);
     display: flex;

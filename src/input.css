@@ -482,6 +482,10 @@
     transform: rotate(90deg);
   }
 
+  .emoji {
+    @apply hidden group-hover:inline;
+  } 
+
   /* Flip Cards */
   .cards-container {
     @apply flex flex-col gap-5 m-10 items-center justify-evenly md:flex-row lg:flex-row  xl:flex-row;
