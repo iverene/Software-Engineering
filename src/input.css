@@ -482,7 +482,7 @@
 
   /* Exercise */
   .exercise-card {
-    @apply p-5 mt-8 bg-main-blue/60 text-white border border-sky-100 rounded-lg flex flex-col items-center;
+    @apply p-5 mt-8 bg-gradient-to-r from-main-blue to-light-blue  text-white border border-sky-100 rounded-lg flex flex-col items-center;
   }
 
   .exercise {
