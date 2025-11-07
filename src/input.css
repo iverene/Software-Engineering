@@ -337,6 +337,11 @@
     @apply xl:pt-0;
   }
 
+  .main-card {
+    @apply bg-white text-neutral-gray
+                 border border-neutral-gray rounded-3xl shadow-lg;
+  }
+
   .content {
     @apply mt-5 xl:mt-10;
   }
